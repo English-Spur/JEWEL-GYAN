@@ -2,31 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JewelGyan — Gem &amp; Jewellery Store Executive Knowledge Hub</title>
-<meta name="description" content="Professional Knowledge & Interview Preparation for Gem, Gold, Diamond & Jewellery Retail Executives. 10 sections, 80 questions — Bengali + English.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JewelGyan — Gem &amp; Jewellery Executive Hub</title>
+<meta name="description" content="Interactive Q&A handbook + Bengali Gemstone Academy for jewellery retail professionals.">
+<meta name="theme-color" content="#07120c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
 
   :root{
-    --bg:#0d0c0a;
-    --bg2:#141210;
-    --panel:#1a1714;
-    --panel2:#211d18;
-    --gold:#d9b45a;
-    --gold-2:#f2dda0;
-    --text:#efe9dd;
-    --muted:#a79d8b;
-    --line:rgba(217,180,90,.16);
-    --line-2:rgba(217,180,90,.34);
-    --blue:#8ec3ef;
+    --bg:#07120c;
+    --bg2:#0c1a12;
+    --panel:#0f1f17;
+    --panel2:#142a1f;
+    --gold:#6fcaa0;
+    --gold-2:#b6eccd;
+    --text:#e8f3ec;
+    --muted:#8fa89a;
+    --line:rgba(111,202,160,.16);
+    --line-2:rgba(111,202,160,.38);
+    --blue:#7fd4cc;
     --radius:16px;
   }
 
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 
   body{
     font-family:'Inter','Noto Sans Bengali',system-ui,-apple-system,sans-serif;
@@ -34,82 +35,166 @@
     color:var(--text);
     line-height:1.62;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
     background-image:
-      radial-gradient(900px 520px at 12% -8%, rgba(217,180,90,.10), transparent 62%),
-      radial-gradient(820px 520px at 100% 2%, rgba(150,95,45,.13), transparent 58%),
-      radial-gradient(700px 400px at 50% 110%, rgba(217,180,90,.06), transparent 60%);
+      radial-gradient(900px 520px at 12% -8%, rgba(111,202,160,.10), transparent 62%),
+      radial-gradient(820px 520px at 100% 2%, rgba(58,132,90,.15), transparent 58%),
+      radial-gradient(700px 400px at 50% 110%, rgba(111,202,160,.07), transparent 60%);
     background-attachment:fixed;
   }
+
+  img, svg{max-width:100%;display:block}
 
   /* ============ HEADER ============ */
   header.site{
     position:sticky;top:0;z-index:60;
     backdrop-filter:blur(16px);
     -webkit-backdrop-filter:blur(16px);
-    background:rgba(13,12,10,.85);
+    background:rgba(7,18,12,.88);
     border-bottom:1px solid var(--line);
   }
   .hbar{
-    max-width:1440px;margin:0 auto;padding:12px 20px;
-    display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+    max-width:1440px;margin:0 auto;padding:11px 20px;
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
   }
-  .logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;flex:0 0 auto}
   .logo .mark{
     width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:20px;
-    background:linear-gradient(150deg,#3d3118,#1a1610);
+    background:linear-gradient(150deg,#1d3a2a,#0f1f17);
     border:1px solid var(--line-2);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 6px 18px -8px rgba(217,180,90,.5);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 6px 18px -8px rgba(111,202,160,.5);
+    flex:0 0 auto;
   }
   .logo h1{
     font-family:'Cormorant Garamond',Georgia,serif;
-    font-size:23px;line-height:1.1;letter-spacing:.6px;font-weight:700;
-    background:linear-gradient(92deg,#f7e9b8,#d9b45a 55%,#a9822f);
+    font-size:22px;line-height:1.1;letter-spacing:.6px;font-weight:700;
+    background:linear-gradient(92deg,#dff5e8,#6fcaa0 55%,#3d8f66);
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
   .logo small{
-    display:block;font-size:9.5px;letter-spacing:2.2px;text-transform:uppercase;
+    display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;
     color:var(--muted);font-weight:600;margin-top:2px;
+  }
+
+  .main-nav{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;flex:0 0 auto;
+  }
+
+  .tabs{
+    display:flex;background:rgba(255,255,255,.04);
+    border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px;
+  }
+  .tabs button{
+    font:inherit;font-size:12px;font-weight:700;letter-spacing:.2px;
+    padding:7px 13px;border-radius:7px;border:0;
+    background:transparent;color:var(--muted);cursor:pointer;transition:.2s;
+    white-space:nowrap;
+  }
+  .tabs button:hover{color:var(--text)}
+  .tabs button.on{
+    background:linear-gradient(150deg,var(--gold-2),var(--gold));
+    color:#0a1a10;
+    box-shadow:0 4px 14px -6px rgba(111,202,160,.6);
+  }
+
+  /* HEADER ORANGE LINKS */
+  .header-links{
+    display:flex;gap:6px;flex:0 0 auto;
+  }
+  .header-links a{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:7px 14px;border-radius:10px;
+    background:linear-gradient(150deg, #fdba74, #f97316);
+    color:#451a03; /* Dark brown text for contrast */
+    font-size:12px;font-weight:700;letter-spacing:.2px;
+    text-decoration:none;transition:.2s;border:1px solid #ea580c;
+    box-shadow:0 4px 14px -6px rgba(249,115,22,.5);
+    white-space:nowrap;
+  }
+  .header-links a:hover{
+    background:linear-gradient(150deg, #f97316, #ea580c);
+    color:#fff;transform:translateY(-1px);
+    box-shadow:0 6px 18px -8px rgba(249,115,22,.7);
   }
 
   .tools{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 
-  .search{
-    position:relative;display:flex;align-items:center;
-  }
+  .search{position:relative;display:flex;align-items:center}
   .search input{
-    width:250px;padding:9px 12px 9px 34px;font:inherit;font-size:13.5px;
+    width:220px;padding:9px 12px 9px 34px;font:inherit;font-size:13px;
     color:var(--text);background:rgba(255,255,255,.04);
     border:1px solid var(--line);border-radius:10px;outline:none;transition:.2s;
   }
-  .search input::placeholder{color:#7d7568}
-  .search input:focus{border-color:var(--line-2);background:rgba(217,180,90,.07);width:290px}
+  .search input::placeholder{color:#6f8579}
+  .search input:focus{border-color:var(--line-2);background:rgba(111,202,160,.07);width:260px}
   .search .mag{position:absolute;left:11px;font-size:13px;opacity:.6;pointer-events:none}
 
   .langsw{display:flex;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px}
   .langsw button{
     font:inherit;font-size:11.5px;font-weight:600;padding:6px 10px;border-radius:7px;
     border:0;background:transparent;color:var(--muted);cursor:pointer;transition:.2s;letter-spacing:.3px;
+    white-space:nowrap;
   }
   .langsw button:hover{color:var(--text)}
-  .langsw button.on{background:linear-gradient(150deg,var(--gold-2),var(--gold));color:#161208}
+  .langsw button.on{background:linear-gradient(150deg,var(--gold-2),var(--gold));color:#0a1a10}
 
-  /* ============ LAYOUT ============ */
+  body.view-academy .tools{display:none}
+
+  /* ============ VIEWS ============ */
+  .app-view{display:none}
+  .app-view.active{display:block;animation:viewIn .3s ease both}
+  @keyframes viewIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  /* ============ HERO LINKS (Q&A + Academy) ============ */
+  .hero-links{
+    position:relative;z-index:1;
+    display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;
+  }
+  .hero-link{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:9px 16px;border-radius:11px;
+    background:linear-gradient(150deg, #fdba74, #f97316);
+    border:1px solid #ea580c;
+    color:#451a03;font-size:12.5px;font-weight:700;
+    text-decoration:none;transition:.22s;letter-spacing:.3px;
+    box-shadow:0 4px 14px -6px rgba(249,115,22,.4);
+  }
+  .hero-link:hover{
+    background:linear-gradient(150deg, #f97316, #ea580c);
+    border-color:#c2410c;
+    color:#fff;
+    transform:translateY(-1px);
+    box-shadow:0 8px 22px -10px rgba(249,115,22,.7);
+  }
+  .hero-link .hl-ico{
+    font-size:14px;line-height:1;
+    width:26px;height:26px;border-radius:7px;
+    display:grid;place-items:center;
+    background:rgba(255,255,255,.25);
+    flex:0 0 auto;
+  }
+  .hero-link:hover .hl-ico{background:rgba(255,255,255,.35)}
+  .hero-link .hl-arrow{font-size:11px;opacity:.7;transition:.2s}
+  .hero-link:hover .hl-arrow{transform:translateX(2px);opacity:1}
+
+  /* ============ Q&A LAYOUT ============ */
   .layout{
     max-width:1440px;margin:0 auto;padding:26px 20px 70px;
     display:grid;grid-template-columns:296px minmax(0,1fr);gap:30px;align-items:start;
   }
+  .layout > main{min-width:0}
 
-  /* ============ SIDEBAR ============ */
   aside{
-    position:sticky;top:82px;
-    max-height:calc(100vh - 104px);overflow-y:auto;
+    position:sticky;top:86px;
+    max-height:calc(100vh - 106px);overflow-y:auto;
     padding:16px;border-radius:var(--radius);
-    background:linear-gradient(180deg,rgba(26,23,20,.92),rgba(20,18,16,.92));
+    background:linear-gradient(180deg,rgba(15,31,23,.94),rgba(12,26,18,.94));
     border:1px solid var(--line);
-    scrollbar-width:thin;scrollbar-color:rgba(217,180,90,.3) transparent;
+    scrollbar-width:thin;scrollbar-color:rgba(111,202,160,.3) transparent;
+    min-width:0;
   }
   aside::-webkit-scrollbar{width:6px}
-  aside::-webkit-scrollbar-thumb{background:rgba(217,180,90,.25);border-radius:10px}
+  aside::-webkit-scrollbar-thumb{background:rgba(111,202,160,.25);border-radius:10px}
 
   .nav-label{
     font-size:10px;letter-spacing:2px;text-transform:uppercase;
@@ -121,33 +206,32 @@
     background:transparent;color:var(--muted);cursor:pointer;font:inherit;
     font-size:13px;text-align:left;transition:.18s;margin-bottom:3px;line-height:1.35;
   }
-  .nav-btn:hover{background:rgba(217,180,90,.07);color:var(--text)}
+  .nav-btn:hover{background:rgba(111,202,160,.07);color:var(--text)}
   .nav-btn.active{
-    background:linear-gradient(90deg,rgba(217,180,90,.17),rgba(217,180,90,.02));
+    background:linear-gradient(90deg,rgba(111,202,160,.17),rgba(111,202,160,.02));
     border-color:var(--line-2);color:var(--gold-2);font-weight:600;
   }
   .nav-btn .ico{width:20px;text-align:center;flex:0 0 auto;font-size:14px}
   .nav-btn .lbl{flex:1;min-width:0}
-  .nav-btn .sub{display:block;font-size:10.5px;color:#8b8375;font-weight:400;margin-top:1px}
-  .nav-btn.active .sub{color:#b9ac8e}
+  .nav-btn .sub{display:block;font-size:10.5px;color:#7a9486;font-weight:400;margin-top:1px}
+  .nav-btn.active .sub{color:#a3c7b2}
   .nav-btn .cnt{
     font-size:10.5px;font-weight:700;color:var(--gold);
-    background:rgba(217,180,90,.13);padding:1px 7px;border-radius:20px;flex:0 0 auto;
+    background:rgba(111,202,160,.13);padding:1px 7px;border-radius:20px;flex:0 0 auto;
   }
 
   .nav-div{height:1px;background:var(--line);margin:12px 4px}
 
-  /* ============ HERO ============ */
   .hero{
     padding:30px 30px 28px;border-radius:22px;margin-bottom:24px;position:relative;overflow:hidden;
     background:
-      radial-gradient(600px 260px at 85% -30%, rgba(217,180,90,.20), transparent 65%),
-      linear-gradient(160deg,#221d17,#141210 70%);
+      radial-gradient(600px 260px at 85% -30%, rgba(111,202,160,.20), transparent 65%),
+      linear-gradient(160deg,#142a1f,#0c1a12 70%);
     border:1px solid var(--line-2);
   }
   .hero::after{
     content:"";position:absolute;inset:0;pointer-events:none;
-    background-image:radial-gradient(rgba(217,180,90,.14) 1px, transparent 1px);
+    background-image:radial-gradient(rgba(111,202,160,.16) 1px, transparent 1px);
     background-size:26px 26px;opacity:.5;
     -webkit-mask-image:radial-gradient(70% 70% at 80% 0%, #000, transparent);
     mask-image:radial-gradient(70% 70% at 80% 0%, #000, transparent);
@@ -161,21 +245,20 @@
     position:relative;z-index:1;
     font-family:'Cormorant Garamond',Georgia,serif;
     font-size:clamp(26px,4vw,40px);line-height:1.15;font-weight:700;letter-spacing:.3px;
-    background:linear-gradient(92deg,#fdf3cf,#e6c979 45%,#c39a3f);
+    background:linear-gradient(92deg,#e6f9ee,#a8e6c4 45%,#4e9d74);
     -webkit-background-clip:text;background-clip:text;color:transparent;
     max-width:16ch;
   }
   .hero p{
-    position:relative;z-index:1;color:#c9c0af;font-size:14.5px;margin-top:14px;max-width:60ch;
+    position:relative;z-index:1;color:#c3d5ca;font-size:14.5px;margin-top:14px;max-width:60ch;
   }
-  .hero p.bnline{color:#a79d8b;font-size:13.5px;margin-top:6px}
+  .hero p.bnline{color:#8fa89a;font-size:13.5px;margin-top:6px}
   .chips{position:relative;z-index:1;display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
   .chip{
     font-size:11.5px;font-weight:600;letter-spacing:.4px;padding:6px 12px;border-radius:30px;
-    background:rgba(217,180,90,.09);border:1px solid var(--line-2);color:var(--gold-2);
+    background:rgba(111,202,160,.09);border:1px solid var(--line-2);color:var(--gold-2);
   }
 
-  /* ============ TOOLBAR ============ */
   .toolbar{
     display:flex;align-items:center;gap:12px;flex-wrap:wrap;
     margin-bottom:18px;padding:0 2px;
@@ -188,41 +271,39 @@
     padding:7px 13px;border-radius:9px;cursor:pointer;transition:.2s;
     background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);
   }
-  .btn:hover{border-color:var(--line-2);color:var(--gold-2);background:rgba(217,180,90,.08)}
+  .btn:hover{border-color:var(--line-2);color:var(--gold-2);background:rgba(111,202,160,.08)}
 
-  /* ============ SECTION HEAD ============ */
   .sec-head{
     display:flex;align-items:center;gap:14px;
     margin:34px 0 16px;padding:16px 20px;border-radius:14px;
-    background:linear-gradient(90deg,rgba(217,180,90,.11),rgba(217,180,90,.01));
+    background:linear-gradient(90deg,rgba(111,202,160,.11),rgba(111,202,160,.01));
     border:1px solid var(--line);border-left:3px solid var(--gold);
   }
   .sec-head:first-child{margin-top:0}
   .sec-icon{
     width:42px;height:42px;flex:0 0 auto;border-radius:11px;display:grid;place-items:center;font-size:19px;
-    background:linear-gradient(150deg,#332a16,#191510);border:1px solid var(--line-2);
+    background:linear-gradient(150deg,#1a3325,#0f1f17);border:1px solid var(--line-2);
   }
   .sec-head h2{
     font-family:'Cormorant Garamond',Georgia,serif;
-    font-size:20px;font-weight:700;letter-spacing:.4px;color:#f5eeda;line-height:1.25;
+    font-size:20px;font-weight:700;letter-spacing:.4px;color:#e8f7ee;line-height:1.25;
   }
   .sec-head .sub{font-size:12.5px;color:var(--muted);margin-top:1px}
   .sec-count{
     margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:.6px;
-    color:var(--gold);background:rgba(217,180,90,.12);
+    color:var(--gold);background:rgba(111,202,160,.12);
     border:1px solid var(--line-2);padding:4px 11px;border-radius:20px;
   }
 
-  /* ============ Q CARDS ============ */
   .q-card{
-    background:linear-gradient(180deg,var(--panel),rgba(18,16,14,.95));
+    background:linear-gradient(180deg,var(--panel),rgba(10,22,16,.95));
     border:1px solid var(--line);border-radius:14px;margin-bottom:10px;
-    overflow:hidden;transition:border-color .22s,box-shadow .22s,transform .22s;
+    overflow:hidden;transition:border-color .22s,box-shadow .22s;
   }
   .q-card:hover{border-color:var(--line-2)}
   .q-card.open{
     border-color:var(--line-2);
-    box-shadow:0 16px 40px -26px rgba(217,180,90,.75);
+    box-shadow:0 16px 40px -26px rgba(111,202,160,.75);
   }
   .q-head{
     width:100%;display:flex;align-items:flex-start;gap:13px;
@@ -232,12 +313,12 @@
   .q-num{
     flex:0 0 auto;margin-top:2px;
     font-size:11px;font-weight:800;letter-spacing:.4px;
-    color:#171208;background:linear-gradient(150deg,var(--gold-2),var(--gold));
+    color:#0a1a10;background:linear-gradient(150deg,var(--gold-2),var(--gold));
     padding:3px 9px;border-radius:7px;
   }
   .q-title{flex:1;min-width:0}
-  .q-title .bn{display:block;font-size:14.8px;font-weight:600;color:#f6f1e5;line-height:1.5}
-  .q-title .en{display:block;font-size:13.2px;color:var(--muted);margin-top:3px;line-height:1.45}
+  .q-title .bn{display:block;font-size:14.8px;font-weight:600;color:#eaf5ee;line-height:1.5;word-wrap:break-word;overflow-wrap:anywhere}
+  .q-title .en{display:block;font-size:13.2px;color:var(--muted);margin-top:3px;line-height:1.45;word-wrap:break-word;overflow-wrap:anywhere}
   .chev{flex:0 0 auto;color:var(--gold);font-size:11px;margin-top:7px;transition:transform .28s}
   .q-card.open .chev{transform:rotate(180deg)}
 
@@ -251,11 +332,11 @@
   .ans{
     padding:13px 16px;border-radius:11px;
     border-left:3px solid var(--gold);
-    background:rgba(217,180,90,.055);
-    font-size:14px;color:#e3dccd;
+    background:rgba(111,202,160,.055);
+    font-size:14px;color:#d9e8df;word-wrap:break-word;overflow-wrap:anywhere;
   }
   .ans + .ans{margin-top:10px}
-  .ans.en{border-left-color:#6fa8dc;background:rgba(111,168,220,.055)}
+  .ans.en{border-left-color:#5fb8b0;background:rgba(95,184,176,.055)}
   .ans .tag{
     display:block;font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;
     font-weight:800;color:var(--gold);margin-bottom:7px;
@@ -263,127 +344,441 @@
   .ans.en .tag{color:var(--blue)}
   .ans ul{margin:8px 0 2px 20px}
   .ans li{margin:4px 0}
-  .ans b{color:#f8ecc9;font-weight:700}
-  .ans.en b{color:#cfe6fa}
+  .ans b{color:#dbf3e6;font-weight:700}
+  .ans.en b{color:#c9ecea}
 
-  /* language visibility */
   body.lang-bn .en{display:none !important}
   body.lang-en .bn{display:none !important}
 
-  /* ============ EXTRAS ============ */
   .panel{
     margin-top:34px;border-radius:18px;overflow:hidden;
-    background:linear-gradient(180deg,#1b1815,#131110);
+    background:linear-gradient(180deg,#102219,#0a1711);
     border:1px solid var(--line-2);
   }
   .panel-head{
     padding:18px 22px;border-bottom:1px solid var(--line);
-    background:linear-gradient(90deg,rgba(217,180,90,.13),transparent);
+    background:linear-gradient(90deg,rgba(111,202,160,.13),transparent);
   }
   .panel-head h2{
     font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:700;
-    color:#f7efd9;letter-spacing:.4px;
+    color:#e9f8ee;letter-spacing:.4px;
   }
   .panel-head p{font-size:12.5px;color:var(--muted);margin-top:2px}
   .panel-body{padding:18px 22px 24px}
 
-  .tablewrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line)}
-  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+  .tablewrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line);-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:480px}
   thead th{
     text-align:left;padding:11px 16px;font-size:10.5px;letter-spacing:1.6px;
     text-transform:uppercase;color:var(--gold);font-weight:800;
-    background:rgba(217,180,90,.09);border-bottom:1px solid var(--line-2);
+    background:rgba(111,202,160,.09);border-bottom:1px solid var(--line-2);
+    white-space:nowrap;
   }
-  tbody td{padding:10px 16px;border-bottom:1px solid rgba(217,180,90,.08);color:#ddd5c5}
+  tbody td{padding:10px 16px;border-bottom:1px solid rgba(111,202,160,.08);color:#d0e2d6}
   tbody tr:last-child td{border-bottom:0}
-  tbody tr:hover td{background:rgba(217,180,90,.045)}
+  tbody tr:hover td{background:rgba(111,202,160,.045)}
   tbody td:first-child{font-weight:600;color:var(--gold-2);white-space:nowrap}
 
   ol.rules{list-style:none;counter-reset:r;display:grid;gap:9px}
   ol.rules li{
     counter-increment:r;position:relative;padding:11px 16px 11px 52px;
     background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:11px;
-    font-size:13.8px;color:#e0d9ca;transition:.2s;
+    font-size:13.8px;color:#d3e5da;transition:.2s;
   }
-  ol.rules li:hover{border-color:var(--line-2);background:rgba(217,180,90,.06)}
+  ol.rules li:hover{border-color:var(--line-2);background:rgba(111,202,160,.06)}
   ol.rules li::before{
     content:counter(r);position:absolute;left:14px;top:50%;transform:translateY(-50%);
     width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
-    font-size:11px;font-weight:800;color:#171208;
+    font-size:11px;font-weight:800;color:#0a1a10;
     background:linear-gradient(150deg,var(--gold-2),var(--gold));
   }
 
   .empty{
     text-align:center;padding:60px 20px;color:var(--muted);
-    border:1px dashed var(--line-2);border-radius:16px;background:rgba(217,180,90,.03);
+    border:1px dashed var(--line-2);border-radius:16px;background:rgba(111,202,160,.03);
   }
   .empty strong{display:block;font-size:16px;color:var(--gold-2);margin-bottom:6px}
 
+  /* ============ ACADEMY VIEW ============ */
+  .academy-main{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+
+  .ac-hero{
+    margin-top:26px;
+    background:
+      radial-gradient(circle at 82% 24%, rgba(111,202,160,.20), transparent 28%),
+      linear-gradient(120deg,#07120c,#143d2a);
+    border:1px solid var(--line-2);
+    border-radius:22px;
+    color:#e8f3ec;
+    overflow:hidden;
+  }
+  .ac-hero-inner{
+    padding:56px 34px;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center;
+  }
+  .ac-eyebrow{color:var(--gold);font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase}
+  .ac-hero h1{
+    font-family:'Noto Sans Bengali','Inter',sans-serif;
+    font-size:clamp(32px,5vw,54px);line-height:1.25;margin:14px 0;font-weight:800;
+    color:#eaf8ee;
+  }
+  .ac-hero h1 span{
+    background:linear-gradient(92deg,#dff5e8,#8ddcb4 55%,#4e9d74);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .ac-hero p{color:#c3d5ca;max-width:620px;font-size:14.5px;line-height:1.75}
+  .ac-hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:24px}
+  .ac-btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:11px 18px;border-radius:9px;font-weight:800;font-size:13px;
+    border:1px solid transparent;text-decoration:none;transition:.2s;cursor:pointer;
+    font-family:inherit;
+  }
+  .ac-btn-gold{
+    background:linear-gradient(150deg,var(--gold-2),var(--gold));color:#0a1a10;
+    box-shadow:0 8px 22px -10px rgba(111,202,160,.6);
+  }
+  .ac-btn-gold:hover{transform:translateY(-1px)}
+  .ac-btn-outline{border-color:rgba(111,202,160,.5);color:#e8f3ec}
+  .ac-btn-outline:hover{background:rgba(111,202,160,.1);border-color:var(--gold)}
+
+  .ac-hero-art{min-height:290px;position:relative;display:grid;place-items:center}
+  .ac-hero-art:before{
+    content:"";position:absolute;width:270px;height:270px;border-radius:50%;
+    border:1px solid rgba(182,236,205,.35);
+    box-shadow:0 0 0 34px rgba(182,236,205,.04),0 0 0 68px rgba(182,236,205,.03);
+  }
+  .ac-hero-gem{width:min(310px,80%);filter:drop-shadow(0 25px 30px rgba(0,0,0,.55));z-index:1}
+  .ac-floating{
+    position:absolute;z-index:2;background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:10px;
+    font-size:11px;color:#d6f5e4;font-weight:600;
+  }
+  .ac-fl1{top:18px;right:0}
+  .ac-fl2{bottom:20px;left:0}
+
+  .ac-stats{
+    max-width:1080px;margin:-22px auto 0;position:relative;
+    padding:0 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:11px;
+  }
+  .ac-stat{
+    background:linear-gradient(180deg,var(--panel),rgba(10,22,16,.95));
+    border:1px solid var(--line-2);border-radius:13px;
+    padding:15px;text-align:center;
+    box-shadow:0 12px 35px -18px rgba(0,0,0,.8);
+  }
+  .ac-stat b{
+    display:block;font-family:'Playfair Display',Georgia,serif;
+    font-size:30px;color:var(--gold-2);font-weight:700;line-height:1.1;
+  }
+  .ac-stat span{font-size:11px;color:var(--muted);display:block;margin-top:3px}
+
+  .ac-wrap{max-width:1180px;margin:auto;padding:56px 22px 0}
+  .ac-section-head{max-width:760px;margin-bottom:26px}
+  .ac-kicker{color:var(--gold);font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase}
+  .ac-section-head h2{
+    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-size:clamp(26px,4vw,38px);color:#f0faf3;margin:7px 0;font-weight:800;line-height:1.25;
+  }
+  .ac-section-head p{color:var(--muted);margin:0;font-size:14px;line-height:1.7}
+
+  .ac-quicknav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px}
+  .ac-chip{
+    background:rgba(111,202,160,.06);border:1px solid var(--line);
+    padding:7px 12px;border-radius:99px;font-size:11px;font-weight:700;
+    color:#a3c7b2;text-decoration:none;transition:.2s;
+  }
+  .ac-chip:hover{border-color:var(--gold);color:var(--gold-2);background:rgba(111,202,160,.13)}
+
+  .ac-gem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+  .ac-gem-card{
+    background:linear-gradient(180deg,var(--panel),rgba(10,22,16,.95));
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 8px 28px -18px rgba(0,0,0,.7);
+    transition:.22s;
+  }
+  .ac-gem-card:hover{border-color:var(--line-2)}
+  .ac-gem-visual{
+    height:175px;display:grid;place-items:center;position:relative;
+    background:linear-gradient(145deg,#0a1810,#1a3d28);
+  }
+  .ac-gem-visual:after{
+    content:"";position:absolute;width:205px;height:205px;
+    border:1px solid rgba(111,202,160,.15);border-radius:50%;
+  }
+  .ac-gem-visual svg{width:140px;height:140px;z-index:1;filter:drop-shadow(0 12px 14px rgba(0,0,0,.5))}
+  .ac-gem-index{
+    position:absolute;top:10px;left:13px;color:rgba(255,255,255,.65);
+    font-size:10px;font-weight:600;letter-spacing:.4px;
+  }
+  .ac-gem-body{padding:18px}
+  .ac-gem-sub{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.3px}
+  .ac-gem-body h3{
+    margin:2px 0;color:#f0faf3;font-size:22px;font-weight:800;
+    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+  }
+  .ac-gem-body p{font-size:12px;color:var(--muted);margin:8px 0 13px;line-height:1.65}
+  .ac-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+  .ac-spec{
+    background:rgba(111,202,160,.06);padding:8px;border-radius:8px;
+    border:1px solid rgba(111,202,160,.09);
+  }
+  .ac-spec small{display:block;color:var(--muted);font-size:10px}
+  .ac-spec b{font-size:12px;color:var(--gold-2);font-weight:700}
+  .ac-tagrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+  .ac-tag{
+    font-size:10px;padding:3px 8px;border-radius:99px;
+    background:rgba(111,202,160,.13);color:var(--gold-2);font-weight:700;
+    border:1px solid rgba(111,202,160,.15);
+  }
+  .ac-details{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+  .ac-details summary{cursor:pointer;color:var(--gold);font-weight:800;font-size:12px;list-style:none}
+  .ac-details summary::-webkit-details-marker{display:none}
+  .ac-details summary::before{content:"▸ ";display:inline-block;transition:.2s}
+  .ac-details[open] summary::before{transform:rotate(90deg)}
+  .ac-details p{margin:8px 0;color:#c8d8ce;font-size:12.5px;line-height:1.7}
+  .ac-details p b{color:var(--gold-2)}
+
+  .ac-info-panel{
+    background:linear-gradient(180deg,#0f1f17,#0a1711);
+    border:1px solid var(--line-2);border-radius:18px;padding:27px;
+    display:grid;grid-template-columns:1fr 1fr;gap:25px;
+    margin-top:20px;
+  }
+  .ac-info-panel h3{
+    font-size:20px;margin:0 0 9px;color:var(--gold-2);
+    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-weight:800;
+  }
+  .ac-info-panel p,.ac-info-panel li{color:#c3d5ca;font-size:12.5px;line-height:1.7}
+  .ac-info-panel ul{padding-left:20px}
+  .ac-note{
+    font-size:11.5px;color:#9fb5a6;border-left:3px solid var(--gold);
+    padding-left:11px;margin-top:15px;line-height:1.7;
+  }
+
+  .ac-calculator{
+    display:grid;grid-template-columns:1fr 1fr;gap:18px;
+    background:linear-gradient(180deg,var(--panel),rgba(10,22,16,.95));
+    border:1px solid var(--line-2);border-radius:17px;padding:22px;
+    box-shadow:0 12px 35px -22px rgba(0,0,0,.9);
+  }
+  .ac-calcbox{
+    background:rgba(111,202,160,.05);border:1px solid rgba(111,202,160,.12);
+    border-radius:12px;padding:17px;
+  }
+  .ac-calcbox label{display:block;font-size:12px;font-weight:800;color:#a3c7b2;margin-bottom:7px}
+  .ac-calcbox input{
+    width:100%;padding:11px;border:1px solid rgba(111,202,160,.22);
+    border-radius:9px;background:rgba(0,0,0,.25);color:var(--gold-2);
+    font-size:18px;font-family:inherit;outline:none;transition:.2s;
+  }
+  .ac-calcbox input:focus{border-color:var(--gold);background:rgba(111,202,160,.07)}
+  .ac-result{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:var(--gold-2);margin-top:9px;font-weight:700}
+  .ac-small{font-size:10.5px;color:var(--muted);margin-top:4px}
+
+  .ac-training-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .ac-session{
+    background:linear-gradient(180deg,var(--panel),rgba(10,22,16,.95));
+    border:1px solid var(--line);border-radius:14px;padding:17px;transition:.22s;
+  }
+  .ac-session:hover{border-color:var(--line-2)}
+  .ac-num{font-family:'Playfair Display',Georgia,serif;font-size:26px;color:var(--gold);font-weight:700;line-height:1}
+  .ac-session h3{
+    font-size:18px;margin:4px 0;color:#f0faf3;
+    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-weight:800;
+  }
+  .ac-session p{font-size:12px;color:var(--muted);line-height:1.65}
+  .ac-session p b{color:var(--gold-2)}
+  .ac-session details{border-top:1px solid var(--line);padding-top:9px;margin-top:10px}
+  .ac-session summary{font-size:12px;font-weight:800;color:var(--gold);cursor:pointer;list-style:none}
+  .ac-session summary::-webkit-details-marker{display:none}
+  .ac-session summary::before{content:"▸ ";display:inline-block;transition:.2s}
+  .ac-session[open] summary::before{transform:rotate(90deg)}
+  .ac-session ul{padding-left:18px;margin-top:6px}
+  .ac-session li{font-size:11.5px;color:#b8cabe;margin:7px 0;line-height:1.65}
+  .ac-session li b{color:var(--gold-2)}
+
+  .ac-roleplay,.ac-exam{
+    background:rgba(111,202,160,.045);
+    border:1px solid var(--line-2);
+    border-radius:17px;padding:24px;margin-top:24px;
+  }
+  .ac-roleplay h3,.ac-exam h3{
+    font-size:20px;color:var(--gold-2);margin:0 0 12px;
+    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-weight:800;
+  }
+  .ac-roleplay-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+  .ac-scenario{
+    background:rgba(0,0,0,.25);border:1px solid var(--line);
+    border-radius:10px;padding:13px;font-size:12.5px;
+    color:#c8d8ce;line-height:1.7;
+  }
+  .ac-scenario b{color:var(--gold-2);display:block;margin-bottom:4px}
+
+  .ac-exam-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .ac-exam-item{
+    background:rgba(0,0,0,.25);border:1px solid var(--line);
+    padding:13px;border-radius:9px;font-size:11.5px;
+    color:#c8d8ce;line-height:1.65;
+  }
+  .ac-exam-item b{color:var(--gold-2)}
+
+  .backtop{
+    position:fixed;right:16px;bottom:16px;
+    background:linear-gradient(150deg,var(--gold-2),var(--gold));
+    color:#0a1a10;border:0;border-radius:50%;
+    width:44px;height:44px;font-size:20px;cursor:pointer;
+    box-shadow:0 8px 20px -6px rgba(111,202,160,.5);
+    z-index:50;display:grid;place-items:center;
+    opacity:0;pointer-events:none;transition:.25s;
+    font-weight:800;
+  }
+  .backtop.show{opacity:1;pointer-events:auto}
+  .backtop:hover{transform:translateY(-2px)}
+
   /* ============ FOOTER ============ */
   footer.site-footer{
-    border-top:1px solid var(--line-2);
-    background:
-      radial-gradient(700px 300px at 50% 0%, rgba(217,180,90,.10), transparent 70%),
-      linear-gradient(180deg,#121110,#0a0908);
-    padding:44px 20px 34px;margin-top:20px;
+    border-top:1px solid var(--line);
+    background:linear-gradient(180deg,#0c1a12,#07120c);
+    padding:34px 20px 28px;margin-top:40px;
   }
-  .footer-inner{max-width:900px;margin:0 auto;text-align:center}
-  .f-brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px}
-  .f-brand .mark{
-    width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:18px;
-    background:linear-gradient(150deg,#3d3118,#1a1610);border:1px solid var(--line-2);
-  }
-  .f-brand strong{
-    display:block;font-family:'Cormorant Garamond',Georgia,serif;
-    font-size:20px;letter-spacing:.8px;
-    background:linear-gradient(92deg,#f7e9b8,#d9b45a 60%,#a9822f);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
-  .f-brand span{display:block;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:600}
-  .f-note{font-size:13px;color:var(--muted);max-width:60ch;margin:0 auto 24px}
-
-  .f-credit{
-    display:inline-block;padding:16px 34px;border-radius:16px;margin-bottom:20px;
-    background:linear-gradient(160deg,rgba(217,180,90,.13),rgba(217,180,90,.03));
-    border:1px solid var(--line-2);
-  }
-  .f-credit span{
-    display:block;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;
-    color:var(--muted);font-weight:700;margin-bottom:4px;
-  }
-  .f-credit strong{
-    display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;
-    letter-spacing:1px;font-weight:700;
-    background:linear-gradient(92deg,#fdf3cf,#e6c979 50%,#c39a3f);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
-  .f-copy{font-size:11.5px;color:#6f685c;letter-spacing:.2px}
+  .footer-inner{max-width:1100px;margin:0 auto;text-align:center}
+  .f-name{font-size:14px;color:var(--text);margin-bottom:6px;letter-spacing:.3px}
+  .f-name strong{color:var(--gold);font-weight:700;letter-spacing:.6px}
+  .f-copy{font-size:11.5px;color:var(--muted);letter-spacing:.2px;line-height:1.55}
 
   /* ============ RESPONSIVE ============ */
+  @media (max-width:1100px){
+    .ac-gem-grid,.ac-training-grid{grid-template-columns:repeat(2,1fr)}
+    .ac-exam-grid{grid-template-columns:repeat(2,1fr)}
+    .ac-info-panel{grid-template-columns:1fr}
+    .search input, .search input:focus{width:180px}
+  }
   @media (max-width:980px){
-    .layout{grid-template-columns:1fr;gap:18px;padding-top:18px}
+    .layout{grid-template-columns:1fr;gap:18px;padding-top:18px;padding-left:16px;padding-right:16px}
     aside{
       position:static;max-height:none;display:flex;gap:7px;overflow-x:auto;
       padding:12px;border-radius:14px;
+      -webkit-overflow-scrolling:touch;scrollbar-width:none;
     }
+    aside::-webkit-scrollbar{display:none}
     .nav-label,.nav-div{display:none}
-    .nav-btn{width:auto;flex:0 0 auto;white-space:nowrap;margin-bottom:0;font-size:12.5px;padding:8px 12px}
+    .nav-btn{
+      width:auto;flex:0 0 auto;white-space:nowrap;margin-bottom:0;
+      font-size:12.5px;padding:8px 12px;
+    }
     .nav-btn .sub{display:none}
     .hero{padding:24px 20px}
-    .search input, .search input:focus{width:180px}
+    .search input, .search input:focus{width:160px}
+
+    .ac-hero-inner{grid-template-columns:1fr;padding:44px 22px;gap:12px}
+    .ac-hero-art{min-height:230px}
+    .ac-hero-art:before{width:210px;height:210px}
+    .ac-hero-gem{width:230px}
+    .ac-fl1{top:0;right:0}
+    .ac-fl2{left:0;bottom:0}
+    .ac-stats{grid-template-columns:repeat(2,1fr);padding:0 12px;gap:8px}
+    .ac-wrap{padding:44px 16px 0}
   }
-  @media (max-width:600px){
-    .logo h1{font-size:19px}
-    .tools{width:100%;margin-left:0}
-    .search{flex:1}
-    .search input, .search input:focus{width:100%}
-    .q-head{padding:13px 14px;gap:10px}
-    .q-body{padding:0 14px 14px}
-    .sec-head{padding:13px 14px;gap:11px}
-    .sec-head h2{font-size:17px}
+  @media (max-width:820px){
+    .search{display:none}
+  }
+  @media (max-width:700px){
+    .hbar{padding:10px 14px;gap:10px}
+    .logo h1{font-size:20px}
+    .logo small{font-size:9px;letter-spacing:1.8px}
+    .main-nav{order:3;width:100%;margin-left:0;flex:1 1 100%;flex-direction:column;gap:8px}
+    .tabs{width:100%;justify-content:center}
+    .tabs button{flex:1;text-align:center;font-size:12px;padding:8px 6px}
+    .header-links{width:100%;justify-content:center}
+    .header-links a{flex:1;justify-content:center;font-size:11.5px;padding:8px 10px}
+    .tools{order:4;width:100%;margin-left:0;gap:8px;flex:1 1 100%}
+    .langsw{flex:1 1 auto;justify-content:center}
+    .langsw button{flex:1;font-size:11px;padding:7px 6px;text-align:center}
+
+    .hero-links{gap:8px;margin-top:18px}
+    .hero-link{flex:1 1 auto;justify-content:center;padding:9px 12px;font-size:12px;min-width:0}
+    .hero-link .hl-ico{width:22px;height:22px;font-size:12px}
+
+    .layout{padding:14px 12px 50px;gap:14px}
+    .hero{padding:20px 16px;border-radius:16px;margin-bottom:18px}
+    .hero p{font-size:13.5px}
+    .chip{font-size:10.5px;padding:5px 10px}
+    .toolbar{gap:8px;margin-bottom:14px}
+    .count{font-size:12px;flex:1 1 100%}
+    .btn{font-size:11.5px;padding:6px 11px;flex:1}
+    .sec-head{padding:13px 14px;gap:11px;margin:26px 0 12px}
+    .sec-head h2{font-size:16.5px}
+    .sec-head .sub{font-size:11.5px}
+    .sec-icon{width:36px;height:36px;font-size:16px}
     .sec-count{display:none}
+    .q-head{padding:13px 14px;gap:10px}
+    .q-title .bn{font-size:14px}
+    .q-title .en{font-size:12.5px}
+    .q-body{padding:0 14px 14px}
     .ans{font-size:13.4px;padding:12px 13px}
-    .panel-body{padding:15px 15px 20px}
+    .ans ul{margin-left:16px}
+    .panel-head{padding:15px 16px}
+    .panel-head h2{font-size:19px}
+    .panel-body{padding:15px 14px 20px}
+    ol.rules li{font-size:13px;padding:10px 12px 10px 46px}
+    ol.rules li::before{left:11px;width:22px;height:22px;font-size:10px}
+    table{font-size:12.5px;min-width:420px}
+    thead th, tbody td{padding:9px 12px}
+
+    .academy-main{padding:0 12px 40px}
+    .ac-hero-inner{padding:34px 18px;gap:6px}
+    .ac-hero h1{font-size:34px;line-height:1.3}
+    .ac-hero p{font-size:13px}
+    .ac-hero-actions .ac-btn{flex:1;font-size:12px;padding:10px 12px}
+    .ac-hero-art{min-height:200px}
+    .ac-hero-art:before{width:180px;height:180px}
+    .ac-hero-gem{width:200px}
+    .ac-stats{padding:0 8px;gap:6px;margin-top:-16px}
+    .ac-stat{padding:11px 6px}
+    .ac-stat b{font-size:24px}
+    .ac-stat span{font-size:9.5px}
+    .ac-wrap{padding:36px 14px 0}
+    .ac-section-head h2{font-size:26px}
+    .ac-section-head p{font-size:13px}
+
+    .ac-gem-grid,.ac-training-grid,.ac-exam-grid,.ac-roleplay-grid{grid-template-columns:1fr}
+    .ac-calculator{grid-template-columns:1fr;padding:14px}
+    .ac-gem-visual{height:165px}
+    .ac-gem-body h3{font-size:20px}
+    .ac-info-panel{padding:20px;gap:16px}
+    .ac-info-panel h3{font-size:18px}
+    .ac-roleplay,.ac-exam{padding:18px}
+
+    footer.site-footer{padding:26px 16px;margin-top:30px}
+    .f-name{font-size:13px}
+    .f-copy{font-size:11px}
+  }
+  @media (max-width:400px){
+    .logo .mark{width:36px;height:36px;font-size:17px}
+    .logo h1{font-size:18px}
+    .logo small{font-size:8.5px}
+    .hero h2{font-size:24px}
+    .q-num{font-size:10px;padding:2px 7px}
+    .q-title .bn{font-size:13.2px}
+    .q-title .en{font-size:12px}
+    .ans{font-size:13px}
+    .sec-head h2{font-size:15.5px}
+    .ac-hero h1{font-size:28px}
+    .ac-hero h1 span{display:block}
+  }
+
+  @media print{
+    header.site,.tabs,.tools,.backtop,.ac-hero-actions,.ac-quicknav,aside,.header-links,.hero-links{display:none!important}
+    body{background:#fff;color:#111}
+    .q-card,.ac-gem-card,.ac-session{break-inside:avoid;background:#fff;color:#111;border-color:#ccc}
+    .q-title .bn,.q-title .en,.ans{color:#111}
+    .sec-head,.panel,.ac-info-panel,.ac-calculator,.ac-session,.ac-gem-card{
+      background:#fff!important;color:#111!important;border-color:#ccc!important;
+    }
   }
 </style>
 </head>
@@ -392,7 +787,7 @@
 <!-- ================= HEADER ================= -->
 <header class="site">
   <div class="hbar">
-    <a class="logo" href="#top">
+    <a class="logo" href="#" onclick="switchTab('qa');return false;">
       <div class="mark">💎</div>
       <div>
         <h1>JewelGyan</h1>
@@ -400,7 +795,25 @@
       </div>
     </a>
 
-    <div class="tools">
+    <!-- Main Navigation Group -->
+    <div class="main-nav">
+      <div class="tabs" id="tabs">
+        <button data-tab="qa" class="on" type="button">📚 Q&amp;A</button>
+        <button data-tab="academy" type="button">💎 রত্নশিক্ষা</button>
+      </div>
+
+      <!-- External Links as Categories -->
+      <div class="header-links">
+        <a href="https://english-spur.github.io/sovan-portfolio/" target="_blank" rel="noopener noreferrer" title="Sovan Portfolio">
+          <span>👤</span> Portfolio
+        </a>
+        <a href="https://english-spur.github.io/English-Spur/" target="_blank" rel="noopener noreferrer" title="English Spur">
+          <span>🌐</span> English Spur
+        </a>
+      </div>
+    </div>
+
+    <div class="tools" id="qaTools">
       <div class="search">
         <span class="mag">🔍</span>
         <input id="search" type="search" placeholder="Search questions, karat, HUID, 4Cs…" autocomplete="off">
@@ -414,139 +827,377 @@
   </div>
 </header>
 
-<div class="layout" id="top">
+<!-- ==========================================================
+     VIEW 1 : Q & A HUB
+     ========================================================== -->
+<div id="qaView" class="app-view active">
+  <div class="layout" id="top">
 
-  <!-- ================= SIDEBAR ================= -->
-  <aside>
-    <nav id="nav">
-      <div class="nav-label">Sections</div>
-      <button class="nav-btn active" data-sec="all">
-        <span class="ico">📚</span>
-        <span class="lbl">All Questions<span class="sub">সব প্রশ্ন</span></span>
-        <span class="cnt">80</span>
-      </button>
-      <!-- section buttons injected here -->
-      <div class="nav-div"></div>
-      <div class="nav-label">Quick Reference</div>
-      <button class="nav-btn" data-jump="revision">
-        <span class="ico">📋</span>
-        <span class="lbl">Final Revision Table<span class="sub">সারসংক্ষেপ</span></span>
-      </button>
-      <button class="nav-btn" data-jump="golden">
-        <span class="ico">⭐</span>
-        <span class="lbl">Golden Rules<span class="sub">সোনালি নিয়ম</span></span>
-      </button>
-    </nav>
-  </aside>
+    <aside>
+      <nav id="nav">
+        <div class="nav-label">Sections</div>
+        <button class="nav-btn active" data-sec="all">
+          <span class="ico">📚</span>
+          <span class="lbl">All Questions<span class="sub">সব প্রশ্ন</span></span>
+          <span class="cnt">80</span>
+        </button>
+        <div class="nav-div"></div>
+        <div class="nav-label">Quick Reference</div>
+        <button class="nav-btn" data-jump="revision">
+          <span class="ico">📋</span>
+          <span class="lbl">Final Revision Table<span class="sub">সারসংক্ষেপ</span></span>
+        </button>
+        <button class="nav-btn" data-jump="golden">
+          <span class="ico">⭐</span>
+          <span class="lbl">Golden Rules<span class="sub">সোনালি নিয়ম</span></span>
+        </button>
+      </nav>
+    </aside>
 
-  <!-- ================= MAIN ================= -->
-  <main>
-    <section class="hero">
-      <div class="eyebrow">Professional Knowledge &amp; Interview Preparation</div>
-      <h2>Gem &amp; Jewellery Store Executive</h2>
-      <p>A complete, interactive question-and-answer handbook for gold, diamond, gemstone and jewellery retail professionals.</p>
-      <p class="bnline">প্রফেশনাল জ্ঞান ও চাকরির ইন্টারভিউ প্রস্তুতি — বাংলা ও ইংরেজি উভয় ভাষায়।</p>
-      <div class="chips">
-        <span class="chip">10 Sections</span>
-        <span class="chip">80 Q &amp; A</span>
-        <span class="chip">Beginner → Experienced</span>
-        <span class="chip">Bengali + English</span>
-        <span class="chip">Gemstone · Gold · Diamond · Retail</span>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Professional Knowledge &amp; Interview Preparation</div>
+        <h2>Gem &amp; Jewellery Store Executive</h2>
+        <p>A complete, interactive question-and-answer handbook for gold, diamond, gemstone and jewellery retail professionals.</p>
+        <p class="bnline">প্রফেশনাল জ্ঞান ও চাকরির ইন্টারভিউ প্রস্তুতি — বাংলা ও ইংরেজি উভয় ভাষায়।</p>
+        <div class="chips">
+          <span class="chip">10 Sections</span>
+          <span class="chip">80 Q &amp; A</span>
+          <span class="chip">Beginner → Experienced</span>
+          <span class="chip">Bengali + English</span>
+          <span class="chip">Gemstone · Gold · Diamond · Retail</span>
+        </div>
+
+        <!-- HERO LINKS (Updated to Orange Theme) -->
+        <div class="hero-links">
+          <a class="hero-link" href="https://english-spur.github.io/sovan-portfolio/" target="_blank" rel="noopener noreferrer">
+            <span class="hl-ico">👤</span>
+            <span>Sovan Portfolio</span>
+            <span class="hl-arrow">↗</span>
+          </a>
+          <a class="hero-link" href="https://english-spur.github.io/English-Spur/" target="_blank" rel="noopener noreferrer">
+            <span class="hl-ico">🌐</span>
+            <span>English Spur</span>
+            <span class="hl-arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="toolbar">
+        <div class="count" id="count"></div>
+        <div class="spacer"></div>
+        <button class="btn" id="expandAll">⤢ Expand All</button>
+        <button class="btn" id="collapseAll">⤡ Collapse All</button>
       </div>
-    </section>
 
-    <div class="toolbar">
-      <div class="count" id="count"></div>
-      <div class="spacer"></div>
-      <button class="btn" id="expandAll">⤢ Expand All</button>
-      <button class="btn" id="collapseAll">⤡ Collapse All</button>
-    </div>
+      <div id="content"></div>
 
-    <div id="content"></div>
+      <section class="panel" id="revision">
+        <div class="panel-head">
+          <h2>Final Professional Revision</h2>
+          <p>একজন Executive-এর অবশ্যই মনে রাখার বিষয়</p>
+        </div>
+        <div class="panel-body">
+          <div class="tablewrap">
+            <table>
+              <thead>
+                <tr><th>Topic</th><th>Must-Know Information</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Gold</td><td>24K, 22K, 18K, 14K</td></tr>
+                <tr><td>Purity</td><td>999, 916, 750, 585</td></tr>
+                <tr><td>Hallmark</td><td>BIS, HUID</td></tr>
+                <tr><td>Diamond</td><td>4Cs, Grading Report</td></tr>
+                <tr><td>Gemstones</td><td>Ruby, Sapphire, Emerald, Topaz, Amethyst</td></tr>
+                <tr><td>Gem Treatments</td><td>Heating, Oiling, Dyeing</td></tr>
+                <tr><td>Jewellery Making</td><td>Casting, CAD, Stone Setting, Polishing</td></tr>
+                <tr><td>Pricing</td><td>Gold Rate, Net Weight, Making Charges, Taxes</td></tr>
+                <tr><td>Sales</td><td>Upselling, Cross-Selling, CRM</td></tr>
+                <tr><td>Operations</td><td>POS, SKU, Inventory</td></tr>
+                <tr><td>Customer Service</td><td>Complaint Handling, Exchange, Buyback</td></tr>
+                <tr><td>Professional Ethics</td><td>Honesty, Transparency, Confidentiality</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
 
-    <!-- ============ FINAL REVISION ============ -->
-    <section class="panel" id="revision">
-      <div class="panel-head">
-        <h2>Final Professional Revision</h2>
-        <p>একজন Executive-এর অবশ্যই মনে রাখার বিষয়</p>
-      </div>
-      <div class="panel-body">
-        <div class="tablewrap">
-          <table>
-            <thead>
-              <tr><th>Topic</th><th>Must-Know Information</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Gold</td><td>24K, 22K, 18K, 14K</td></tr>
-              <tr><td>Purity</td><td>999, 916, 750, 585</td></tr>
-              <tr><td>Hallmark</td><td>BIS, HUID</td></tr>
-              <tr><td>Diamond</td><td>4Cs, Grading Report</td></tr>
-              <tr><td>Gemstones</td><td>Ruby, Sapphire, Emerald, Topaz, Amethyst</td></tr>
-              <tr><td>Gem Treatments</td><td>Heating, Oiling, Dyeing</td></tr>
-              <tr><td>Jewellery Making</td><td>Casting, CAD, Stone Setting, Polishing</td></tr>
-              <tr><td>Pricing</td><td>Gold Rate, Net Weight, Making Charges, Taxes</td></tr>
-              <tr><td>Sales</td><td>Upselling, Cross-Selling, CRM</td></tr>
-              <tr><td>Operations</td><td>POS, SKU, Inventory</td></tr>
-              <tr><td>Customer Service</td><td>Complaint Handling, Exchange, Buyback</td></tr>
-              <tr><td>Professional Ethics</td><td>Honesty, Transparency, Confidentiality</td></tr>
-            </tbody>
-          </table>
+      <section class="panel" id="golden">
+        <div class="panel-head">
+          <h2>A Professional Executive's Golden Rules</h2>
+          <p>Ten non-negotiable principles for every jewellery professional</p>
+        </div>
+        <div class="panel-body">
+          <ol class="rules">
+            <li>Never provide incorrect product information.</li>
+            <li>Never confuse Karat with Carat.</li>
+            <li>Never hide gemstone treatments.</li>
+            <li>Always explain pricing transparently.</li>
+            <li>Always follow the store's security procedures.</li>
+            <li>Never promise an unauthorised discount.</li>
+            <li>Always verify product details before billing.</li>
+            <li>Treat every customer with respect.</li>
+            <li>Never make unsupported claims about gemstones or their healing properties.</li>
+            <li>Keep learning about new jewellery designs, gemstones and industry standards.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- ==========================================================
+     VIEW 2 : রত্নশিক্ষা / GEMSTONE ACADEMY
+     ========================================================== -->
+<div id="academyView" class="app-view">
+  <main class="academy-main">
+
+    <section class="ac-hero">
+      <div class="ac-hero-inner">
+        <div>
+          <div class="ac-eyebrow">পেশাদার প্রশিক্ষণ · মডিউল ০১</div>
+          <h1>রত্নপাথরের <span>জ্ঞান ও বিজ্ঞান</span></h1>
+          <p>জুয়েলারি রিটেল কর্মীদের জন্য একটি পূর্ণাঙ্গ প্রশিক্ষণ সহায়িকা। এখানে রয়েছে প্রচলিত নবরত্নের পরিচয়, রত্নের বৈজ্ঞানিক বৈশিষ্ট্য, ওজনের একক, ক্রেতার সঙ্গে কথোপকথন এবং হাতে-কলমে অনুশীলন।</p>
+          <div class="ac-hero-actions">
+            <a class="ac-btn ac-btn-gold" href="#gemstones" onclick="smoothAc(event)">৯টি রত্ন সম্পর্কে জানুন ↓</a>
+            <a class="ac-btn ac-btn-outline" href="#training" onclick="smoothAc(event)">প্রশিক্ষণ শুরু করুন</a>
+          </div>
+
+          <!-- HERO LINKS -->
+          <div class="hero-links">
+            <a class="hero-link" href="https://english-spur.github.io/sovan-portfolio/" target="_blank" rel="noopener noreferrer">
+              <span class="hl-ico">👤</span>
+              <span>Sovan Portfolio</span>
+              <span class="hl-arrow">↗</span>
+            </a>
+            <a class="hero-link" href="https://english-spur.github.io/English-Spur/" target="_blank" rel="noopener noreferrer">
+              <span class="hl-ico">🌐</span>
+              <span>English Spur</span>
+              <span class="hl-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="ac-hero-art">
+          <div class="ac-floating ac-fl1">নয়টি নবরত্ন</div>
+          <div class="ac-floating ac-fl2">জ্ঞান · আত্মবিশ্বাস · বিশ্বাস</div>
+          <svg class="ac-hero-gem" viewBox="0 0 320 320" aria-label="বহুমুখী রত্নের অলংকরণ">
+            <defs>
+              <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#dff5e8"/>
+                <stop offset=".35" stop-color="#6fcaa0"/>
+                <stop offset=".7" stop-color="#2d6a4f"/>
+                <stop offset="1" stop-color="#a8e6c4"/>
+              </linearGradient>
+            </defs>
+            <path d="M160 18 272 75 296 164 160 300 24 164 48 75Z" fill="url(#hg)" stroke="#d6f5e4" stroke-width="3"/>
+            <path d="M48 75 160 18 160 145 24 164Z" fill="#e8f8ee" opacity=".5"/>
+            <path d="M272 75 160 18 160 145 296 164Z" fill="#1d4d33" opacity=".55"/>
+            <path d="M24 164 160 145 160 300Z" fill="#2d6a4f" opacity=".5"/>
+            <path d="M296 164 160 145 160 300Z" fill="#d6f5e4" opacity=".35"/>
+            <path d="M48 75 160 145 272 75M24 164 160 145 296 164M160 18 160 145 160 300" fill="none" stroke="#e8f8ee" stroke-width="2" opacity=".75"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- ============ GOLDEN RULES ============ -->
-    <section class="panel" id="golden">
-      <div class="panel-head">
-        <h2>A Professional Executive's Golden Rules</h2>
-        <p>Ten non-negotiable principles for every jewellery professional</p>
+    <div class="ac-stats">
+      <div class="ac-stat"><b>০৯</b><span>নবরত্ন</span></div>
+      <div class="ac-stat"><b>০৪</b><span>মূল বৈশিষ্ট্য</span></div>
+      <div class="ac-stat"><b>০২</b><span>ওজনের একক</span></div>
+      <div class="ac-stat"><b>০৯</b><span>প্রশিক্ষণ পর্ব</span></div>
+    </div>
+
+    <section class="ac-wrap" id="gemstones">
+      <div class="ac-section-head">
+        <div class="ac-kicker">রত্ন পরিচিতি</div>
+        <h2>নয়টি নবরত্ন সম্পর্কে জানুন</h2>
+        <p>প্রতিটি রত্নের পরিচয়, সাধারণ রং, প্রতিসরণাঙ্ক (RI), আপেক্ষিক গুরুত্ব (SG), মোহস কঠোরতা, প্রচলিত গ্রহ-সম্পর্ক এবং ক্রেতাকে বোঝানোর গুরুত্বপূর্ণ বিষয় জানুন।</p>
       </div>
-      <div class="panel-body">
-        <ol class="rules">
-          <li>Never provide incorrect product information.</li>
-          <li>Never confuse Karat with Carat.</li>
-          <li>Never hide gemstone treatments.</li>
-          <li>Always explain pricing transparently.</li>
-          <li>Always follow the store's security procedures.</li>
-          <li>Never promise an unauthorised discount.</li>
-          <li>Always verify product details before billing.</li>
-          <li>Treat every customer with respect.</li>
-          <li>Never make unsupported claims about gemstones or their healing properties.</li>
-          <li>Keep learning about new jewellery designs, gemstones and industry standards.</li>
-        </ol>
+      <div class="ac-quicknav">
+        <a class="ac-chip" href="#ruby" onclick="smoothAc(event)">০১ মানিক</a>
+        <a class="ac-chip" href="#pearl" onclick="smoothAc(event)">০২ মুক্তা</a>
+        <a class="ac-chip" href="#coral" onclick="smoothAc(event)">০৩ প্রবাল</a>
+        <a class="ac-chip" href="#emerald" onclick="smoothAc(event)">০৪ পান্না</a>
+        <a class="ac-chip" href="#yellow-sapphire" onclick="smoothAc(event)">০৫ পীত পুখরাজ</a>
+        <a class="ac-chip" href="#diamond" onclick="smoothAc(event)">০৬ হীরা</a>
+        <a class="ac-chip" href="#blue-sapphire" onclick="smoothAc(event)">০৭ নীলা</a>
+        <a class="ac-chip" href="#hessonite" onclick="smoothAc(event)">০৮ গোমেদ</a>
+        <a class="ac-chip" href="#catseye" onclick="smoothAc(event)">০৯ ক্যাটস আই</a>
+      </div>
+      <div class="ac-gem-grid" id="gemGrid"></div>
+    </section>
+
+    <section class="ac-wrap" id="science">
+      <div class="ac-section-head">
+        <div class="ac-kicker">রত্নের বিজ্ঞান</div>
+        <h2>এক নজরে রত্নের বৈজ্ঞানিক বৈশিষ্ট্য</h2>
+        <p>নিচের মানগুলি প্রাকৃতিক রত্নের সাধারণ রেফারেন্স রেঞ্জ। রাসায়নিক গঠন, উৎস, চিকিৎসা বা ট্রিটমেন্ট এবং পরীক্ষার পদ্ধতি অনুযায়ী মানের কিছু পার্থক্য হতে পারে।</p>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th>রত্নের নাম</th><th>RI (প্রায়)</th><th>SG (প্রায়)</th><th>মোহস কঠোরতা</th><th>খনিজ / উপাদান</th></tr>
+          </thead>
+          <tbody id="scienceRows"></tbody>
+        </table>
+      </div>
+      <div class="ac-info-panel">
+        <div>
+          <h3>এই শব্দগুলির অর্থ কী?</h3>
+          <ul>
+            <li><b>RI – প্রতিসরণাঙ্ক:</b> রত্নের ভিতরে আলো প্রবেশ করলে কতটা বেঁকে যায়, তার পরিমাপ।</li>
+            <li><b>SG – আপেক্ষিক গুরুত্ব:</b> সমান আয়তনের জলের তুলনায় পদার্থটির ঘনত্বের অনুপাত।</li>
+            <li><b>Mohs Hardness – মোহস কঠোরতা:</b> আঁচড় প্রতিরোধের আপেক্ষিক ক্ষমতা। এটি ভেঙে যাওয়ার প্রতিরোধ ক্ষমতা বা Toughness নয়।</li>
+            <li><b>হীরার 4Cs:</b> Cut (কাট), Colour (রং), Clarity (স্বচ্ছতা) এবং Carat Weight (ওজন)।</li>
+          </ul>
+        </div>
+        <div>
+          <h3>বিক্রয়কর্মীর জন্য জরুরি কথা</h3>
+          <p>শুধু রং বা চোখে দেখে কোনো রত্নের পরিচয় নিশ্চিত করবেন না। সঠিক শনাক্তকরণের জন্য প্রশিক্ষিত রত্নবিশারদ, উপযুক্ত যন্ত্র এবং নির্ভরযোগ্য পরীক্ষাগারের রিপোর্ট প্রয়োজন হতে পারে।</p>
+          <p class="ac-note">রত্নে কোনো ট্রিটমেন্ট, কৃত্রিম উৎপাদন, বিকল্প পাথর বা জোড়া লাগানো উপাদান থাকলে প্রযোজ্য আইন, দোকানের নীতি ও রিপোর্ট অনুযায়ী সঠিক তথ্য জানাতে হবে।</p>
+        </div>
       </div>
     </section>
+
+    <section class="ac-wrap" id="weight">
+      <div class="ac-section-head">
+        <div class="ac-kicker">ওজন রূপান্তর</div>
+        <h2>ক্যারেট ও রতি: পার্থক্য বুঝুন</h2>
+        <p>Carat বা ক্যারেট হলো রত্নের ওজন মাপার আন্তর্জাতিকভাবে স্বীকৃত একক। Ratti বা রতি হলো ভারতীয় ঐতিহ্যবাহী ওজনের একক, যার ব্যবহারিক মান অঞ্চল ও ব্যবসায়িক রীতি অনুযায়ী ভিন্ন হতে পারে।</p>
+      </div>
+      <div class="ac-calculator">
+        <div class="ac-calcbox">
+          <label for="caratInput">ক্যারেট (ct) লিখুন</label>
+          <input id="caratInput" type="number" min="0" step="0.01" value="1">
+          <div class="ac-result" id="rattiResult">প্রায় ১.১০ রতি</div>
+          <div class="ac-small">সাধারণ দোকানি হিসাব: ১ রতি ≈ ০.৯১ ক্যারেট।</div>
+        </div>
+        <div class="ac-calcbox">
+          <label for="rattiInput">রতি লিখুন</label>
+          <input id="rattiInput" type="number" min="0" step="0.01" value="1">
+          <div class="ac-result" id="caratResult">প্রায় ০.৯১ ক্যারেট</div>
+          <div class="ac-small">একই আনুমানিক রূপান্তর ব্যবহার করা হয়েছে।</div>
+        </div>
+      </div>
+      <div class="tablewrap" style="margin-top:17px">
+        <table>
+          <thead>
+            <tr><th>একক</th><th>সমতুল্য ওজন</th><th>গুরুত্বপূর্ণ তথ্য</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>১ ক্যারেট (ct)</td><td>২০০ মিলিগ্রাম</td><td>রত্নের ওজনের আন্তর্জাতিক মান।</td></tr>
+            <tr><td>১ রতি (প্রচলিত আনুমানিক হিসাব)</td><td>প্রায় ০.৯১ ক্যারেট / ১৮২ মিলিগ্রাম</td><td>ঐতিহ্যবাহী মান; স্থানীয় রীতিতে পার্থক্য থাকতে পারে।</td></tr>
+            <tr><td>১ ক্যারেট (আনুমানিক)</td><td>প্রায় ১.১০ রতি</td><td>দোকানের অনুমোদিত হিসাব এবং ক্যালিব্রেটেড ওজনযন্ত্র ব্যবহার করুন।</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="ac-note">সতর্কতা: স্থানীয় ব্যবসায়িক রীতি যাচাই না করে ক্রেতাকে রতির একদম নির্ভুল রূপান্তরের প্রতিশ্রুতি দেবেন না। বিল, সার্টিফিকেট এবং আন্তর্জাতিক তুলনার ক্ষেত্রে ক্যালিব্রেটেড যন্ত্রে মাপা ক্যারেট ওজনকে গুরুত্ব দিন।</p>
+    </section>
+
+    <section class="ac-wrap" id="training">
+      <div class="ac-section-head">
+        <div class="ac-kicker">নয়টি প্রশিক্ষণ পর্ব</div>
+        <h2>প্রতিটি রত্নের জন্য হাতে-কলমে অনুশীলন</h2>
+        <p>প্রতিটি রত্ন নিয়ে একটি করে প্রশিক্ষণ পর্ব সাজানো হয়েছে। প্রতিটি পর্বে রয়েছে পণ্যের জ্ঞান, পর্যবেক্ষণ, ক্রেতার সঙ্গে কথোপকথন, সংক্ষিপ্ত বিক্রয় উপস্থাপনা এবং বাড়ির কাজ।</p>
+      </div>
+      <div class="ac-training-grid" id="trainingGrid"></div>
+      <div class="ac-roleplay">
+        <h3>বাস্তব ক্রেতার পাঁচটি পরিস্থিতি</h3>
+        <div class="ac-roleplay-grid">
+          <div class="ac-scenario"><b>পরিস্থিতি ০১ · সীমিত বাজেটের ক্রেতা</b>“আমি আসল রত্ন কিনতে চাই, কিন্তু বাজেট কম।” গুণমান সম্পর্কে ভুল তথ্য না দিয়ে উপযুক্ত বিকল্প বোঝান।</div>
+          <div class="ac-scenario"><b>পরিস্থিতি ০২ · জ্যোতিষবিশ্বাসী ক্রেতা</b>“কোন পাথর পরলে আমার সমস্যা নিশ্চিতভাবে মিটবে?” বিশ্বাসকে সম্মান করুন, তবে জ্যোতিষীয় ফল নিশ্চিত বা বৈজ্ঞানিকভাবে প্রমাণিত—এমন দাবি করবেন না।</div>
+          <div class="ac-scenario"><b>পরিস্থিতি ০৩ · সার্টিফিকেট জানতে চাওয়া ক্রেতা</b>“আমি বুঝব কীভাবে পাথরটি প্রাকৃতিক?” রিপোর্ট, পরীক্ষাগার, ট্রিটমেন্ট এবং রিপোর্টের সীমাবদ্ধতা সহজ ভাষায় বোঝান।</div>
+          <div class="ac-scenario"><b>পরিস্থিতি ০৪ · দুটি পাথরের তুলনা</b>“এই মানিকটির দাম অন্যটির চেয়ে বেশি কেন?” রং, স্বচ্ছতা, ট্রিটমেন্ট, উৎসের দাবি, কাট এবং নথিপত্র ব্যাখ্যা করুন।</div>
+          <div class="ac-scenario"><b>পরিস্থিতি ০৫ · দৈনন্দিন ব্যবহারের উপযোগিতা</b>“এই পাথরটি কি প্রতিদিন পরা যাবে?” কঠোরতা, ভঙ্গুরতা, সেটিংয়ের সুরক্ষা এবং যত্নের নিয়ম বলুন।</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ac-wrap" id="assessment">
+      <div class="ac-section-head">
+        <div class="ac-kicker">প্রশিক্ষকের মূল্যায়ন</div>
+        <h2>চূড়ান্ত ব্যবহারিক পরীক্ষা</h2>
+        <p>পণ্যের জ্ঞান, যোগাযোগ দক্ষতা এবং দায়িত্বশীল বিক্রয় যাচাই করার জন্য ১০০ নম্বরের একটি নমুনা মূল্যায়ন।</p>
+      </div>
+      <div class="ac-exam">
+        <h3>চূড়ান্ত বিক্রয় দক্ষতা পরীক্ষা · ১০০ নম্বর</h3>
+        <div class="ac-exam-grid">
+          <div class="ac-exam-item"><b>২০ নম্বর · পণ্যের জ্ঞান</b><br>নয়টি রত্নের নাম ও মূল বৈশিষ্ট্য ব্যাখ্যা করুন।</div>
+          <div class="ac-exam-item"><b>১৫ নম্বর · রত্নের বিজ্ঞান</b><br>RI, SG, মোহস কঠোরতা এবং 4Cs ব্যাখ্যা করুন।</div>
+          <div class="ac-exam-item"><b>১০ নম্বর · ওজনের হিসাব</b><br>দোকানের অনুমোদিত নিয়মে ক্যারেট ও রতি রূপান্তর করুন।</div>
+          <div class="ac-exam-item"><b>২০ নম্বর · ক্রেতার প্রয়োজন বোঝা</b><br>প্রয়োজন অনুযায়ী প্রশ্ন করুন এবং দায়িত্বশীল পরামর্শ দিন।</div>
+          <div class="ac-exam-item"><b>২০ নম্বর · পণ্য উপস্থাপনা</b><br>৬০–৯০ সেকেন্ডে স্পষ্ট ও নির্ভুলভাবে পণ্যটি উপস্থাপন করুন।</div>
+          <div class="ac-exam-item"><b>১৫ নম্বর · নৈতিকতা ও যত্ন</b><br>ট্রিটমেন্ট, সার্টিফিকেট, তথ্য প্রকাশ এবং পরিচর্যা ব্যাখ্যা করুন।</div>
+        </div>
+      </div>
+      <div class="ac-info-panel">
+        <div>
+          <h3>প্রশিক্ষকের দৈনিক চেকলিস্ট</h3>
+          <ul>
+            <li>প্রশিক্ষণার্থী কি রত্নটির নাম ও খনিজ পরিবার বলতে পারছেন?</li>
+            <li>সহজ ভাষায় RI, SG এবং কঠোরতা বোঝাতে পারছেন?</li>
+            <li>কঠোরতা ও ভঙ্গুরতার পার্থক্য বুঝিয়ে বলতে পারছেন?</li>
+            <li>ট্রিটমেন্ট ও সার্টিফিকেট সম্পর্কে সঠিক তথ্য দিতে পারছেন?</li>
+            <li>যত্নের নিয়ম ও ক্রেতার প্রশ্নের উত্তর দিতে পারছেন?</li>
+          </ul>
+        </div>
+        <div>
+          <h3>পেশাদার বিক্রয়ের মূলনীতি</h3>
+          <p>নির্ভুল তথ্য, স্বচ্ছতা এবং মনোযোগ দিয়ে ক্রেতার কথা শোনার মাধ্যমে বিশ্বাস তৈরি করুন। নির্ভরযোগ্য প্রমাণ ছাড়া জ্যোতিষীয় ফল, বিনিয়োগে লাভ, বিরলতা বা উৎস সম্পর্কে নিশ্চয়তা দেবেন না।</p>
+          <p class="ac-note">এই ওয়েবসাইটটি প্রশিক্ষণের শিক্ষামূলক সহায়িকা। এটি রত্ন পরীক্ষাগারের পরীক্ষা, আনুষ্ঠানিক সার্টিফিকেশন বা বর্তমান আইনগত নির্দেশিকার বিকল্প নয়।</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="f-brand">
-      <div class="mark">💎</div>
-      <div>
-        <strong>JewelGyan</strong>
-        <span>Gem &amp; Jewellery Store Executive Knowledge Hub</span>
-      </div>
-    </div>
-
-    <p class="f-note">
-      Professional Knowledge &amp; Interview Preparation — Bengali + English · 10 Sections · 80 Q&amp;A ·
-      Prepared for professional Gem &amp; Jewellery Retail Training and Interview Preparation.
-    </p>
-
-    <div class="f-credit">
-      <span>Designed &amp; Developed by</span>
-      <strong>Sovan Kapri</strong>
-    </div>
-
-    <p class="f-copy">© <span id="yr"></span> JewelGyan · All content compiled for training &amp; interview reference.</p>
+    <p class="f-name">Designed &amp; Developed by <strong>Sovan Kapri</strong></p>
+    <p class="f-copy">© <span id="yr"></span> JewelGyan · Professional Gem &amp; Jewellery Store Executive Knowledge Hub</p>
   </div>
 </footer>
 
+<button class="backtop" id="backtop" type="button" aria-label="উপরে যান" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
 <script>
 /* =========================================================
-   SECTION METADATA
+   TAB SWITCHING
+   ========================================================= */
+function switchTab(name){
+  document.body.classList.toggle('view-academy', name === 'academy');
+  document.getElementById('qaView').classList.toggle('active', name === 'qa');
+  document.getElementById('academyView').classList.toggle('active', name === 'academy');
+  document.querySelectorAll('#tabs button').forEach(b => {
+    b.classList.toggle('on', b.dataset.tab === name);
+  });
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+document.getElementById('tabs').addEventListener('click', e => {
+  const btn = e.target.closest('button');
+  if(!btn) return;
+  switchTab(btn.dataset.tab);
+});
+
+function smoothAc(e){
+  e.preventDefault();
+  const id = e.currentTarget.getAttribute('href').slice(1);
+  const el = document.getElementById(id);
+  if(!el) return;
+  const y = el.getBoundingClientRect().top + window.pageYOffset - 76;
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('backtop').classList.toggle('show', window.pageYOffset > 500);
+}, { passive: true });
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* =========================================================
+   Q&A DATA
    ========================================================= */
 const SECTIONS = [
   { id:'s1', n:1,  icon:'🪙', en:'Gold Knowledge',                    bn:'সোনা সম্পর্কে প্রাথমিক ও পেশাগত জ্ঞান' },
@@ -561,450 +1212,106 @@ const SECTIONS = [
   { id:'s10',n:10, icon:'🎯', en:'Practical Situation-Based Questions',bn:'বাস্তব পরিস্থিতির ওপর ভিত্তি করে প্রশ্নোত্তর' }
 ];
 
-/* =========================================================
-   ALL 80 QUESTIONS
-   ========================================================= */
 const QUESTIONS = [
-
-/* ---------- SECTION 1 : GOLD ---------- */
-{s:'s1',n:1,
- q:{bn:`সোনা কী?`, en:`What is gold?`},
- a:{bn:`সোনা একটি মূল্যবান প্রাকৃতিক ধাতু। এর রাসায়নিক প্রতীক Au এবং এটি সাধারণত গয়না, বিনিয়োগ ও বিভিন্ন শিল্পক্ষেত্রে ব্যবহৃত হয়।`,
-    en:`Gold is a precious natural metal. Its chemical symbol is Au. It is widely used in jewellery, investment and various industrial applications.`}},
-
-{s:'s1',n:2,
- q:{bn:`24K, 22K, 18K ও 14K সোনার মধ্যে পার্থক্য কী?`, en:`What is the difference between 24K, 22K, 18K and 14K gold?`},
- a:{bn:`এই পার্থক্য মূলত সোনার বিশুদ্ধতার ওপর নির্ভর করে।<ul><li><b>24K</b> = 99.9% বা তার কাছাকাছি বিশুদ্ধ সোনা (প্রচলিত বিশুদ্ধতার ধারণা)।</li><li><b>22K</b> = 91.6% সোনা।</li><li><b>18K</b> = 75% সোনা।</li><li><b>14K</b> = 58.5% সোনা।</li></ul>`,
-    en:`The difference is based on gold purity.<ul><li><b>24K</b> = Approximately 99.9% pure gold.</li><li><b>22K</b> = 91.6% pure gold.</li><li><b>18K</b> = 75% pure gold.</li><li><b>14K</b> = 58.5% pure gold.</li></ul>`}},
-
-{s:'s1',n:3,
- q:{bn:`916 গোল্ড কী?`, en:`What is 916 gold?`},
- a:{bn:`916 গোল্ড বলতে 22 ক্যারেট সোনাকে বোঝায়। প্রতি 1000 অংশে 916 অংশ বিশুদ্ধ সোনা থাকে।`,
-    en:`916 gold refers to 22-karat gold. It contains 916 parts of pure gold out of 1000 parts.`}},
-
-{s:'s1',n:4,
- q:{bn:`Karat ও Carat-এর পার্থক্য কী?`, en:`What is the difference between Karat and Carat?`},
- a:{bn:`Karat দিয়ে সোনার বিশুদ্ধতা বোঝানো হয়। Carat দিয়ে Diamond বা Gemstone-এর ওজন বোঝানো হয়।`,
-    en:`Karat measures the purity of gold, whereas Carat measures the weight of diamonds and gemstones.`}},
-
-{s:'s1',n:5,
- q:{bn:`বিশুদ্ধ সোনা সাধারণ গয়নায় বেশি ব্যবহার করা হয় না কেন?`, en:`Why is pure gold not commonly used for regular jewellery?`},
- a:{bn:`বিশুদ্ধ সোনা তুলনামূলকভাবে নরম। তাই দৈনন্দিন ব্যবহারের গয়নায় শক্তি ও স্থায়িত্ব বাড়ানোর জন্য অন্যান্য ধাতু মেশানো হয়।`,
-    en:`Pure gold is relatively soft. Other metals are added to improve strength and durability for everyday jewellery.`}},
-
-{s:'s1',n:6,
- q:{bn:`অ্যালয় কী?`, en:`What is an alloy?`},
- a:{bn:`দুটি বা তার বেশি ধাতু মিশিয়ে তৈরি ধাতব মিশ্রণকে Alloy বলে। যেমন সোনার সঙ্গে Copper, Silver বা অন্যান্য ধাতু মেশানো।`,
-    en:`An alloy is a mixture of two or more metals. For example, gold can be mixed with copper, silver or other metals.`}},
-
-{s:'s1',n:7,
- q:{bn:`সোনার বিভিন্ন রং কী কী?`, en:`What are the different colours of gold?`},
- a:{bn:`প্রধানত তিন ধরনের Gold Colour দেখা যায়:<ul><li><b>Yellow Gold</b> – হলুদ সোনা।</li><li><b>White Gold</b> – সাদা সোনা।</li><li><b>Rose Gold</b> – গোলাপি আভাযুক্ত সোনা।</li></ul>`,
-    en:`The three common gold colours are Yellow Gold, White Gold and Rose Gold. Their colours depend on the metals used in the alloy and the finishing process.`}},
-
-{s:'s1',n:8,
- q:{bn:`গোল্ড পিউরিটি বা ফাইননেস কী?`, en:`What is gold purity or fineness?`},
- a:{bn:`1000 অংশের মধ্যে কত অংশ বিশুদ্ধ সোনা রয়েছে, সেটিই Gold Fineness। যেমন 750 Fineness মানে 75% বিশুদ্ধ সোনা।`,
-    en:`Gold fineness indicates the number of parts of pure gold in 1000 parts of an alloy. For example, 750 fineness means 75% pure gold.`}},
-
-/* ---------- SECTION 2 : HALLMARKING ---------- */
-{s:'s2',n:9,
- q:{bn:`হলমার্কিং কী?`, en:`What is Hallmarking?`},
- a:{bn:`Hallmarking হলো অনুমোদিত পরীক্ষার মাধ্যমে গয়নার মূল্যবান ধাতুর বিশুদ্ধতা যাচাই করে নির্দিষ্ট চিহ্ন দেওয়ার ব্যবস্থা।`,
-    en:`Hallmarking is a system of verifying the purity of precious metal jewellery through an authorised process and marking it accordingly.`}},
-
-{s:'s2',n:10,
- q:{bn:`BIS কী?`, en:`What is BIS?`},
- a:{bn:`BIS-এর সম্পূর্ণ নাম Bureau of Indian Standards। এটি ভারতের জাতীয় মান নির্ধারণকারী সংস্থা।`,
-    en:`BIS stands for Bureau of Indian Standards. It is India's national standards body.`}},
-
-{s:'s2',n:11,
- q:{bn:`HUID কী?`, en:`What is HUID?`},
- a:{bn:`HUID-এর সম্পূর্ণ নাম Hallmark Unique Identification। এটি Hallmarked gold jewellery-র জন্য একটি ছয় অক্ষর ও সংখ্যার সমন্বয়ে তৈরি Unique Identification Number।`,
-    en:`HUID stands for Hallmark Unique Identification. It is a unique six-character alphanumeric identification number assigned to a hallmarked gold jewellery article.`}},
-
-{s:'s2',n:12,
- q:{bn:`বর্তমানে BIS হলমার্কে কী কী চিহ্ন থাকে?`, en:`What are the components of the current BIS hallmark on gold jewellery?`},
- a:{bn:`<ul><li><b>BIS Standard Mark.</b></li><li><b>Purity/Fineness Mark</b>, যেমন 22K916।</li><li><b>Six-digit Alphanumeric HUID.</b></li></ul>`,
-    en:`<ul><li><b>BIS Standard Mark.</b></li><li><b>Purity or Fineness Mark</b>, such as 22K916.</li><li><b>Six-digit Alphanumeric HUID.</b></li></ul>`}},
-
-{s:'s2',n:13,
- q:{bn:`গ্রাহক কীভাবে HUID যাচাই করবেন?`, en:`How can a customer verify HUID?`},
- a:{bn:`গ্রাহক BIS Care App-এর Verify HUID সুবিধা ব্যবহার করে HUID যাচাই করতে পারেন।`,
-    en:`Customers can verify the HUID using the Verify HUID feature in the BIS Care App.`}},
-
-{s:'s2',n:14,
- q:{bn:`হলমার্কিং কেন গুরুত্বপূর্ণ?`, en:`Why is hallmarking important?`},
- a:{bn:`এটি গ্রাহককে গয়নার ঘোষিত বিশুদ্ধতা সম্পর্কে তৃতীয় পক্ষের নিশ্চয়তা দেয় এবং কেনাকাটায় আস্থা তৈরি করে।`,
-    en:`Hallmarking provides third-party assurance of the declared purity of jewellery and builds customer confidence.`}},
-
-{s:'s2',n:15,
- q:{bn:`শুধু দেখে কি একজন Executive সোনার বিশুদ্ধতা নিশ্চিত করতে পারেন?`, en:`Can an executive personally guarantee gold purity just by looking at a jewellery item?`},
- a:{bn:`না। শুধু দেখে সোনার বিশুদ্ধতা নিশ্চিত করা যায় না। Hallmark, HUID এবং প্রয়োজনীয় পরীক্ষার মাধ্যমে তা যাচাই করতে হয়।`,
-    en:`No. Gold purity cannot be guaranteed by visual inspection alone. It should be verified through hallmark details, HUID and appropriate testing procedures.`}},
-
-/* ---------- SECTION 3 : DIAMOND ---------- */
-{s:'s3',n:16,
- q:{bn:`ডায়মন্ড কী?`, en:`What is a diamond?`},
- a:{bn:`Diamond হলো প্রাকৃতিকভাবে তৈরি কার্বনের একটি স্ফটিক রূপ। এটি অত্যন্ত কঠিন প্রাকৃতিক পদার্থগুলির মধ্যে অন্যতম।`,
-    en:`A diamond is a crystalline form of naturally occurring carbon. It is one of the hardest naturally occurring materials.`}},
-
-{s:'s3',n:17,
- q:{bn:`ডায়মন্ডের 4Cs কী কী?`, en:`What are the 4Cs of Diamond?`},
- a:{bn:`<ul><li><b>Cut</b> – কাটিংয়ের গুণমান।</li><li><b>Colour</b> – রং বা বর্ণহীনতার মাত্রা।</li><li><b>Clarity</b> – অভ্যন্তরীণ ও বাহ্যিক বৈশিষ্ট্য বা দাগের মাত্রা।</li><li><b>Carat</b> – ওজন।</li></ul>`,
-    en:`<ul><li><b>Cut</b> – Quality of the diamond's cut.</li><li><b>Colour</b> – Degree of colourlessness.</li><li><b>Clarity</b> – Presence and characteristics of inclusions and blemishes.</li><li><b>Carat</b> – Weight of the diamond.</li></ul>`}},
-
-{s:'s3',n:18,
- q:{bn:`ডায়মন্ড কাট কী?`, en:`What is Diamond Cut?`},
- a:{bn:`Diamond Cut হলো হিরের Facets, Proportions, Symmetry এবং Polish-এর গুণমান। এটি হিরের আলো প্রতিফলন ও ঝলমলে ভাবকে প্রভাবিত করে।`,
-    en:`Diamond Cut refers to the quality of its facets, proportions, symmetry and polish. It affects how brilliantly the diamond interacts with light.`}},
-
-{s:'s3',n:19,
- q:{bn:`ডায়মন্ড কালার গ্রেডিং কী?`, en:`What is Diamond Colour Grading?`},
- a:{bn:`সাধারণ White Diamond-এর Colour Grade সাধারণত D থেকে Z পর্যন্ত নির্ধারণ করা হয়। D হলো Colourless এবং Z-এর দিকে গেলে হলুদ বা বাদামি আভা বাড়তে পারে।`,
-    en:`Standard white diamonds are commonly graded on a D-to-Z colour scale. D represents colourless, while progressively higher grades may show increasing yellow or brown tints.`}},
-
-{s:'s3',n:20,
- q:{bn:`ডায়মন্ড ক্ল্যারিটি কী?`, en:`What is Diamond Clarity?`},
- a:{bn:`Diamond-এর ভিতরের Inclusion এবং বাইরের Blemish-এর উপস্থিতি, আকার, অবস্থান ও দৃশ্যমানতার ওপর Clarity নির্ভর করে।`,
-    en:`Diamond Clarity is determined by the presence, size, position and visibility of internal inclusions and external blemishes.`}},
-
-{s:'s3',n:21,
- q:{bn:`ডায়মন্ডের সাধারণ Clarity Grade কী কী?`, en:`What are the common Diamond Clarity Grades?`},
- a:{bn:`<ul><li><b>FL</b> – Flawless</li><li><b>IF</b> – Internally Flawless</li><li><b>VVS1, VVS2</b> – Very Very Slightly Included</li><li><b>VS1, VS2</b> – Very Slightly Included</li><li><b>SI1, SI2</b> – Slightly Included</li><li><b>I1, I2, I3</b> – Included</li></ul>`,
-    en:`The common clarity grades range from FL (Flawless) to I3 (Included), with IF, VVS, VS and SI grades in between.`}},
-
-{s:'s3',n:22,
- q:{bn:`ডায়মন্ড ক্যারেট ওজন কী?`, en:`What is Diamond Carat Weight?`},
- a:{bn:`Diamond-এর ওজন Carat দিয়ে মাপা হয়। 1 Carat = 200 Milligrams = 0.20 Gram।`,
-    en:`Diamond weight is measured in carats. One carat equals 200 milligrams or 0.20 grams.`}},
-
-{s:'s3',n:23,
- q:{bn:`Natural ও Lab-Grown Diamond-এর পার্থক্য কী?`, en:`What is the difference between Natural Diamond and Lab-Grown Diamond?`},
- a:{bn:`Natural Diamond প্রকৃতিতে ভূগর্ভে তৈরি হয়। Lab-Grown Diamond নিয়ন্ত্রিত পরিবেশে প্রযুক্তির সাহায্যে তৈরি হয়। উভয়ের রাসায়নিক গঠন ও স্ফটিক বৈশিষ্ট্য একই ধরনের হলেও উৎপত্তি আলাদা।`,
-    en:`Natural diamonds form in the Earth, whereas lab-grown diamonds are created using technology in controlled environments. They have essentially the same chemical composition and crystal structure, but different origins.`}},
-
-{s:'s3',n:24,
- q:{bn:`ডায়মন্ড সার্টিফিকেট কী?`, en:`What is a Diamond Certificate or Grading Report?`},
- a:{bn:`এটি একটি Gemological Laboratory-এর দেওয়া রিপোর্ট, যেখানে হিরের নির্দিষ্ট বৈশিষ্ট্য ও গ্রেড উল্লেখ থাকে।`,
-    en:`It is a report issued by a gemological laboratory describing the diamond's characteristics and grading.`}},
-
-{s:'s3',n:25,
- q:{bn:`ডায়মন্ড ফ্লুরোসেন্স কী?`, en:`What is Diamond Fluorescence?`},
- a:{bn:`কিছু Diamond UV Light-এর সংস্পর্শে এলে নীল বা অন্য রঙের আলো নির্গত করতে পারে। এই বৈশিষ্ট্যকে Fluorescence বলে।`,
-    en:`Fluorescence is the phenomenon in which some diamonds emit visible light, often blue, when exposed to ultraviolet light.`}},
-
-/* ---------- SECTION 4 : GEMSTONE ---------- */
-{s:'s4',n:26,
- q:{bn:`Gemstone বা রত্নপাথর কী?`, en:`What is a gemstone?`},
- a:{bn:`Gemstone হলো প্রাকৃতিক বা নির্দিষ্ট ক্ষেত্রে Laboratory-created এমন খনিজ বা জৈব পদার্থ, যা সৌন্দর্য, বিরলতা, স্থায়িত্ব ও অলংকারের কাজে ব্যবহারের উপযোগিতার জন্য মূল্যবান।`,
-    en:`A gemstone is a natural or, in some cases, laboratory-created mineral or organic material valued for its beauty, rarity, durability and suitability for jewellery.`}},
-
-{s:'s4',n:27,
- q:{bn:`রঙিন রত্নপাথরের গুণমান বোঝার প্রধান বিষয় কী?`, en:`What are the four important factors used to evaluate coloured gemstones?`},
- a:{bn:`<ul><li><b>Colour</b> – রং।</li><li><b>Clarity</b> – স্বচ্ছতা ও অভ্যন্তরীণ বৈশিষ্ট্য।</li><li><b>Cut</b> – কাটিং।</li><li><b>Carat Weight</b> – ওজন।</li></ul>`,
-    en:`The four important factors are Colour, Clarity, Cut and Carat Weight.`}},
-
-{s:'s4',n:28,
- q:{bn:`রুবি কী?`, en:`What is Ruby?`},
- a:{bn:`Ruby হলো Corundum খনিজের লাল রঙের রত্নপাথর। এর লাল রং মূলত Chromium-এর কারণে তৈরি হয়।`,
-    en:`Ruby is the red variety of the mineral Corundum. Its red colour is primarily caused by chromium.`}},
-
-{s:'s4',n:29,
- q:{bn:`স্যাফায়ার কী?`, en:`What is Sapphire?`},
- a:{bn:`Sapphire-ও Corundum খনিজের একটি রত্নপাথর। নীল রং এর সবচেয়ে পরিচিত রূপ হলেও অন্যান্য রঙের Sapphire-ও পাওয়া যায়।`,
-    en:`Sapphire is another variety of Corundum. Although blue is its most familiar colour, sapphires are available in several other colours.`}},
-
-{s:'s4',n:30,
- q:{bn:`এমেরাল্ড কী?`, en:`What is Emerald?`},
- a:{bn:`Emerald হলো Beryl পরিবারের সবুজ রঙের রত্নপাথর। Chromium অথবা Vanadium এর সবুজ রঙের জন্য দায়ী হতে পারে।`,
-    en:`Emerald is the green variety of the Beryl mineral family. Chromium or vanadium may be responsible for its green colour.`}},
-
-{s:'s4',n:31,
- q:{bn:`অ্যামেথিস্ট কী?`, en:`What is Amethyst?`},
- a:{bn:`Amethyst হলো Quartz পরিবারের বেগুনি রঙের রত্নপাথর।`,
-    en:`Amethyst is a purple variety of the Quartz mineral family.`}},
-
-{s:'s4',n:32,
- q:{bn:`অ্যাকোয়ামেরিন কী?`, en:`What is Aquamarine?`},
- a:{bn:`Aquamarine হলো Beryl পরিবারের নীল থেকে হালকা নীল-সবুজ রঙের রত্নপাথর।`,
-    en:`Aquamarine is a blue to greenish-blue variety of the Beryl mineral family.`}},
-
-{s:'s4',n:33,
- q:{bn:`টোপাজ কী?`, en:`What is Topaz?`},
- a:{bn:`Topaz একটি স্বতন্ত্র খনিজ রত্নপাথর। এটি বিভিন্ন রঙে পাওয়া যায়, যেমন নীল, হলুদ, গোলাপি ও বর্ণহীন।`,
-    en:`Topaz is a distinct gemstone mineral available in various colours, including blue, yellow, pink and colourless.`}},
-
-{s:'s4',n:34,
- q:{bn:`Natural, Synthetic ও Imitation Gemstone-এর পার্থক্য কী?`, en:`What is the difference between Natural, Synthetic and Imitation Gemstones?`},
- a:{bn:`<ul><li><b>Natural Gemstone:</b> প্রকৃতিতে তৈরি।</li><li><b>Synthetic Gemstone:</b> মানুষের তৈরি, কিন্তু একই ধরনের রাসায়নিক ও স্ফটিক বৈশিষ্ট্যযুক্ত।</li><li><b>Imitation Gemstone:</b> দেখতে অন্য রত্নের মতো হলেও তার উপাদান ও গঠন আলাদা।</li></ul>`,
-    en:`<ul><li><b>Natural Gemstone:</b> Formed naturally.</li><li><b>Synthetic Gemstone:</b> Laboratory-created with essentially the same chemical composition and crystal structure as its natural counterpart.</li><li><b>Imitation Gemstone:</b> A different material that resembles another gemstone in appearance.</li></ul>`}},
-
-{s:'s4',n:35,
- q:{bn:`Gemstone Treatment কী?`, en:`What is Gemstone Treatment?`},
- a:{bn:`Gemstone-এর রং, স্বচ্ছতা বা বাহ্যিক সৌন্দর্য উন্নত করার জন্য Heating, Oiling, Dyeing, Irradiation বা অন্যান্য পদ্ধতি ব্যবহার করা হতে পারে। এগুলি Treatment নামে পরিচিত।`,
-    en:`Gemstone treatments are processes such as heating, oiling, dyeing or irradiation used to improve or alter a gemstone's appearance.`}},
-
-{s:'s4',n:36,
- q:{bn:`Gemstone Treatment জানানো কেন জরুরি?`, en:`Why is gemstone treatment disclosure important?`},
- a:{bn:`Treatment-এর ফলে রত্নের মূল্য, স্থায়িত্ব, যত্নের নিয়ম এবং বাজারমূল্য পরিবর্তিত হতে পারে। তাই গ্রাহককে সঠিক তথ্য জানানো জরুরি।`,
-    en:`Treatments can affect a gemstone's value, durability, care requirements and market price. Therefore, customers should be informed accurately.`}},
-
-/* ---------- SECTION 5 : JEWELLERY MAKING ---------- */
-{s:'s5',n:37,
- q:{bn:`গয়না তৈরির প্রধান ধাপগুলি কী?`, en:`What are the basic stages of jewellery manufacturing?`},
- a:{bn:`<ul><li><b>Design</b> – ডিজাইন তৈরি।</li><li><b>CAD Modelling</b> – ডিজিটাল মডেল তৈরি।</li><li><b>Casting</b> – ধাতুর ছাঁচ তৈরি ও ঢালাই।</li><li><b>Filing and Assembly</b> – ঘষামাজা ও বিভিন্ন অংশ জোড়া লাগানো।</li><li><b>Stone Setting</b> – পাথর বসানো।</li><li><b>Polishing</b> – পালিশ।</li><li><b>Quality Checking</b> – গুণমান পরীক্ষা।</li></ul>`,
-    en:`The main stages include Design, CAD Modelling, Casting, Filing and Assembly, Stone Setting, Polishing and Quality Checking.`}},
-
-{s:'s5',n:38,
- q:{bn:`Jewellery-তে CAD কী?`, en:`What is CAD in jewellery?`},
- a:{bn:`CAD-এর সম্পূর্ণ নাম Computer-Aided Design। কম্পিউটারের মাধ্যমে গয়নার ডিজাইন ও 3D Model তৈরি করার পদ্ধতি।`,
-    en:`CAD stands for Computer-Aided Design. It is used to create jewellery designs and 3D models using computer software.`}},
-
-{s:'s5',n:39,
- q:{bn:`স্টোন সেটিং কী?`, en:`What is Stone Setting?`},
- a:{bn:`গয়নার মধ্যে Diamond বা Gemstone সঠিকভাবে বসানোর প্রক্রিয়াকে Stone Setting বলে।`,
-    en:`Stone Setting is the process of securely placing diamonds or gemstones into jewellery.`}},
-
-{s:'s5',n:40,
- q:{bn:`স্টোন সেটিংয়ের সাধারণ ধরন কী কী?`, en:`What are the common types of Stone Setting?`},
- a:{bn:`<ul><li><b>Prong Setting</b> – ছোট ধাতব কাঁটা দিয়ে পাথর আটকানো।</li><li><b>Bezel Setting</b> – ধাতব বর্ডার দিয়ে পাথর ঘিরে রাখা।</li><li><b>Pave Setting</b> – ছোট ছোট পাথর পাশাপাশি বসানো।</li><li><b>Channel Setting</b> – ধাতব চ্যানেলের মধ্যে পাথর বসানো।</li><li><b>Halo Setting</b> – একটি বড় পাথরের চারদিকে ছোট পাথর বসানো।</li></ul>`,
-    en:`Common types include Prong, Bezel, Pave, Channel and Halo Settings.`}},
-
-{s:'s5',n:41,
- q:{bn:`Handmade ও Machine-Made Jewellery-এর পার্থক্য কী?`, en:`What is the difference between Handmade and Machine-Made Jewellery?`},
- a:{bn:`Handmade Jewellery মূলত কারিগরের হাতে তৈরি হয়। Machine-Made Jewellery যন্ত্রের সাহায্যে তৈরি হয়। উভয়েরই ডিজাইন, ফিনিশিং ও গুণমান আলাদা হতে পারে।`,
-    en:`Handmade jewellery is crafted primarily by artisans, whereas machine-made jewellery is manufactured using machines. Their design, finishing and quality may vary.`}},
-
-{s:'s5',n:42,
- q:{bn:`গয়নার ওজন কী?`, en:`What is Jewellery Weight?`},
- a:{bn:`গয়নার মোট ওজনের মধ্যে ধাতু, পাথর এবং অন্যান্য অংশের ওজন থাকতে পারে। তাই Net Gold Weight ও Gross Weight-এর পার্থক্য জানা জরুরি।`,
-    en:`Jewellery weight may include the weight of metal, stones and other components. Therefore, it is important to distinguish between Net Gold Weight and Gross Weight.`}},
-
-{s:'s5',n:43,
- q:{bn:`Gross Weight ও Net Gold Weight-এর পার্থক্য কী?`, en:`What is the difference between Gross Weight and Net Gold Weight?`},
- a:{bn:`<ul><li><b>Gross Weight:</b> সম্পূর্ণ গয়নার মোট ওজন।</li><li><b>Net Gold Weight:</b> গয়নার মধ্যে থাকা সোনার প্রকৃত ওজন, যেখানে পাথর ও অন্যান্য অ-সোনার অংশ বাদ দেওয়া হয়।</li></ul>`,
-    en:`<ul><li><b>Gross Weight:</b> The total weight of the complete jewellery item.</li><li><b>Net Gold Weight:</b> The actual weight of the gold content, excluding stones and other non-gold components.</li></ul>`}},
-
-/* ---------- SECTION 6 : PRICING & BILLING ---------- */
-{s:'s6',n:44,
- q:{bn:`সোনার গয়নার দাম কীভাবে হিসাব করা হয়?`, en:`How is gold jewellery pricing calculated?`},
- a:{bn:`সাধারণত গয়নার দাম নির্ভর করে:<ul><li>Net Gold Weight.</li><li>Applicable Gold Rate.</li><li>Making Charges.</li><li>Applicable Wastage Charges, if any.</li><li>Stone or Diamond Charges, if any.</li><li>Applicable Taxes.</li></ul>`,
-    en:`Gold jewellery pricing generally depends on:<ul><li>Net Gold Weight.</li><li>Applicable Gold Rate.</li><li>Making Charges.</li><li>Applicable Wastage Charges, if any.</li><li>Stone or Diamond Charges, if any.</li><li>Applicable Taxes.</li></ul>`}},
-
-{s:'s6',n:45,
- q:{bn:`মেকিং চার্জ কী?`, en:`What are Making Charges?`},
- a:{bn:`গয়না তৈরি করার জন্য কারিগরি শ্রম, ডিজাইন ও উৎপাদন খরচের যে মূল্য নেওয়া হয় তাকে Making Charges বলে।`,
-    en:`Making Charges are the costs charged for craftsmanship, design and manufacturing of jewellery.`}},
-
-{s:'s6',n:46,
- q:{bn:`ওয়েস্টেজ চার্জ কী?`, en:`What is Wastage Charge?`},
- a:{bn:`গয়না তৈরির সময় উৎপাদন প্রক্রিয়ায় ধাতুর কিছু অংশ ক্ষয় বা অপচয় হতে পারে। দোকানের নীতি অনুযায়ী এর জন্য Wastage Charge নেওয়া হতে পারে।`,
-    en:`Wastage Charges may represent metal loss during the manufacturing process. They may be charged according to the store's pricing policy.`}},
-
-{s:'s6',n:47,
- q:{bn:`স্টোন ওয়েট ডিডাকশন কী?`, en:`What is Stone Weight Deduction?`},
- a:{bn:`গয়নার মোট ওজন থেকে পাথরের ওজন বাদ দিয়ে ধাতুর প্রকৃত ওজন নির্ধারণ করাকে Stone Weight Deduction বলা হয়।`,
-    en:`Stone Weight Deduction means subtracting the weight of stones from the gross jewellery weight to determine the actual metal weight.`}},
-
-{s:'s6',n:48,
- q:{bn:`জুয়েলারি এক্সচেঞ্জ কী?`, en:`What is Jewellery Exchange?`},
- a:{bn:`গ্রাহক পুরোনো গয়না দোকানে জমা দিয়ে দোকানের নিয়ম অনুযায়ী তার মূল্য সমন্বয় করে নতুন গয়না কিনতে পারেন। একে Jewellery Exchange বলে।`,
-    en:`Jewellery Exchange is a facility through which customers trade in their old jewellery and adjust its assessed value against a new purchase, subject to store policy.`}},
-
-{s:'s6',n:49,
- q:{bn:`বাইব্যাক পলিসি কী?`, en:`What is Buyback Policy?`},
- a:{bn:`দোকান নির্দিষ্ট শর্তে আগে বিক্রি করা গয়না ভবিষ্যতে ফেরত কিনতে পারে। এই ব্যবস্থাকে Buyback Policy বলে।`,
-    en:`A Buyback Policy allows a store to repurchase previously sold jewellery under specified terms and conditions.`}},
-
-{s:'s6',n:50,
- q:{bn:`সঠিক বিল বা ইনভয়েস কেন জরুরি?`, en:`Why is a proper invoice important?`},
- a:{bn:`Invoice-এ পণ্যের বিবরণ, বিশুদ্ধতা, ওজন, দাম, Making Charges, কর এবং অন্যান্য প্রযোজ্য তথ্য থাকে। এটি কেনাকাটার প্রমাণ ও ভবিষ্যতের পরিষেবার জন্য গুরুত্বপূর্ণ।`,
-    en:`An invoice records product details, purity, weight, price, making charges, applicable taxes and other relevant information. It serves as proof of purchase and supports future services.`}},
-
-/* ---------- SECTION 7 : CUSTOMER & SALES ---------- */
-{s:'s7',n:51,
- q:{bn:`গ্রাহক দোকানে ঢুকলে প্রথমে কী করা উচিত?`, en:`What is the first step when a customer enters a jewellery store?`},
- a:{bn:`হাসিমুখে গ্রাহককে স্বাগত জানাতে হবে, নম্রভাবে কথা বলতে হবে এবং তাঁর প্রয়োজন বোঝার চেষ্টা করতে হবে।`,
-    en:`Welcome the customer with a warm smile, communicate politely and try to understand their requirements.`}},
-
-{s:'s7',n:52,
- q:{bn:`গ্রাহকের চাহিদা কীভাবে বুঝবেন?`, en:`How do you identify a customer's needs?`},
- a:{bn:`গ্রাহকের বাজেট, পছন্দ, উপলক্ষ, ডিজাইন, ধাতুর ধরন এবং ব্যবহারের উদ্দেশ্য সম্পর্কে প্রশ্ন করতে হবে।`,
-    en:`Ask questions about the customer's budget, preferences, occasion, design, metal type and intended use.`}},
-
-{s:'s7',n:53,
- q:{bn:`একজন গ্রাহককে পণ্য কিনতে কীভাবে উৎসাহিত করবেন?`, en:`How would you convince a customer to buy a product?`},
- a:{bn:`পণ্যের গুণমান, ডিজাইন, ব্যবহারিক সুবিধা ও মূল্য সম্পর্কে সঠিক তথ্য দিয়ে গ্রাহকের প্রয়োজন অনুযায়ী পণ্য দেখাতে হবে। কখনও জোর করে বিক্রি করা উচিত নয়।`,
-    en:`Explain the product's quality, design, practical benefits and price accurately. Recommend products that match the customer's needs without pressuring them.`}},
-
-{s:'s7',n:54,
- q:{bn:`গ্রাহক দাম বেশি বললে কী করবেন?`, en:`What would you do if a customer says the price is too high?`},
- a:{bn:`প্রথমে তাঁর বাজেট বুঝব। তারপর একই ধরনের কম বাজেটের ডিজাইন দেখাব অথবা পণ্যের মূল্য কীভাবে নির্ধারিত হয়েছে তা বুঝিয়ে বলব।`,
-    en:`First, I would understand the customer's budget. Then I would show similar designs within that budget or explain how the product's price is calculated.`}},
-
-{s:'s7',n:55,
- q:{bn:`রাগান্বিত গ্রাহককে কীভাবে সামলাবেন?`, en:`How would you handle an angry customer?`},
- a:{bn:`শান্ত থাকব, মনোযোগ দিয়ে অভিযোগ শুনব, সহানুভূতি প্রকাশ করব এবং দোকানের নীতি অনুযায়ী সমাধানের চেষ্টা করব।`,
-    en:`I would remain calm, listen carefully to the complaint, show empathy and try to resolve the issue according to store policy.`}},
-
-{s:'s7',n:56,
- q:{bn:`আপসেলিং কী?`, en:`What is Upselling?`},
- a:{bn:`গ্রাহক যে পণ্যটি কিনতে চাইছেন তার তুলনায় বেশি বৈশিষ্ট্য বা উচ্চমূল্যের উপযুক্ত পণ্য দেখানোকে Upselling বলে।`,
-    en:`Upselling means suggesting a higher-value or upgraded product that offers additional features and suits the customer's needs.`}},
-
-{s:'s7',n:57,
- q:{bn:`ক্রস-সেলিং কী?`, en:`What is Cross-Selling?`},
- a:{bn:`গ্রাহক একটি পণ্য কিনলে তার সঙ্গে সম্পর্কিত অন্য পণ্য কেনার পরামর্শ দেওয়াকে Cross-Selling বলে। যেমন Necklace-এর সঙ্গে Earrings দেখানো।`,
-    en:`Cross-Selling means suggesting complementary products. For example, recommending matching earrings with a necklace.`}},
-
-{s:'s7',n:58,
- q:{bn:`CRM কী?`, en:`What is Customer Relationship Management (CRM)?`},
- a:{bn:`CRM হলো গ্রাহকের সঙ্গে দীর্ঘমেয়াদি সম্পর্ক তৈরি, বজায় রাখা এবং উন্নত করার পদ্ধতি।`,
-    en:`CRM stands for Customer Relationship Management. It is the process of building, maintaining and improving long-term customer relationships.`}},
-
-{s:'s7',n:59,
- q:{bn:`Jewellery Sales-এ Product Knowledge কেন গুরুত্বপূর্ণ?`, en:`Why is product knowledge important in jewellery sales?`},
- a:{bn:`পণ্যের সঠিক তথ্য জানা থাকলে গ্রাহকের প্রশ্নের উত্তর দেওয়া যায়, আস্থা তৈরি হয় এবং বিক্রয়ের সম্ভাবনা বাড়ে।`,
-    en:`Product knowledge helps executives answer customer questions accurately, build trust and improve sales opportunities.`}},
-
-{s:'s7',n:60,
- q:{bn:`After-Sales Service কী?`, en:`What is After-Sales Service?`},
- a:{bn:`বিক্রয়ের পর গ্রাহককে Cleaning, Repair, Polishing, Resizing, Warranty Support এবং অন্যান্য প্রযোজ্য পরিষেবা দেওয়াকে After-Sales Service বলে।`,
-    en:`After-Sales Service includes services such as cleaning, repair, polishing, resizing, warranty support and other applicable services after a purchase.`}},
-
-/* ---------- SECTION 8 : STORE OPERATIONS ---------- */
-{s:'s8',n:61,
- q:{bn:`ইনভেন্টরি ম্যানেজমেন্ট কী?`, en:`What is Inventory Management?`},
- a:{bn:`দোকানে থাকা সমস্ত পণ্যের স্টক, পরিমাণ, ওজন, অবস্থান এবং বিক্রির হিসাব সঠিকভাবে সংরক্ষণ ও পরিচালনা করাকে Inventory Management বলে।`,
-    en:`Inventory Management is the process of recording and controlling product stock, quantity, weight, location and sales.`}},
-
-{s:'s8',n:62,
- q:{bn:`SKU কী?`, en:`What is SKU?`},
- a:{bn:`SKU-এর সম্পূর্ণ নাম Stock Keeping Unit। এটি প্রতিটি পণ্যকে আলাদাভাবে শনাক্ত করার জন্য ব্যবহৃত একটি Unique Code।`,
-    en:`SKU stands for Stock Keeping Unit. It is a unique code used to identify and track individual products.`}},
-
-{s:'s8',n:63,
- q:{bn:`POS কী?`, en:`What is POS?`},
- a:{bn:`POS-এর সম্পূর্ণ নাম Point of Sale। এটি দোকানে পণ্য বিক্রি, বিল তৈরি এবং লেনদেন রেকর্ড করার ব্যবস্থা।`,
-    en:`POS stands for Point of Sale. It is a system used to process sales, generate bills and record transactions.`}},
-
-{s:'s8',n:64,
- q:{bn:`দামি গয়না সামলানোর সময় কী কী সতর্কতা নিতে হবে?`, en:`What precautions should be taken while handling expensive jewellery?`},
- a:{bn:`<ul><li>নির্দিষ্ট নিয়ম অনুযায়ী পণ্য বের করতে হবে।</li><li>একসঙ্গে অতিরিক্ত পণ্য হাতে নেওয়া যাবে না।</li><li>পণ্য সবসময় নির্দিষ্ট Tray-তে রাখতে হবে।</li><li>প্রতিটি পণ্য ব্যবহারের পর সঠিক স্থানে রাখতে হবে।</li><li>স্টোরের Security Protocol মেনে চলতে হবে।</li></ul>`,
-    en:`<ul><li>Follow the store's product-handling procedures.</li><li>Avoid handling too many items simultaneously.</li><li>Use designated jewellery trays.</li><li>Return every item to its correct place after use.</li><li>Follow all store security protocols.</li></ul>`}},
-
-{s:'s8',n:65,
- q:{bn:`কাজ শুরু করার আগে Executive-এর কী করা উচিত?`, en:`What should an executive do at the beginning of a working day?`},
- a:{bn:`দোকানের Opening Checklist অনুসরণ করা, ডিসপ্লে পরীক্ষা করা, স্টক ও নিরাপত্তা সংক্রান্ত নির্দেশ মেনে চলা এবং নিজের কাজের প্রস্তুতি নেওয়া।`,
-    en:`Follow the opening checklist, inspect displays, comply with stock and security procedures and prepare for daily responsibilities.`}},
-
-{s:'s8',n:66,
- q:{bn:`কোনো গয়না ক্ষতিগ্রস্ত অবস্থায় পাওয়া গেলে কী করবেন?`, en:`What should an executive do if a jewellery item is found damaged?`},
- a:{bn:`পণ্যটি আলাদা করে রাখতে হবে, ম্যানেজারকে জানাতে হবে এবং নির্ধারিত Damage Reporting Procedure অনুসরণ করতে হবে।`,
-    en:`Isolate the damaged item, inform the manager and follow the store's damage-reporting procedure.`}},
-
-{s:'s8',n:67,
- q:{bn:`Jewellery Store-এ Teamwork কেন গুরুত্বপূর্ণ?`, en:`Why is teamwork important in a jewellery store?`},
- a:{bn:`ভালো Teamwork-এর ফলে গ্রাহক পরিষেবা উন্নত হয়, কাজের ভুল কমে এবং দোকানের সামগ্রিক বিক্রয় ও পরিচালনা ভালো হয়।`,
-    en:`Effective teamwork improves customer service, reduces operational errors and supports better store performance and sales.`}},
-
-/* ---------- SECTION 9 : ETHICS ---------- */
-{s:'s9',n:68,
- q:{bn:`Jewellery Sales-এ সততা কেন জরুরি?`, en:`Why is honesty important in jewellery sales?`},
- a:{bn:`Jewellery একটি মূল্যবান পণ্য। ভুল তথ্য বা মিথ্যা প্রতিশ্রুতি গ্রাহকের আর্থিক ক্ষতি ও প্রতিষ্ঠানের সুনামের ক্ষতি করতে পারে।`,
-    en:`Jewellery is a valuable product. False information or misleading promises can cause financial loss to customers and damage the store's reputation.`}},
-
-{s:'s9',n:69,
- q:{bn:`Gemstone Treatment বা পণ্যের ত্রুটি কি গ্রাহকের কাছ থেকে লুকানো উচিত?`, en:`Should an executive hide gemstone treatments or product defects?`},
- a:{bn:`কখনোই নয়। পণ্যের Treatment, পরিচিত ত্রুটি ও গুরুত্বপূর্ণ বৈশিষ্ট্য সম্পর্কে গ্রাহককে সঠিক তথ্য জানাতে হবে।`,
-    en:`Never. Customers must receive accurate information about gemstone treatments, known defects and important product characteristics.`}},
-
-{s:'s9',n:70,
- q:{bn:`গ্রাহকের প্রশ্নের উত্তর জানা না থাকলে কী করবেন?`, en:`What should you do if you do not know the answer to a customer's question?`},
- a:{bn:`ভুল উত্তর দেওয়া যাবে না। বিনয়ের সঙ্গে সময় চেয়ে Senior বা Manager-এর কাছ থেকে সঠিক তথ্য জেনে গ্রাহককে জানাতে হবে।`,
-    en:`I would never provide incorrect information. I would politely ask for some time, consult a senior or manager and then provide the correct answer.`}},
-
-{s:'s9',n:71,
- q:{bn:`Jewellery Retail-এ Confidentiality কী?`, en:`What is Confidentiality in jewellery retail?`},
- a:{bn:`গ্রাহকের ব্যক্তিগত তথ্য, কেনাকাটার বিবরণ এবং প্রতিষ্ঠানের গোপন ব্যবসায়িক তথ্য অনুমতি ছাড়া অন্যের কাছে প্রকাশ না করাকে Confidentiality বলে।`,
-    en:`Confidentiality means protecting customers' personal information, purchase details and the store's confidential business information from unauthorised disclosure.`}},
-
-{s:'s9',n:72,
- q:{bn:`একজন সফল Jewellery Store Executive-এর বৈশিষ্ট্য কী?`, en:`What makes a successful jewellery store executive?`},
- a:{bn:`<ul><li>Product Knowledge.</li><li>Communication Skills.</li><li>Customer Handling.</li><li>Sales Skills.</li><li>Honesty and Integrity.</li><li>Attention to Detail.</li><li>Teamwork.</li><li>Discipline and Professionalism.</li></ul>`,
-    en:`A successful jewellery store executive should possess strong product knowledge, communication skills, customer-handling ability, sales skills, honesty, attention to detail, teamwork and professionalism.`}},
-
-/* ---------- SECTION 10 : PRACTICAL ---------- */
-{s:'s10',n:73,
- q:{bn:`একজন গ্রাহক ₹20,000-এর মধ্যে একটি সোনার আংটি চান। আপনি কী করবেন?`, en:`A customer wants a gold ring within ₹20,000. What will you do?`},
- a:{bn:`প্রথমে গ্রাহকের ডিজাইন ও পছন্দ জানব। তারপর বর্তমান সোনার দর, ওজন, Making Charges এবং প্রযোজ্য কর বিবেচনা করে বাজেটের মধ্যে উপযুক্ত Ring দেখাব।`,
-    en:`First, I will understand the customer's design preferences. Then I will recommend suitable rings within the budget, considering the applicable gold rate, weight, making charges and taxes.`}},
-
-{s:'s10',n:74,
- q:{bn:`একজন গ্রাহক জিজ্ঞাসা করেন 22K সোনা ভালো না 18K সোনা ভালো। কীভাবে বুঝিয়ে বলবেন?`, en:`A customer asks whether 22K gold is better than 18K gold. How will you explain?`},
- a:{bn:`22K সোনায় বিশুদ্ধতার পরিমাণ বেশি। অন্যদিকে 18K সোনায় অন্যান্য ধাতুর পরিমাণ বেশি থাকায় কিছু ডিজাইন ও Diamond Jewellery-তে এটি ব্যবহার করা হয়। কোনটি ভালো তা নির্ভর করে ব্যবহারের উদ্দেশ্য ও পছন্দের ওপর।`,
-    en:`22K gold has a higher gold content, while 18K gold contains a greater proportion of other metals and is used in various designs, including diamond jewellery. The better choice depends on the intended use and customer preference.`}},
-
-{s:'s10',n:75,
- q:{bn:`একজন গ্রাহক ডায়মন্ড রিং কিনতে চান কিন্তু 4Cs বুঝতে পারেন না। আপনি কী করবেন?`, en:`A customer wants to buy a diamond ring but does not understand the 4Cs. What will you do?`},
- a:{bn:`সহজভাবে Cut, Colour, Clarity এবং Carat বুঝিয়ে দেব। তারপর তাঁর বাজেট অনুযায়ী বিভিন্ন Diamond তুলনা করে দেখাব।`,
-    en:`I will explain Cut, Colour, Clarity and Carat in simple terms. Then I will compare different diamonds according to the customer's budget.`}},
-
-{s:'s10',n:76,
- q:{bn:`একজন গ্রাহক অভিযোগ করেন যে রত্নপাথরের রং প্রতিশ্রুতির চেয়ে আলাদা দেখাচ্ছে। আপনি কী করবেন?`, en:`A customer complains that the gemstone colour looks different from what was promised. What will you do?`},
- a:{bn:`প্রথমে গ্রাহকের অভিযোগ মনোযোগ দিয়ে শুনব। তারপর Invoice, Certificate এবং পণ্যের বিবরণ যাচাই করে Manager-এর সাহায্যে দোকানের নীতি অনুযায়ী সমাধান করব।`,
-    en:`I will listen carefully to the complaint, check the invoice, certificate and product description, and work with the manager to resolve the issue according to store policy.`}},
-
-{s:'s10',n:77,
- q:{bn:`একজন গ্রাহক ডিসকাউন্ট চাইলে কীভাবে উত্তর দেবেন?`, en:`A customer wants a discount. How will you respond?`},
- a:{bn:`বিনয়ের সঙ্গে দোকানের Discount Policy জানাব। অনুমতি ছাড়া কোনো Discount প্রতিশ্রুতি দেব না।`,
-    en:`I will politely explain the store's discount policy. I will never promise an unauthorised discount.`}},
-
-{s:'s10',n:78,
- q:{bn:`আপনি লক্ষ্য করলেন Invoice-এর ওজন ও গয়নার ট্যাগের ওজন মিলছে না। আপনি কী করবেন?`, en:`You notice that the invoice weight and the jewellery tag weight do not match. What will you do?`},
- a:{bn:`বিক্রয় সম্পন্ন করার আগে বিষয়টি যাচাই করব এবং Manager বা সংশ্লিষ্ট কর্মীকে জানাব। যাচাই ছাড়া বিল সম্পন্ন করব না।`,
-    en:`I will verify the discrepancy and inform the manager or the concerned employee. I will not complete the billing until the issue is resolved.`}},
-
-{s:'s10',n:79,
- q:{bn:`একই সময়ে দুজন গ্রাহকের সহায়তা প্রয়োজন। আপনি কী করবেন?`, en:`Two customers need assistance at the same time. What will you do?`},
- a:{bn:`উভয় গ্রাহককে অভ্যর্থনা জানাব, একজনকে সামান্য অপেক্ষা করতে অনুরোধ করব এবং প্রয়োজনে সহকর্মীর সাহায্য নেব।`,
-    en:`I will acknowledge both customers, politely request one to wait briefly and seek assistance from a colleague if necessary.`}},
-
-{s:'s10',n:80,
- q:{bn:`গ্রাহকদের সঙ্গে দীর্ঘমেয়াদি সম্পর্ক কীভাবে তৈরি করবেন?`, en:`How would you build long-term relationships with customers?`},
- a:{bn:`ভালো ব্যবহার, সঠিক তথ্য, প্রতিশ্রুতি রক্ষা, বিক্রয়-পরবর্তী পরিষেবা এবং নিয়মিত যোগাযোগের মাধ্যমে গ্রাহকের আস্থা অর্জন করব।`,
-    en:`I will build trust through courteous behaviour, accurate information, keeping promises, reliable after-sales service and appropriate follow-up communication.`}}
+{s:'s1',n:1,q:{bn:`সোনা কী?`, en:`What is gold?`},a:{bn:`সোনা একটি মূল্যবান প্রাকৃতিক ধাতু। এর রাসায়নিক প্রতীক Au এবং এটি সাধারণত গয়না, বিনিয়োগ ও বিভিন্ন শিল্পক্ষেত্রে ব্যবহৃত হয়।`,en:`Gold is a precious natural metal. Its chemical symbol is Au. It is widely used in jewellery, investment and various industrial applications.`}},
+{s:'s1',n:2,q:{bn:`24K, 22K, 18K ও 14K সোনার মধ্যে পার্থক্য কী?`, en:`What is the difference between 24K, 22K, 18K and 14K gold?`},a:{bn:`এই পার্থক্য মূলত সোনার বিশুদ্ধতার ওপর নির্ভর করে।<ul><li><b>24K</b> = 99.9% বা তার কাছাকাছি বিশুদ্ধ সোনা (প্রচলিত বিশুদ্ধতার ধারণা)।</li><li><b>22K</b> = 91.6% সোনা।</li><li><b>18K</b> = 75% সোনা।</li><li><b>14K</b> = 58.5% সোনা।</li></ul>`,en:`The difference is based on gold purity.<ul><li><b>24K</b> = Approximately 99.9% pure gold.</li><li><b>22K</b> = 91.6% pure gold.</li><li><b>18K</b> = 75% pure gold.</li><li><b>14K</b> = 58.5% pure gold.</li></ul>`}},
+{s:'s1',n:3,q:{bn:`916 গোল্ড কী?`, en:`What is 916 gold?`},a:{bn:`916 গোল্ড বলতে 22 ক্যারেট সোনাকে বোঝায়। প্রতি 1000 অংশে 916 অংশ বিশুদ্ধ সোনা থাকে।`,en:`916 gold refers to 22-karat gold. It contains 916 parts of pure gold out of 1000 parts.`}},
+{s:'s1',n:4,q:{bn:`Karat ও Carat-এর পার্থক্য কী?`, en:`What is the difference between Karat and Carat?`},a:{bn:`Karat দিয়ে সোনার বিশুদ্ধতা বোঝানো হয়। Carat দিয়ে Diamond বা Gemstone-এর ওজন বোঝানো হয়।`,en:`Karat measures the purity of gold, whereas Carat measures the weight of diamonds and gemstones.`}},
+{s:'s1',n:5,q:{bn:`বিশুদ্ধ সোনা সাধারণ গয়নায় বেশি ব্যবহার করা হয় না কেন?`, en:`Why is pure gold not commonly used for regular jewellery?`},a:{bn:`বিশুদ্ধ সোনা তুলনামূলকভাবে নরম। তাই দৈনন্দিন ব্যবহারের গয়নায় শক্তি ও স্থায়িত্ব বাড়ানোর জন্য অন্যান্য ধাতু মেশানো হয়।`,en:`Pure gold is relatively soft. Other metals are added to improve strength and durability for everyday jewellery.`}},
+{s:'s1',n:6,q:{bn:`অ্যালয় কী?`, en:`What is an alloy?`},a:{bn:`দুটি বা তার বেশি ধাতু মিশিয়ে তৈরি ধাতব মিশ্রণকে Alloy বলে। যেমন সোনার সঙ্গে Copper, Silver বা অন্যান্য ধাতু মেশানো।`,en:`An alloy is a mixture of two or more metals. For example, gold can be mixed with copper, silver or other metals.`}},
+{s:'s1',n:7,q:{bn:`সোনার বিভিন্ন রং কী কী?`, en:`What are the different colours of gold?`},a:{bn:`প্রধানত তিন ধরনের Gold Colour দেখা যায়:<ul><li><b>Yellow Gold</b> – হলুদ সোনা।</li><li><b>White Gold</b> – সাদা সোনা।</li><li><b>Rose Gold</b> – গোলাপি আভাযুক্ত সোনা।</li></ul>`,en:`The three common gold colours are Yellow Gold, White Gold and Rose Gold. Their colours depend on the metals used in the alloy and the finishing process.`}},
+{s:'s1',n:8,q:{bn:`গোল্ড পিউরিটি বা ফাইননেস কী?`, en:`What is gold purity or fineness?`},a:{bn:`1000 অংশের মধ্যে কত অংশ বিশুদ্ধ সোনা রয়েছে, সেটিই Gold Fineness। যেমন 750 Fineness মানে 75% বিশুদ্ধ সোনা।`,en:`Gold fineness indicates the number of parts of pure gold in 1000 parts of an alloy. For example, 750 fineness means 75% pure gold.`}},
+{s:'s2',n:9,q:{bn:`হলমার্কিং কী?`, en:`What is Hallmarking?`},a:{bn:`Hallmarking হলো অনুমোদিত পরীক্ষার মাধ্যমে গয়নার মূল্যবান ধাতুর বিশুদ্ধতা যাচাই করে নির্দিষ্ট চিহ্ন দেওয়ার ব্যবস্থা।`,en:`Hallmarking is a system of verifying the purity of precious metal jewellery through an authorised process and marking it accordingly.`}},
+{s:'s2',n:10,q:{bn:`BIS কী?`, en:`What is BIS?`},a:{bn:`BIS-এর সম্পূর্ণ নাম Bureau of Indian Standards। এটি ভারতের জাতীয় মান নির্ধারণকারী সংস্থা।`,en:`BIS stands for Bureau of Indian Standards. It is India's national standards body.`}},
+{s:'s2',n:11,q:{bn:`HUID কী?`, en:`What is HUID?`},a:{bn:`HUID-এর সম্পূর্ণ নাম Hallmark Unique Identification। এটি Hallmarked gold jewellery-র জন্য একটি ছয় অক্ষর ও সংখ্যার সমন্বয়ে তৈরি Unique Identification Number।`,en:`HUID stands for Hallmark Unique Identification. It is a unique six-character alphanumeric identification number assigned to a hallmarked gold jewellery article.`}},
+{s:'s2',n:12,q:{bn:`বর্তমানে BIS হলমার্কে কী কী চিহ্ন থাকে?`, en:`What are the components of the current BIS hallmark on gold jewellery?`},a:{bn:`<ul><li><b>BIS Standard Mark.</b></li><li><b>Purity/Fineness Mark</b>, যেমন 22K916।</li><li><b>Six-digit Alphanumeric HUID.</b></li></ul>`,en:`<ul><li><b>BIS Standard Mark.</b></li><li><b>Purity or Fineness Mark</b>, such as 22K916.</li><li><b>Six-digit Alphanumeric HUID.</b></li></ul>`}},
+{s:'s2',n:13,q:{bn:`গ্রাহক কীভাবে HUID যাচাই করবেন?`, en:`How can a customer verify HUID?`},a:{bn:`গ্রাহক BIS Care App-এর Verify HUID সুবিধা ব্যবহার করে HUID যাচাই করতে পারেন।`,en:`Customers can verify the HUID using the Verify HUID feature in the BIS Care App.`}},
+{s:'s2',n:14,q:{bn:`হলমার্কিং কেন গুরুত্বপূর্ণ?`, en:`Why is hallmarking important?`},a:{bn:`এটি গ্রাহককে গয়নার ঘোষিত বিশুদ্ধতা সম্পর্কে তৃতীয় পক্ষের নিশ্চয়তা দেয় এবং কেনাকাটায় আস্থা তৈরি করে।`,en:`Hallmarking provides third-party assurance of the declared purity of jewellery and builds customer confidence.`}},
+{s:'s2',n:15,q:{bn:`শুধু দেখে কি একজন Executive সোনার বিশুদ্ধতা নিশ্চিত করতে পারেন?`, en:`Can an executive personally guarantee gold purity just by looking at a jewellery item?`},a:{bn:`না। শুধু দেখে সোনার বিশুদ্ধতা নিশ্চিত করা যায় না। Hallmark, HUID এবং প্রয়োজনীয় পরীক্ষার মাধ্যমে তা যাচাই করতে হয়।`,en:`No. Gold purity cannot be guaranteed by visual inspection alone. It should be verified through hallmark details, HUID and appropriate testing procedures.`}},
+{s:'s3',n:16,q:{bn:`ডায়মন্ড কী?`, en:`What is a diamond?`},a:{bn:`Diamond হলো প্রাকৃতিকভাবে তৈরি কার্বনের একটি স্ফটিক রূপ। এটি অত্যন্ত কঠিন প্রাকৃতিক পদার্থগুলির মধ্যে অন্যতম।`,en:`A diamond is a crystalline form of naturally occurring carbon. It is one of the hardest naturally occurring materials.`}},
+{s:'s3',n:17,q:{bn:`ডায়মন্ডের 4Cs কী কী?`, en:`What are the 4Cs of Diamond?`},a:{bn:`<ul><li><b>Cut</b> – কাটিংয়ের গুণমান।</li><li><b>Colour</b> – রং বা বর্ণহীনতার মাত্রা।</li><li><b>Clarity</b> – অভ্যন্তরীণ ও বাহ্যিক বৈশিষ্ট্য বা দাগের মাত্রা।</li><li><b>Carat</b> – ওজন।</li></ul>`,en:`<ul><li><b>Cut</b> – Quality of the diamond's cut.</li><li><b>Colour</b> – Degree of colourlessness.</li><li><b>Clarity</b> – Presence and characteristics of inclusions and blemishes.</li><li><b>Carat</b> – Weight of the diamond.</li></ul>`}},
+{s:'s3',n:18,q:{bn:`ডায়মন্ড কাট কী?`, en:`What is Diamond Cut?`},a:{bn:`Diamond Cut হলো হিরের Facets, Proportions, Symmetry এবং Polish-এর গুণমান। এটি হিরের আলো প্রতিফলন ও ঝলমলে ভাবকে প্রভাবিত করে।`,en:`Diamond Cut refers to the quality of its facets, proportions, symmetry and polish. It affects how brilliantly the diamond interacts with light.`}},
+{s:'s3',n:19,q:{bn:`ডায়মন্ড কালার গ্রেডিং কী?`, en:`What is Diamond Colour Grading?`},a:{bn:`সাধারণ White Diamond-এর Colour Grade সাধারণত D থেকে Z পর্যন্ত নির্ধারণ করা হয়। D হলো Colourless এবং Z-এর দিকে গেলে হলুদ বা বাদামি আভা বাড়তে পারে।`,en:`Standard white diamonds are commonly graded on a D-to-Z colour scale. D represents colourless, while progressively higher grades may show increasing yellow or brown tints.`}},
+{s:'s3',n:20,q:{bn:`ডায়মন্ড ক্ল্যারিটি কী?`, en:`What is Diamond Clarity?`},a:{bn:`Diamond-এর ভিতরের Inclusion এবং বাইরের Blemish-এর উপস্থিতি, আকার, অবস্থান ও দৃশ্যমানতার ওপর Clarity নির্ভর করে।`,en:`Diamond Clarity is determined by the presence, size, position and visibility of internal inclusions and external blemishes.`}},
+{s:'s3',n:21,q:{bn:`ডায়মন্ডের সাধারণ Clarity Grade কী কী?`, en:`What are the common Diamond Clarity Grades?`},a:{bn:`<ul><li><b>FL</b> – Flawless</li><li><b>IF</b> – Internally Flawless</li><li><b>VVS1, VVS2</b> – Very Very Slightly Included</li><li><b>VS1, VS2</b> – Very Slightly Included</li><li><b>SI1, SI2</b> – Slightly Included</li><li><b>I1, I2, I3</b> – Included</li></ul>`,en:`The common clarity grades range from FL (Flawless) to I3 (Included), with IF, VVS, VS and SI grades in between.`}},
+{s:'s3',n:22,q:{bn:`ডায়মন্ড ক্যারেট ওজন কী?`, en:`What is Diamond Carat Weight?`},a:{bn:`Diamond-এর ওজন Carat দিয়ে মাপা হয়। 1 Carat = 200 Milligrams = 0.20 Gram।`,en:`Diamond weight is measured in carats. One carat equals 200 milligrams or 0.20 grams.`}},
+{s:'s3',n:23,q:{bn:`Natural ও Lab-Grown Diamond-এর পার্থক্য কী?`, en:`What is the difference between Natural Diamond and Lab-Grown Diamond?`},a:{bn:`Natural Diamond প্রকৃতিতে ভূগর্ভে তৈরি হয়। Lab-Grown Diamond নিয়ন্ত্রিত পরিবেশে প্রযুক্তির সাহায্যে তৈরি হয়। উভয়ের রাসায়নিক গঠন ও স্ফটিক বৈশিষ্ট্য একই ধরনের হলেও উৎপত্তি আলাদা।`,en:`Natural diamonds form in the Earth, whereas lab-grown diamonds are created using technology in controlled environments. They have essentially the same chemical composition and crystal structure, but different origins.`}},
+{s:'s3',n:24,q:{bn:`ডায়মন্ড সার্টিফিকেট কী?`, en:`What is a Diamond Certificate or Grading Report?`},a:{bn:`এটি একটি Gemological Laboratory-এর দেওয়া রিপোর্ট, যেখানে হিরের নির্দিষ্ট বৈশিষ্ট্য ও গ্রেড উল্লেখ থাকে।`,en:`It is a report issued by a gemological laboratory describing the diamond's characteristics and grading.`}},
+{s:'s3',n:25,q:{bn:`ডায়মন্ড ফ্লুরোসেন্স কী?`, en:`What is Diamond Fluorescence?`},a:{bn:`কিছু Diamond UV Light-এর সংস্পর্শে এলে নীল বা অন্য রঙের আলো নির্গত করতে পারে। এই বৈশিষ্ট্যকে Fluorescence বলে।`,en:`Fluorescence is the phenomenon in which some diamonds emit visible light, often blue, when exposed to ultraviolet light.`}},
+{s:'s4',n:26,q:{bn:`Gemstone বা রত্নপাথর কী?`, en:`What is a gemstone?`},a:{bn:`Gemstone হলো প্রাকৃতিক বা নির্দিষ্ট ক্ষেত্রে Laboratory-created এমন খনিজ বা জৈব পদার্থ, যা সৌন্দর্য, বিরলতা, স্থায়িত্ব ও অলংকারের কাজে ব্যবহারের উপযোগিতার জন্য মূল্যবান।`,en:`A gemstone is a natural or, in some cases, laboratory-created mineral or organic material valued for its beauty, rarity, durability and suitability for jewellery.`}},
+{s:'s4',n:27,q:{bn:`রঙিন রত্নপাথরের গুণমান বোঝার প্রধান বিষয় কী?`, en:`What are the four important factors used to evaluate coloured gemstones?`},a:{bn:`<ul><li><b>Colour</b> – রং।</li><li><b>Clarity</b> – স্বচ্ছতা ও অভ্যন্তরীণ বৈশিষ্ট্য।</li><li><b>Cut</b> – কাটিং।</li><li><b>Carat Weight</b> – ওজন।</li></ul>`,en:`The four important factors are Colour, Clarity, Cut and Carat Weight.`}},
+{s:'s4',n:28,q:{bn:`রুবি কী?`, en:`What is Ruby?`},a:{bn:`Ruby হলো Corundum খনিজের লাল রঙের রত্নপাথর। এর লাল রং মূলত Chromium-এর কারণে তৈরি হয়।`,en:`Ruby is the red variety of the mineral Corundum. Its red colour is primarily caused by chromium.`}},
+{s:'s4',n:29,q:{bn:`স্যাফায়ার কী?`, en:`What is Sapphire?`},a:{bn:`Sapphire-ও Corundum খনিজের একটি রত্নপাথর। নীল রং এর সবচেয়ে পরিচিত রূপ হলেও অন্যান্য রঙের Sapphire-ও পাওয়া যায়।`,en:`Sapphire is another variety of Corundum. Although blue is its most familiar colour, sapphires are available in several other colours.`}},
+{s:'s4',n:30,q:{bn:`এমেরাল্ড কী?`, en:`What is Emerald?`},a:{bn:`Emerald হলো Beryl পরিবারের সবুজ রঙের রত্নপাথর। Chromium অথবা Vanadium এর সবুজ রঙের জন্য দায়ী হতে পারে।`,en:`Emerald is the green variety of the Beryl mineral family. Chromium or vanadium may be responsible for its green colour.`}},
+{s:'s4',n:31,q:{bn:`অ্যামেথিস্ট কী?`, en:`What is Amethyst?`},a:{bn:`Amethyst হলো Quartz পরিবারের বেগুনি রঙের রত্নপাথর।`,en:`Amethyst is a purple variety of the Quartz mineral family.`}},
+{s:'s4',n:32,q:{bn:`অ্যাকোয়ামেরিন কী?`, en:`What is Aquamarine?`},a:{bn:`Aquamarine হলো Beryl পরিবারের নীল থেকে হালকা নীল-সবুজ রঙের রত্নপাথর।`,en:`Aquamarine is a blue to greenish-blue variety of the Beryl mineral family.`}},
+{s:'s4',n:33,q:{bn:`টোপাজ কী?`, en:`What is Topaz?`},a:{bn:`Topaz একটি স্বতন্ত্র খনিজ রত্নপাথর। এটি বিভিন্ন রঙে পাওয়া যায়, যেমন নীল, হলুদ, গোলাপি ও বর্ণহীন।`,en:`Topaz is a distinct gemstone mineral available in various colours, including blue, yellow, pink and colourless.`}},
+{s:'s4',n:34,q:{bn:`Natural, Synthetic ও Imitation Gemstone-এর পার্থক্য কী?`, en:`What is the difference between Natural, Synthetic and Imitation Gemstones?`},a:{bn:`<ul><li><b>Natural Gemstone:</b> প্রকৃতিতে তৈরি।</li><li><b>Synthetic Gemstone:</b> মানুষের তৈরি, কিন্তু একই ধরনের রাসায়নিক ও স্ফটিক বৈশিষ্ট্যযুক্ত।</li><li><b>Imitation Gemstone:</b> দেখতে অন্য রত্নের মতো হলেও তার উপাদান ও গঠন আলাদা।</li></ul>`,en:`<ul><li><b>Natural Gemstone:</b> Formed naturally.</li><li><b>Synthetic Gemstone:</b> Laboratory-created with essentially the same chemical composition and crystal structure as its natural counterpart.</li><li><b>Imitation Gemstone:</b> A different material that resembles another gemstone in appearance.</li></ul>`}},
+{s:'s4',n:35,q:{bn:`Gemstone Treatment কী?`, en:`What is Gemstone Treatment?`},a:{bn:`Gemstone-এর রং, স্বচ্ছতা বা বাহ্যিক সৌন্দর্য উন্নত করার জন্য Heating, Oiling, Dyeing, Irradiation বা অন্যান্য পদ্ধতি ব্যবহার করা হতে পারে। এগুলি Treatment নামে পরিচিত।`,en:`Gemstone treatments are processes such as heating, oiling, dyeing or irradiation used to improve or alter a gemstone's appearance.`}},
+{s:'s4',n:36,q:{bn:`Gemstone Treatment জানানো কেন জরুরি?`, en:`Why is gemstone treatment disclosure important?`},a:{bn:`Treatment-এর ফলে রত্নের মূল্য, স্থায়িত্ব, যত্নের নিয়ম এবং বাজারমূল্য পরিবর্তিত হতে পারে। তাই গ্রাহককে সঠিক তথ্য জানানো জরুরি।`,en:`Treatments can affect a gemstone's value, durability, care requirements and market price. Therefore, customers should be informed accurately.`}},
+{s:'s5',n:37,q:{bn:`গয়না তৈরির প্রধান ধাপগুলি কী?`, en:`What are the basic stages of jewellery manufacturing?`},a:{bn:`<ul><li><b>Design</b> – ডিজাইন তৈরি।</li><li><b>CAD Modelling</b> – ডিজিটাল মডেল তৈরি।</li><li><b>Casting</b> – ধাতুর ছাঁচ তৈরি ও ঢালাই।</li><li><b>Filing and Assembly</b> – ঘষামাজা ও বিভিন্ন অংশ জোড়া লাগানো।</li><li><b>Stone Setting</b> – পাথর বসানো।</li><li><b>Polishing</b> – পালিশ।</li><li><b>Quality Checking</b> – গুণমান পরীক্ষা।</li></ul>`,en:`The main stages include Design, CAD Modelling, Casting, Filing and Assembly, Stone Setting, Polishing and Quality Checking.`}},
+{s:'s5',n:38,q:{bn:`Jewellery-তে CAD কী?`, en:`What is CAD in jewellery?`},a:{bn:`CAD-এর সম্পূর্ণ নাম Computer-Aided Design। কম্পিউটারের মাধ্যমে গয়নার ডিজাইন ও 3D Model তৈরি করার পদ্ধতি।`,en:`CAD stands for Computer-Aided Design. It is used to create jewellery designs and 3D models using computer software.`}},
+{s:'s5',n:39,q:{bn:`স্টোন সেটিং কী?`, en:`What is Stone Setting?`},a:{bn:`গয়নার মধ্যে Diamond বা Gemstone সঠিকভাবে বসানোর প্রক্রিয়াকে Stone Setting বলে।`,en:`Stone Setting is the process of securely placing diamonds or gemstones into jewellery.`}},
+{s:'s5',n:40,q:{bn:`স্টোন সেটিংয়ের সাধারণ ধরন কী কী?`, en:`What are the common types of Stone Setting?`},a:{bn:`<ul><li><b>Prong Setting</b> – ছোট ধাতব কাঁটা দিয়ে পাথর আটকানো।</li><li><b>Bezel Setting</b> – ধাতব বর্ডার দিয়ে পাথর ঘিরে রাখা।</li><li><b>Pave Setting</b> – ছোট ছোট পাথর পাশাপাশি বসানো।</li><li><b>Channel Setting</b> – ধাতব চ্যানেলের মধ্যে পাথর বসানো।</li><li><b>Halo Setting</b> – একটি বড় পাথরের চারদিকে ছোট পাথর বসানো।</li></ul>`,en:`Common types include Prong, Bezel, Pave, Channel and Halo Settings.`}},
+{s:'s5',n:41,q:{bn:`Handmade ও Machine-Made Jewellery-এর পার্থক্য কী?`, en:`What is the difference between Handmade and Machine-Made Jewellery?`},a:{bn:`Handmade Jewellery মূলত কারিগরের হাতে তৈরি হয়। Machine-Made Jewellery যন্ত্রের সাহায্যে তৈরি হয়। উভয়েরই ডিজাইন, ফিনিশিং ও গুণমান আলাদা হতে পারে।`,en:`Handmade jewellery is crafted primarily by artisans, whereas machine-made jewellery is manufactured using machines. Their design, finishing and quality may vary.`}},
+{s:'s5',n:42,q:{bn:`গয়নার ওজন কী?`, en:`What is Jewellery Weight?`},a:{bn:`গয়নার মোট ওজনের মধ্যে ধাতু, পাথর এবং অন্যান্য অংশের ওজন থাকতে পারে। তাই Net Gold Weight ও Gross Weight-এর পার্থক্য জানা জরুরি।`,en:`Jewellery weight may include the weight of metal, stones and other components. Therefore, it is important to distinguish between Net Gold Weight and Gross Weight.`}},
+{s:'s5',n:43,q:{bn:`Gross Weight ও Net Gold Weight-এর পার্থক্য কী?`, en:`What is the difference between Gross Weight and Net Gold Weight?`},a:{bn:`<ul><li><b>Gross Weight:</b> সম্পূর্ণ গয়নার মোট ওজন।</li><li><b>Net Gold Weight:</b> গয়নার মধ্যে থাকা সোনার প্রকৃত ওজন, যেখানে পাথর ও অন্যান্য অ-সোনার অংশ বাদ দেওয়া হয়।</li></ul>`,en:`<ul><li><b>Gross Weight:</b> The total weight of the complete jewellery item.</li><li><b>Net Gold Weight:</b> The actual weight of the gold content, excluding stones and other non-gold components.</li></ul>`}},
+{s:'s6',n:44,q:{bn:`সোনার গয়নার দাম কীভাবে হিসাব করা হয়?`, en:`How is gold jewellery pricing calculated?`},a:{bn:`সাধারণত গয়নার দাম নির্ভর করে:<ul><li>Net Gold Weight.</li><li>Applicable Gold Rate.</li><li>Making Charges.</li><li>Applicable Wastage Charges, if any.</li><li>Stone or Diamond Charges, if any.</li><li>Applicable Taxes.</li></ul>`,en:`Gold jewellery pricing generally depends on:<ul><li>Net Gold Weight.</li><li>Applicable Gold Rate.</li><li>Making Charges.</li><li>Applicable Wastage Charges, if any.</li><li>Stone or Diamond Charges, if any.</li><li>Applicable Taxes.</li></ul>`}},
+{s:'s6',n:45,q:{bn:`মেকিং চার্জ কী?`, en:`What are Making Charges?`},a:{bn:`গয়না তৈরি করার জন্য কারিগরি শ্রম, ডিজাইন ও উৎপাদন খরচের যে মূল্য নেওয়া হয় তাকে Making Charges বলে।`,en:`Making Charges are the costs charged for craftsmanship, design and manufacturing of jewellery.`}},
+{s:'s6',n:46,q:{bn:`ওয়েস্টেজ চার্জ কী?`, en:`What is Wastage Charge?`},a:{bn:`গয়না তৈরির সময় উৎপাদন প্রক্রিয়ায় ধাতুর কিছু অংশ ক্ষয় বা অপচয় হতে পারে। দোকানের নীতি অনুযায়ী এর জন্য Wastage Charge নেওয়া হতে পারে।`,en:`Wastage Charges may represent metal loss during the manufacturing process. They may be charged according to the store's pricing policy.`}},
+{s:'s6',n:47,q:{bn:`স্টোন ওয়েট ডিডাকশন কী?`, en:`What is Stone Weight Deduction?`},a:{bn:`গয়নার মোট ওজন থেকে পাথরের ওজন বাদ দিয়ে ধাতুর প্রকৃত ওজন নির্ধারণ করাকে Stone Weight Deduction বলা হয়।`,en:`Stone Weight Deduction means subtracting the weight of stones from the gross jewellery weight to determine the actual metal weight.`}},
+{s:'s6',n:48,q:{bn:`জুয়েলারি এক্সচেঞ্জ কী?`, en:`What is Jewellery Exchange?`},a:{bn:`গ্রাহক পুরোনো গয়না দোকানে জমা দিয়ে দোকানের নিয়ম অনুযায়ী তার মূল্য সমন্বয় করে নতুন গয়না কিনতে পারেন। একে Jewellery Exchange বলে।`,en:`Jewellery Exchange is a facility through which customers trade in their old jewellery and adjust its assessed value against a new purchase, subject to store policy.`}},
+{s:'s6',n:49,q:{bn:`বাইব্যাক পলিসি কী?`, en:`What is Buyback Policy?`},a:{bn:`দোকান নির্দিষ্ট শর্তে আগে বিক্রি করা গয়না ভবিষ্যতে ফেরত কিনতে পারে। এই ব্যবস্থাকে Buyback Policy বলে।`,en:`A Buyback Policy allows a store to repurchase previously sold jewellery under specified terms and conditions.`}},
+{s:'s6',n:50,q:{bn:`সঠিক বিল বা ইনভয়েস কেন জরুরি?`, en:`Why is a proper invoice important?`},a:{bn:`Invoice-এ পণ্যের বিবরণ, বিশুদ্ধতা, ওজন, দাম, Making Charges, কর এবং অন্যান্য প্রযোজ্য তথ্য থাকে। এটি কেনাকাটার প্রমাণ ও ভবিষ্যতের পরিষেবার জন্য গুরুত্বপূর্ণ।`,en:`An invoice records product details, purity, weight, price, making charges, applicable taxes and other relevant information. It serves as proof of purchase and supports future services.`}},
+{s:'s7',n:51,q:{bn:`গ্রাহক দোকানে ঢুকলে প্রথমে কী করা উচিত?`, en:`What is the first step when a customer enters a jewellery store?`},a:{bn:`হাসিমুখে গ্রাহককে স্বাগত জানাতে হবে, নম্রভাবে কথা বলতে হবে এবং তাঁর প্রয়োজন বোঝার চেষ্টা করতে হবে।`,en:`Welcome the customer with a warm smile, communicate politely and try to understand their requirements.`}},
+{s:'s7',n:52,q:{bn:`গ্রাহকের চাহিদা কীভাবে বুঝবেন?`, en:`How do you identify a customer's needs?`},a:{bn:`গ্রাহকের বাজেট, পছন্দ, উপলক্ষ, ডিজাইন, ধাতুর ধরন এবং ব্যবহারের উদ্দেশ্য সম্পর্কে প্রশ্ন করতে হবে।`,en:`Ask questions about the customer's budget, preferences, occasion, design, metal type and intended use.`}},
+{s:'s7',n:53,q:{bn:`একজন গ্রাহককে পণ্য কিনতে কীভাবে উৎসাহিত করবেন?`, en:`How would you convince a customer to buy a product?`},a:{bn:`পণ্যের গুণমান, ডিজাইন, ব্যবহারিক সুবিধা ও মূল্য সম্পর্কে সঠিক তথ্য দিয়ে গ্রাহকের প্রয়োজন অনুযায়ী পণ্য দেখাতে হবে। কখনও জোর করে বিক্রি করা উচিত নয়।`,en:`Explain the product's quality, design, practical benefits and price accurately. Recommend products that match the customer's needs without pressuring them.`}},
+{s:'s7',n:54,q:{bn:`গ্রাহক দাম বেশি বললে কী করবেন?`, en:`What would you do if a customer says the price is too high?`},a:{bn:`প্রথমে তাঁর বাজেট বুঝব। তারপর একই ধরনের কম বাজেটের ডিজাইন দেখাব অথবা পণ্যের মূল্য কীভাবে নির্ধারিত হয়েছে তা বুঝিয়ে বলব।`,en:`First, I would understand the customer's budget. Then I would show similar designs within that budget or explain how the product's price is calculated.`}},
+{s:'s7',n:55,q:{bn:`রাগান্বিত গ্রাহককে কীভাবে সামলাবেন?`, en:`How would you handle an angry customer?`},a:{bn:`শান্ত থাকব, মনোযোগ দিয়ে অভিযোগ শুনব, সহানুভূতি প্রকাশ করব এবং দোকানের নীতি অনুযায়ী সমাধানের চেষ্টা করব।`,en:`I would remain calm, listen carefully to the complaint, show empathy and try to resolve the issue according to store policy.`}},
+{s:'s7',n:56,q:{bn:`আপসেলিং কী?`, en:`What is Upselling?`},a:{bn:`গ্রাহক যে পণ্যটি কিনতে চাইছেন তার তুলনায় বেশি বৈশিষ্ট্য বা উচ্চমূল্যের উপযুক্ত পণ্য দেখানোকে Upselling বলে।`,en:`Upselling means suggesting a higher-value or upgraded product that offers additional features and suits the customer's needs.`}},
+{s:'s7',n:57,q:{bn:`ক্রস-সেলিং কী?`, en:`What is Cross-Selling?`},a:{bn:`গ্রাহক একটি পণ্য কিনলে তার সঙ্গে সম্পর্কিত অন্য পণ্য কেনার পরামর্শ দেওয়াকে Cross-Selling বলে। যেমন Necklace-এর সঙ্গে Earrings দেখানো।`,en:`Cross-Selling means suggesting complementary products. For example, recommending matching earrings with a necklace.`}},
+{s:'s7',n:58,q:{bn:`CRM কী?`, en:`What is Customer Relationship Management (CRM)?`},a:{bn:`CRM হলো গ্রাহকের সঙ্গে দীর্ঘমেয়াদি সম্পর্ক তৈরি, বজায় রাখা এবং উন্নত করার পদ্ধতি।`,en:`CRM stands for Customer Relationship Management. It is the process of building, maintaining and improving long-term customer relationships.`}},
+{s:'s7',n:59,q:{bn:`Jewellery Sales-এ Product Knowledge কেন গুরুত্বপূর্ণ?`, en:`Why is product knowledge important in jewellery sales?`},a:{bn:`পণ্যের সঠিক তথ্য জানা থাকলে গ্রাহকের প্রশ্নের উত্তর দেওয়া যায়, আস্থা তৈরি হয় এবং বিক্রয়ের সম্ভাবনা বাড়ে।`,en:`Product knowledge helps executives answer customer questions accurately, build trust and improve sales opportunities.`}},
+{s:'s7',n:60,q:{bn:`After-Sales Service কী?`, en:`What is After-Sales Service?`},a:{bn:`বিক্রয়ের পর গ্রাহককে Cleaning, Repair, Polishing, Resizing, Warranty Support এবং অন্যান্য প্রযোজ্য পরিষেবা দেওয়াকে After-Sales Service বলে।`,en:`After-Sales Service includes services such as cleaning, repair, polishing, resizing, warranty support and other applicable services after a purchase.`}},
+{s:'s8',n:61,q:{bn:`ইনভেন্টরি ম্যানেজমেন্ট কী?`, en:`What is Inventory Management?`},a:{bn:`দোকানে থাকা সমস্ত পণ্যের স্টক, পরিমাণ, ওজন, অবস্থান এবং বিক্রির হিসাব সঠিকভাবে সংরক্ষণ ও পরিচালনা করাকে Inventory Management বলে।`,en:`Inventory Management is the process of recording and controlling product stock, quantity, weight, location and sales.`}},
+{s:'s8',n:62,q:{bn:`SKU কী?`, en:`What is SKU?`},a:{bn:`SKU-এর সম্পূর্ণ নাম Stock Keeping Unit। এটি প্রতিটি পণ্যকে আলাদাভাবে শনাক্ত করার জন্য ব্যবহৃত একটি Unique Code।`,en:`SKU stands for Stock Keeping Unit. It is a unique code used to identify and track individual products.`}},
+{s:'s8',n:63,q:{bn:`POS কী?`, en:`What is POS?`},a:{bn:`POS-এর সম্পূর্ণ নাম Point of Sale। এটি দোকানে পণ্য বিক্রি, বিল তৈরি এবং লেনদেন রেকর্ড করার ব্যবস্থা।`,en:`POS stands for Point of Sale. It is a system used to process sales, generate bills and record transactions.`}},
+{s:'s8',n:64,q:{bn:`দামি গয়না সামলানোর সময় কী কী সতর্কতা নিতে হবে?`, en:`What precautions should be taken while handling expensive jewellery?`},a:{bn:`<ul><li>নির্দিষ্ট নিয়ম অনুযায়ী পণ্য বের করতে হবে।</li><li>একসঙ্গে অতিরিক্ত পণ্য হাতে নেওয়া যাবে না।</li><li>পণ্য সবসময় নির্দিষ্ট Tray-তে রাখতে হবে।</li><li>প্রতিটি পণ্য ব্যবহারের পর সঠিক স্থানে রাখতে হবে।</li><li>স্টোরের Security Protocol মেনে চলতে হবে।</li></ul>`,en:`<ul><li>Follow the store's product-handling procedures.</li><li>Avoid handling too many items simultaneously.</li><li>Use designated jewellery trays.</li><li>Return every item to its correct place after use.</li><li>Follow all store security protocols.</li></ul>`}},
+{s:'s8',n:65,q:{bn:`কাজ শুরু করার আগে Executive-এর কী করা উচিত?`, en:`What should an executive do at the beginning of a working day?`},a:{bn:`দোকানের Opening Checklist অনুসরণ করা, ডিসপ্লে পরীক্ষা করা, স্টক ও নিরাপত্তা সংক্রান্ত নির্দেশ মেনে চলা এবং নিজের কাজের প্রস্তুতি নেওয়া।`,en:`Follow the opening checklist, inspect displays, comply with stock and security procedures and prepare for daily responsibilities.`}},
+{s:'s8',n:66,q:{bn:`কোনো গয়না ক্ষতিগ্রস্ত অবস্থায় পাওয়া গেলে কী করবেন?`, en:`What should an executive do if a jewellery item is found damaged?`},a:{bn:`পণ্যটি আলাদা করে রাখতে হবে, ম্যানেজারকে জানাতে হবে এবং নির্ধারিত Damage Reporting Procedure অনুসরণ করতে হবে।`,en:`Isolate the damaged item, inform the manager and follow the store's damage-reporting procedure.`}},
+{s:'s8',n:67,q:{bn:`Jewellery Store-এ Teamwork কেন গুরুত্বপূর্ণ?`, en:`Why is teamwork important in a jewellery store?`},a:{bn:`ভালো Teamwork-এর ফলে গ্রাহক পরিষেবা উন্নত হয়, কাজের ভুল কমে এবং দোকানের সামগ্রিক বিক্রয় ও পরিচালনা ভালো হয়।`,en:`Effective teamwork improves customer service, reduces operational errors and supports better store performance and sales.`}},
+{s:'s9',n:68,q:{bn:`Jewellery Sales-এ সততা কেন জরুরি?`, en:`Why is honesty important in jewellery sales?`},a:{bn:`Jewellery একটি মূল্যবান পণ্য। ভুল তথ্য বা মিথ্যা প্রতিশ্রুতি গ্রাহকের আর্থিক ক্ষতি ও প্রতিষ্ঠানের সুনামের ক্ষতি করতে পারে।`,en:`Jewellery is a valuable product. False information or misleading promises can cause financial loss to customers and damage the store's reputation.`}},
+{s:'s9',n:69,q:{bn:`Gemstone Treatment বা পণ্যের ত্রুটি কি গ্রাহকের কাছ থেকে লুকানো উচিত?`, en:`Should an executive hide gemstone treatments or product defects?`},a:{bn:`কখনোই নয়। পণ্যের Treatment, পরিচিত ত্রুটি ও গুরুত্বপূর্ণ বৈশিষ্ট্য সম্পর্কে গ্রাহককে সঠিক তথ্য জানাতে হবে।`,en:`Never. Customers must receive accurate information about gemstone treatments, known defects and important product characteristics.`}},
+{s:'s9',n:70,q:{bn:`গ্রাহকের প্রশ্নের উত্তর জানা না থাকলে কী করবেন?`, en:`What should you do if you do not know the answer to a customer's question?`},a:{bn:`ভুল উত্তর দেওয়া যাবে না। বিনয়ের সঙ্গে সময় চেয়ে Senior বা Manager-এর কাছ থেকে সঠিক তথ্য জেনে গ্রাহককে জানাতে হবে।`,en:`I would never provide incorrect information. I would politely ask for some time, consult a senior or manager and then provide the correct answer.`}},
+{s:'s9',n:71,q:{bn:`Jewellery Retail-এ Confidentiality কী?`, en:`What is Confidentiality in jewellery retail?`},a:{bn:`গ্রাহকের ব্যক্তিগত তথ্য, কেনাকাটার বিবরণ এবং প্রতিষ্ঠানের গোপন ব্যবসায়িক তথ্য অনুমতি ছাড়া অন্যের কাছে প্রকাশ না করাকে Confidentiality বলে।`,en:`Confidentiality means protecting customers' personal information, purchase details and the store's confidential business information from unauthorised disclosure.`}},
+{s:'s9',n:72,q:{bn:`একজন সফল Jewellery Store Executive-এর বৈশিষ্ট্য কী?`, en:`What makes a successful jewellery store executive?`},a:{bn:`<ul><li>Product Knowledge.</li><li>Communication Skills.</li><li>Customer Handling.</li><li>Sales Skills.</li><li>Honesty and Integrity.</li><li>Attention to Detail.</li><li>Teamwork.</li><li>Discipline and Professionalism.</li></ul>`,en:`A successful jewellery store executive should possess strong product knowledge, communication skills, customer-handling ability, sales skills, honesty, attention to detail, teamwork and professionalism.`}},
+{s:'s10',n:73,q:{bn:`একজন গ্রাহক ₹20,000-এর মধ্যে একটি সোনার আংটি চান। আপনি কী করবেন?`, en:`A customer wants a gold ring within ₹20,000. What will you do?`},a:{bn:`প্রথমে গ্রাহকের ডিজাইন ও পছন্দ জানব। তারপর বর্তমান সোনার দর, ওজন, Making Charges এবং প্রযোজ্য কর বিবেচনা করে বাজেটের মধ্যে উপযুক্ত Ring দেখাব।`,en:`First, I will understand the customer's design preferences. Then I will recommend suitable rings within the budget, considering the applicable gold rate, weight, making charges and taxes.`}},
+{s:'s10',n:74,q:{bn:`একজন গ্রাহক জিজ্ঞাসা করেন 22K সোনা ভালো না 18K সোনা ভালো। কীভাবে বুঝিয়ে বলবেন?`, en:`A customer asks whether 22K gold is better than 18K gold. How will you explain?`},a:{bn:`22K সোনায় বিশুদ্ধতার পরিমাণ বেশি। অন্যদিকে 18K সোনায় অন্যান্য ধাতুর পরিমাণ বেশি থাকায় কিছু ডিজাইন ও Diamond Jewellery-তে এটি ব্যবহার করা হয়। কোনটি ভালো তা নির্ভর করে ব্যবহারের উদ্দেশ্য ও পছন্দের ওপর।`,en:`22K gold has a higher gold content, while 18K gold contains a greater proportion of other metals and is used in various designs, including diamond jewellery. The better choice depends on the intended use and customer preference.`}},
+{s:'s10',n:75,q:{bn:`একজন গ্রাহক ডায়মন্ড রিং কিনতে চান কিন্তু 4Cs বুঝতে পারেন না। আপনি কী করবেন?`, en:`A customer wants to buy a diamond ring but does not understand the 4Cs. What will you do?`},a:{bn:`সহজভাবে Cut, Colour, Clarity এবং Carat বুঝিয়ে দেব। তারপর তাঁর বাজেট অনুযায়ী বিভিন্ন Diamond তুলনা করে দেখাব।`,en:`I will explain Cut, Colour, Clarity and Carat in simple terms. Then I will compare different diamonds according to the customer's budget.`}},
+{s:'s10',n:76,q:{bn:`একজন গ্রাহক অভিযোগ করেন যে রত্নপাথরের রং প্রতিশ্রুতির চেয়ে আলাদা দেখাচ্ছে। আপনি কী করবেন?`, en:`A customer complains that the gemstone colour looks different from what was promised. What will you do?`},a:{bn:`প্রথমে গ্রাহকের অভিযোগ মনোযোগ দিয়ে শুনব। তারপর Invoice, Certificate এবং পণ্যের বিবরণ যাচাই করে Manager-এর সাহায্যে দোকানের নীতি অনুযায়ী সমাধান করব।`,en:`I will listen carefully to the complaint, check the invoice, certificate and product description, and work with the manager to resolve the issue according to store policy.`}},
+{s:'s10',n:77,q:{bn:`একজন গ্রাহক ডিসকাউন্ট চাইলে কীভাবে উত্তর দেবেন?`, en:`A customer wants a discount. How will you respond?`},a:{bn:`বিনয়ের সঙ্গে দোকানের Discount Policy জানাব। অনুমতি ছাড়া কোনো Discount প্রতিশ্রুতি দেব না।`,en:`I will politely explain the store's discount policy. I will never promise an unauthorised discount.`}},
+{s:'s10',n:78,q:{bn:`আপনি লক্ষ্য করলেন Invoice-এর ওজন ও গয়নার ট্যাগের ওজন মিলছে না। আপনি কী করবেন?`, en:`You notice that the invoice weight and the jewellery tag weight do not match. What will you do?`},a:{bn:`বিক্রয় সম্পন্ন করার আগে বিষয়টি যাচাই করব এবং Manager বা সংশ্লিষ্ট কর্মীকে জানাব। যাচাই ছাড়া বিল সম্পন্ন করব না।`,en:`I will verify the discrepancy and inform the manager or the concerned employee. I will not complete the billing until the issue is resolved.`}},
+{s:'s10',n:79,q:{bn:`একই সময়ে দুজন গ্রাহকের সহায়তা প্রয়োজন। আপনি কী করবেন?`, en:`Two customers need assistance at the same time. What will you do?`},a:{bn:`উভয় গ্রাহককে অভ্যর্থনা জানাব, একজনকে সামান্য অপেক্ষা করতে অনুরোধ করব এবং প্রয়োজনে সহকর্মীর সাহায্য নেব।`,en:`I will acknowledge both customers, politely request one to wait briefly and seek assistance from a colleague if necessary.`}},
+{s:'s10',n:80,q:{bn:`গ্রাহকদের সঙ্গে দীর্ঘমেয়াদি সম্পর্ক কীভাবে তৈরি করবেন?`, en:`How would you build long-term relationships with customers?`},a:{bn:`ভালো ব্যবহার, সঠিক তথ্য, প্রতিশ্রুতি রক্ষা, বিক্রয়-পরবর্তী পরিষেবা এবং নিয়মিত যোগাযোগের মাধ্যমে গ্রাহকের আস্থা অর্জন করব।`,en:`I will build trust through courteous behaviour, accurate information, keeping promises, reliable after-sales service and appropriate follow-up communication.`}}
 ];
 
-/* =========================================================
-   HELPERS
-   ========================================================= */
 const stripHTML = html => {
   const d = document.createElement('div');
   d.innerHTML = html;
   return d.textContent || '';
 };
-
-/* build search index */
 QUESTIONS.forEach(q => {
   q._s = stripHTML(q.q.bn + ' ' + q.q.en + ' ' + q.a.bn + ' ' + q.a.en).toLowerCase();
 });
 
 const state = { section:'all', query:'', lang:'both' };
-
 const contentEl = document.getElementById('content');
 const countEl   = document.getElementById('count');
 const navEl     = document.getElementById('nav');
 const extras    = [document.getElementById('revision'), document.getElementById('golden')];
 
-/* =========================================================
-   BUILD SIDEBAR
-   ========================================================= */
 (function buildNav(){
   const divider = navEl.querySelector('.nav-div');
-  const quickLabel = navEl.querySelectorAll('.nav-label')[1];
-
   SECTIONS.forEach(sec => {
     const btn = document.createElement('button');
     btn.className = 'nav-btn';
@@ -1017,15 +1324,11 @@ const extras    = [document.getElementById('revision'), document.getElementById(
   });
 })();
 
-/* =========================================================
-   RENDER
-   ========================================================= */
 function matches(q){
   if(state.section !== 'all' && q.s !== state.section) return false;
   if(state.query && !q._s.includes(state.query)) return false;
   return true;
 }
-
 function sectionHead(sec, count){
   return `<div class="sec-head" id="${sec.id}">
     <div class="sec-icon">${sec.icon}</div>
@@ -1036,7 +1339,6 @@ function sectionHead(sec, count){
     <span class="sec-count">${count} Q</span>
   </div>`;
 }
-
 function card(q){
   return `<article class="q-card" data-q="${q.n}">
     <button class="q-head" type="button" aria-expanded="false">
@@ -1053,7 +1355,6 @@ function card(q){
     </div>
   </article>`;
 }
-
 function render(){
   const list = QUESTIONS.filter(matches);
   let html = '';
@@ -1085,15 +1386,10 @@ function render(){
   countEl.innerHTML = `Showing <b>${list.length}</b> of ${QUESTIONS.length} questions`;
   toggleExtras(state.section === 'all' && !state.query);
 }
-
 function toggleExtras(show){
   extras.forEach(el => { if(el) el.style.display = show ? '' : 'none'; });
 }
 
-/* =========================================================
-   EVENTS
-   ========================================================= */
-/* accordion */
 contentEl.addEventListener('click', e => {
   const head = e.target.closest('.q-head');
   if(!head) return;
@@ -1102,7 +1398,6 @@ contentEl.addEventListener('click', e => {
   head.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 
-/* sidebar navigation */
 navEl.addEventListener('click', e => {
   const btn = e.target.closest('.nav-btn');
   if(!btn) return;
@@ -1121,31 +1416,30 @@ navEl.addEventListener('click', e => {
   state.section = btn.dataset.sec;
   setActiveNav(state.section);
   render();
-  window.scrollTo({ top: document.querySelector('.toolbar').offsetTop - 90, behavior:'smooth' });
+  const tb = document.querySelector('.toolbar');
+  const y = tb.getBoundingClientRect().top + window.pageYOffset - 80;
+  window.scrollTo({ top: y, behavior:'smooth' });
 });
-
 function setActiveNav(sec){
   navEl.querySelectorAll('.nav-btn').forEach(b => {
     if(b.dataset.sec) b.classList.toggle('active', b.dataset.sec === sec);
   });
 }
 
-/* search */
 document.getElementById('search').addEventListener('input', e => {
   state.query = e.target.value.trim().toLowerCase();
   render();
 });
 
-/* language switch */
 document.getElementById('langsw').addEventListener('click', e => {
   const btn = e.target.closest('button');
   if(!btn) return;
   state.lang = btn.dataset.lang;
-  document.body.className = 'lang-' + state.lang;
+  document.body.className = 'lang-' + state.lang +
+    (document.body.classList.contains('view-academy') ? ' view-academy' : '');
   document.querySelectorAll('#langsw button').forEach(b => b.classList.toggle('on', b === btn));
 });
 
-/* expand / collapse all */
 document.getElementById('expandAll').addEventListener('click', () => {
   contentEl.querySelectorAll('.q-card').forEach(c => {
     c.classList.add('open');
@@ -1159,11 +1453,121 @@ document.getElementById('collapseAll').addEventListener('click', () => {
   });
 });
 
-/* footer year */
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-/* boot */
 render();
+
+/* =========================================================
+   ACADEMY DATA
+   ========================================================= */
+const gems=[
+{id:'ruby',n:'০১',name:'মানিক (Ruby)',sanskrit:'মাণিক্য',planet:'প্রচলিত বিশ্বাসে সূর্য',colour:'লাল থেকে বেগুনি আভাযুক্ত লাল',ri:'১.৭৬২–১.৭৭০',sg:'৩.৯৭–৪.০৫',hard:'৯',material:'করান্ডাম (Al₂O₃)',desc:'করান্ডাম খনিজের লাল রঙের জাতকে মানিক বলা হয়। এর রং, স্বচ্ছতা, কাট এবং ট্রিটমেন্টের ওপর গুণমান নির্ভর করে।',talk:'“মানিক হলো করান্ডাম পরিবারের লাল রত্ন। মোহস স্কেলে এর কঠোরতা ৯। পাথরের রং, স্বচ্ছতা, ট্রিটমেন্ট এবং নির্ভরযোগ্য পরীক্ষার রিপোর্ট দেখে এর গুণমান বিচার করা হয়।”',origin:'মায়ানমার, মোজাম্বিক, থাইল্যান্ড, শ্রীলঙ্কা ও মাদাগাস্কার উল্লেখযোগ্য উৎস। নির্ভরযোগ্য প্রমাণ ছাড়া উৎসের দাবি করবেন না।',care:'নিয়মিত ব্যবহারের উপযোগী হলেও জোরে আঘাত এড়িয়ে চলুন। রাসায়নিক পদার্থ থেকে দূরে রাখুন।',color:'#a51d3b',light:'#ff8ca1'},
+{id:'pearl',n:'০২',name:'মুক্তা (Pearl)',sanskrit:'মোতি',planet:'প্রচলিত বিশ্বাসে চন্দ্র',colour:'সাদা, ক্রিম, গোলাপি, রুপালি, কালো',ri:'১.৫২–১.৬৯ (প্রকারভেদে)',sg:'২.৬০–২.৮৫ (প্রকারভেদে)',hard:'২.৫–৪.৫',material:'জৈব রত্ন; নেকার',desc:'ঝিনুক বা মলাস্কের ভিতরে তৈরি এক ধরনের জৈব রত্ন। প্রাকৃতিক ও কালচার্ড—দুই ধরনের মুক্তাই রয়েছে।',talk:'“মুক্তা একটি জৈব রত্ন, খনিজ নয়। এর দীপ্তি, উপরিভাগের অবস্থা, আকৃতি, আকার, রং এবং মালার মুক্তাগুলির মিল দেখে গুণমান বোঝা হয়।”',origin:'চীন, জাপান, অস্ট্রেলিয়া ও দক্ষিণ প্রশান্ত মহাসাগরীয় অঞ্চলে কালচার্ড মুক্তা উৎপাদিত হয়। প্রকার ও উৎস নথি দেখে নিশ্চিত করুন।',care:'পারফিউম, হেয়ার স্প্রে, প্রসাধনী, অ্যাসিড ও অতিরিক্ত তাপ থেকে দূরে রাখুন। ব্যবহারের পর নরম কাপড়ে মুছুন।',color:'#d8d9df',light:'#fff'},
+{id:'coral',n:'০৩',name:'লাল প্রবাল (Red Coral)',sanskrit:'মুঙ্গা / প্রবাল',planet:'প্রচলিত বিশ্বাসে মঙ্গল',colour:'লাল, কমলা-লাল, গোলাপি-লাল',ri:'১.৪৮৬–১.৬৫৮ (পরিবর্তনশীল)',sg:'প্রায় ২.৬০–২.৭০',hard:'৩–৪',material:'জৈব রত্ন; সামুদ্রিক প্রবাল',desc:'সামুদ্রিক প্রবাল জীবের তৈরি মূল্যবান জৈব রত্ন উপাদান। সাধারণত পুঁতি বা ক্যাবোশঁ আকারে ব্যবহার করা হয়।',talk:'“লাল প্রবাল একটি জৈব রত্ন উপাদান। মানিক বা নীলার তুলনায় এটি অনেক নরম, তাই আঁচড় ও আঘাত থেকে সাবধানে রাখতে হয়।”',origin:'ভূমধ্যসাগরসহ বিভিন্ন সামুদ্রিক অঞ্চল ঐতিহাসিক উৎস। সংগ্রহ ও বাণিজ্যে বিধিনিষেধ থাকতে পারে; বৈধতা ও উৎস যাচাই করুন।',care:'আঁচড়, তাপ, রাসায়নিক পদার্থ এবং আল্ট্রাসনিক ক্লিনার থেকে দূরে রাখুন। নরম কাপড়ে পরিষ্কার করুন।',color:'#c94a36',light:'#ffad8f'},
+{id:'emerald',n:'০৪',name:'পান্না (Emerald)',sanskrit:'পান্না',planet:'প্রচলিত বিশ্বাসে বুধ',colour:'সবুজ থেকে নীলচে সবুজ',ri:'১.৫৭৭–১.৫৮৩',sg:'২.৬৭–২.৭৮',hard:'৭.৫–৮',material:'বেরিল (Be₃Al₂Si₆O₁₈)',desc:'বেরিল খনিজের সবুজ জাতকে পান্না বলা হয়। এতে স্বাভাবিক অন্তর্ভুক্তি বা ইনক্লুশন দেখা যায়, যা অনেক সময় Jardin নামে পরিচিত।',talk:'“পান্না হলো সবুজ বেরিল। অনেক পান্নায় প্রাকৃতিক ইনক্লুশন থাকে। স্বচ্ছতা বাড়াতে তেল বা অন্য উপাদান দিয়ে ট্রিটমেন্ট করা হতে পারে, তাই তা জানানো জরুরি।”',origin:'কলম্বিয়া, জাম্বিয়া, ব্রাজিল, ইথিওপিয়া ও আফগানিস্তান উল্লেখযোগ্য উৎস। পরীক্ষাগারের সমর্থন ছাড়া উৎসের দাবি করবেন না।',care:'আল্ট্রাসনিক বা স্টিম ক্লিনার ব্যবহার করবেন না। তাপমাত্রার আকস্মিক পরিবর্তন ও আঘাত এড়ান।',color:'#16865b',light:'#8af0b5'},
+{id:'yellow-sapphire',n:'০৫',name:'পীত পুখরাজ (Yellow Sapphire)',sanskrit:'পুখরাজ',planet:'প্রচলিত বিশ্বাসে বৃহস্পতি',colour:'হলুদ থেকে সোনালি হলুদ',ri:'১.৭৬২–১.৭৭০',sg:'৩.৯৯–৪.০০',hard:'৯',material:'হলুদ করান্ডাম (Al₂O₃)',desc:'কোরান্ডাম পরিবারের হলুদ রঙের রত্ন। মানিক ও নীলার মতো এর মোহস কঠোরতা ৯।',talk:'“পীত পুখরাজ করান্ডাম পরিবারের রত্ন। এর রং, স্বচ্ছতা, কাট, ট্রিটমেন্ট এবং পরীক্ষার রিপোর্ট গুণমান বিচার করতে সাহায্য করে।”',origin:'শ্রীলঙ্কা, মাদাগাস্কার, থাইল্যান্ড, অস্ট্রেলিয়া ও তানজানিয়া উল্লেখযোগ্য উৎস। প্রমাণ ছাড়া উৎসের দাবি নয়।',care:'গয়নায় ব্যবহারের জন্য বেশ টেকসই, তবে শক্ত আঘাত এড়ান এবং সেটিং নিয়মিত পরীক্ষা করুন।',color:'#d9a323',light:'#ffe99a'},
+{id:'diamond',n:'০৬',name:'হীরা (Diamond)',sanskrit:'হীরা',planet:'প্রচলিত বিশ্বাসে শুক্র',colour:'বর্ণহীন, হলুদ, বাদামি, গোলাপি, নীলসহ নানা রং',ri:'২.৪১৭',sg:'৩.৫২',hard:'১০',material:'কার্বন (C)',desc:'হীরা স্ফটিকাকার কার্বন এবং প্রাকৃতিকভাবে পাওয়া সবচেয়ে কঠিন পদার্থ। 4Cs দিয়ে হীরার গুণমান বোঝানো হয়।',talk:'“হীরার গুণমান বোঝার চারটি প্রধান বিষয় হলো Cut, Colour, Clarity এবং Carat Weight। নির্দিষ্ট পাথরের বৈশিষ্ট্য বুঝতে গ্রেডিং রিপোর্ট সহায়ক।”',origin:'প্রাকৃতিক হীরা বিভিন্ন দেশে পাওয়া যায়। ল্যাব-গ্রোন হীরার রাসায়নিক গঠন একই হলেও উৎপত্তি আলাদা; তা স্পষ্টভাবে জানাতে হবে।',care:'খুব কঠিন হলেও নির্দিষ্ট দিকে বা ধার বরাবর চিড় ধরতে পারে। আঘাত এড়ান এবং সেটিং অনুযায়ী পরিষ্কার করুন।',color:'#8bb9d5',light:'#effaff'},
+{id:'blue-sapphire',n:'০৭',name:'নীলা (Blue Sapphire)',sanskrit:'নীলম',planet:'প্রচলিত বিশ্বাসে শনি',colour:'নীল থেকে বেগুনি আভাযুক্ত নীল',ri:'১.৭৬২–১.৭৭০',sg:'৩.৯৫–৪.০৩',hard:'৯',material:'নীল করান্ডাম (Al₂O₃)',desc:'করান্ডাম খনিজের নীল জাতকে নীলা বলা হয়। রঙের বিন্যাস, ইনক্লুশন, ট্রিটমেন্ট ও স্বচ্ছতা গুরুত্বপূর্ণ।',talk:'“নীলা করান্ডাম পরিবারের রত্ন এবং এর মোহস কঠোরতা ৯। নীলের আভা, রঙের সমতা, স্বচ্ছতা, কাট ও ট্রিটমেন্ট মূল্যায়নে গুরুত্বপূর্ণ।”',origin:'শ্রীলঙ্কা, কাশ্মীর, মাদাগাস্কার, মায়ানমার ও অস্ট্রেলিয়া উল্লেখযোগ্য উৎস। কাশ্মীরি উৎসের দাবি বিশেষভাবে পরীক্ষার প্রমাণসাপেক্ষ।',care:'সাধারণত টেকসই, তবে শক্ত আঘাত এড়ান। উৎস ও ট্রিটমেন্টের তথ্য নির্ভরযোগ্য রিপোর্টের ভিত্তিতে দিন।',color:'#2253a5',light:'#8ab8ff'},
+{id:'hessonite',n:'০৮',name:'গোমেদ (Hessonite)',sanskrit:'গোমেদ',planet:'প্রচলিত বিশ্বাসে রাহু',colour:'মধু, দারুচিনি, কমলা-বাদামি, লালচে বাদামি',ri:'১.৭৩৪–১.৭৫৯',sg:'৩.৫৭–৩.৭৩',hard:'৬.৫–৭.৫',material:'গ্রসুলার গারনেট',desc:'গ্রসুলার গারনেটের কমলা থেকে বাদামি-কমলা জাত। অনেক সময় মধুর মতো উষ্ণ রং দেখা যায়।',talk:'“গোমেদ হলো গ্রসুলার গারনেট। এর মধু বা দারুচিনি রং, স্বচ্ছতা, ইনক্লুশন এবং কাট ভালোভাবে পর্যবেক্ষণ করা উচিত।”',origin:'শ্রীলঙ্কা, ভারত, তানজানিয়া ও অন্যান্য গারনেট উৎপাদনকারী অঞ্চলে পাওয়া যায়। উৎসের দাবি করার আগে যাচাই করুন।',care:'শক্ত আঘাত ও ক্ষতিকর ক্লিনার এড়ান। বেশি কঠিন রত্নের সঙ্গে ঘষা লাগে এমনভাবে রাখবেন না।',color:'#b76b2e',light:'#f4c184'},
+{id:'catseye',n:'০৯',name:'ক্যাটস আই (Chrysoberyl)',sanskrit:'লহসুনিয়া / বৈদুর্য',planet:'প্রচলিত বিশ্বাসে কেতু',colour:'মধু, হলুদ-সবুজ, সবুজ-বাদামি, বাদামি',ri:'১.৭৪৬–১.৭৫৫',sg:'৩.৭০–৩.৭৮',hard:'৮.৫',material:'ক্রাইসোবেরিল (BeAl₂O₄)',desc:'ক্রাইসোবেরিলের এমন এক রূপ, যেখানে আলোর একটি সরু চলমান রেখা বিড়ালের চোখের মতো দেখায়। এই প্রভাবকে Chatoyancy বলে।',talk:'“এই রত্নের প্রধান আকর্ষণ হলো চলমান আলোর রেখা বা Cat’s Eye effect। ক্যাবোশঁ কাট এবং চোখের রেখার অবস্থান খুব গুরুত্বপূর্ণ।”',origin:'শ্রীলঙ্কা, ভারত, ব্রাজিল ও মাদাগাস্কার উল্লেখযোগ্য উৎস। ক্রাইসোবেরিল ক্যাটস আইকে কোয়ার্টজ ক্যাটস আই বা অন্য অনুরূপ পাথর থেকে আলাদা করতে হবে।',care:'কঠোরতা ভালো হলেও ক্যাবোশঁ পাথরে আঘাত লাগতে পারে। অন্য জিনিসের সঙ্গে ঘষা লাগা থেকে রক্ষা করুন।',color:'#9a9b39',light:'#e8e99a'}
+];
+
+const training=[
+['মানিক (Ruby)','লাল করান্ডাম চেনা','মানিকের কঠোরতা ৯ কেন—তা ব্যাখ্যা করুন। দুটি মানিকের রং ও স্বচ্ছতা তুলনা করুন।','ক্রেতা জানতে চান, দুটি লাল পাথরের দামে এত পার্থক্য কেন।','রং, ট্রিটমেন্ট ও সার্টিফিকেট নিয়ে ৬০ সেকেন্ডের উপস্থাপনা দিন।','মানিক সুপারিশ করার আগে ক্রেতাকে করার মতো পাঁচটি প্রশ্ন লিখুন।'],
+['মুক্তা (Pearl)','জৈব রত্ন বোঝা','মুক্তার দীপ্তি, উপরিভাগ, আকৃতি ও মিল পরীক্ষা করুন। প্রাকৃতিক ও কালচার্ড মুক্তার পার্থক্য বলুন।','ক্রেতা জানতে চান, কালচার্ড মুক্তা কি আসল মুক্তা?','কালচার্ড ও নকল মুক্তার পার্থক্য সহজ ভাষায় বোঝান।','মুক্তার যত্নের নির্দেশিকা তৈরি করুন।'],
+['লাল প্রবাল (Red Coral)','প্রবাল শনাক্ত ও যত্ন','রং, পালিশ, উপরিভাগ এবং পুঁতি বা ক্যাবোশঁর ফিনিশ পরীক্ষা করুন। নরম হওয়ার বিষয়টি ব্যাখ্যা করুন।','ক্রেতা প্রতিদিন পরার জন্য প্রবাল চান।','জৈব উৎস, যত্ন এবং বৈধ উৎস সম্পর্কে স্বচ্ছভাবে বলুন।','প্রবাল ব্যবহারে পাঁচটি সতর্কতা লিখুন।'],
+['পান্না (Emerald)','ইনক্লুশন ও ট্রিটমেন্ট বোঝা','প্রাকৃতিক ইনক্লুশন পর্যবেক্ষণ করুন। তেল বা রেজিন ট্রিটমেন্টের কথা কেন জানাতে হয়, ব্যাখ্যা করুন।','ক্রেতা বলছেন, ইনক্লুশন থাকলে পান্না নকল।','প্রাকৃতিক ইনক্লুশন ও ট্রিটমেন্ট সহজ ভাষায় বোঝান।','পান্নার যত্নের পাঁচটি নিয়ম লিখুন।'],
+['পীত পুখরাজ','হলুদ করান্ডাম বোঝা','রং, স্বচ্ছতা, কাট এবং ট্রিটমেন্টের তথ্য তুলনা করুন।','ক্রেতা নিশ্চিত জ্যোতিষীয় ফল জানতে চান।','বিশ্বাসকে সম্মান করে বোঝান যে ফলাফল বৈজ্ঞানিকভাবে নিশ্চিত নয়।','পীত পুখরাজের পণ্যের পরিচিতি কার্ড তৈরি করুন।'],
+['হীরা (Diamond)','4Cs প্রয়োগ','নমুনা রিপোর্ট দেখে Cut, Colour, Clarity ও Carat Weight তুলনা করুন।','ক্রেতা মনে করেন ক্যারেট মানেই পাথরের দৃশ্যমান আকার।','ক্যারেট যে ওজনের একক, তা বোঝান; কাট ও আকৃতিতে মাপ কীভাবে বদলায় বলুন।','১০০ শব্দে 4Cs-এর সহজ ব্যাখ্যা লিখুন।'],
+['নীলা (Blue Sapphire)','নীল করান্ডাম মূল্যায়ন','নীলার রঙের আভা, গাঢ়ত্ব, রঙের ঘনত্ব, রঙের বিন্যাস ও স্বচ্ছতা পর্যবেক্ষণ করুন।','ক্রেতা জানতে চান, পাথরটি নিশ্চিতভাবে কাশ্মীরি কি না।','উৎস জানতে পরীক্ষাগারের নির্ভরযোগ্য প্রমাণ কেন দরকার তা বলুন।','উৎস সম্পর্কে ক্রেতাকে দেওয়ার মতো তিনটি সৎ উত্তর লিখুন।'],
+['গোমেদ (Hessonite)','গ্রসুলার গারনেট চেনা','মধু বা দারুচিনি রং, স্বচ্ছতা এবং ইনক্লুশন পর্যবেক্ষণ করুন।','ক্রেতা দুটি গোমেদের স্বচ্ছতার পার্থক্য জানতে চান।','রং, স্বচ্ছতা, কাট ও রিপোর্টের ভূমিকা ব্যাখ্যা করুন।','গোমেদ পরীক্ষা করার চেকলিস্ট তৈরি করুন।'],
+['ক্যাটস আই (Chrysoberyl)','Chatoyancy বোঝা','ক্যাবোশঁ পাথরকে আলোয় ঘুরিয়ে চলমান চোখের রেখা দেখুন। অন্য ক্যাটস আই উপাদানের সঙ্গে তুলনা করুন।','ক্রেতা জানতে চান, সব কোণ থেকে চোখের রেখা দেখা যায় না কেন।','ক্যাবোশঁ কাট, পাথরের অবস্থান ও আলোর উৎসের ভূমিকা বোঝান।','ক্যাটস আই প্রভাব দেখানোর জন্য ছোট একটি ডেমো স্ক্রিপ্ট লিখুন।']
+];
+
+function gemSVG(g){
+  return `<svg viewBox="0 0 180 180" role="img" aria-label="${g.name} রত্নের অলংকরণ">
+    <defs>
+      <linearGradient id="grad-${g.id}" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="${g.light}"/>
+        <stop offset=".45" stop-color="${g.color}"/>
+        <stop offset="1" stop-color="#0a1810"/>
+      </linearGradient>
+    </defs>
+    <path d="M90 12 148 40 165 91 90 169 15 91 32 40Z" fill="url(#grad-${g.id})" stroke="${g.light}" stroke-width="2"/>
+    <path d="M32 40 90 12 90 82 15 91Z" fill="${g.light}" opacity=".5"/>
+    <path d="M148 40 90 12 90 82 165 91Z" fill="#fff" opacity=".18"/>
+    <path d="M15 91 90 82 90 169Z" fill="#041008" opacity=".35"/>
+    <path d="M165 91 90 82 90 169Z" fill="#fff" opacity=".2"/>
+    <path d="M32 40 90 82 148 40M15 91 90 82 165 91M90 12 90 82 90 169" fill="none" stroke="#fff" stroke-width="1.5" opacity=".7"/>
+  </svg>`;
+}
+
+document.getElementById('gemGrid').innerHTML = gems.map(g => `
+  <article class="ac-gem-card" id="${g.id}">
+    <div class="ac-gem-visual">
+      <span class="ac-gem-index">নবরত্ন · ${g.n}</span>
+      ${gemSVG(g)}
+    </div>
+    <div class="ac-gem-body">
+      <div class="ac-gem-sub">${g.sanskrit} · ${g.planet}</div>
+      <h3>${g.name}</h3>
+      <p>${g.desc}</p>
+      <div class="ac-specs">
+        <div class="ac-spec"><small>প্রতিসরণাঙ্ক (RI)</small><b>${g.ri}</b></div>
+        <div class="ac-spec"><small>আপেক্ষিক গুরুত্ব (SG)</small><b>${g.sg}</b></div>
+        <div class="ac-spec"><small>মোহস কঠোরতা</small><b>${g.hard} / ১০</b></div>
+        <div class="ac-spec"><small>সাধারণ রং</small><b>${g.colour}</b></div>
+      </div>
+      <div class="ac-tagrow">
+        <span class="ac-tag">${g.material}</span>
+        <span class="ac-tag">বিক্রয় প্রশিক্ষণ</span>
+      </div>
+      <details class="ac-details">
+        <summary>প্রশিক্ষকের নোট ও বিক্রয় উপস্থাপনা দেখুন</summary>
+        <p><b>ক্রেতাকে বোঝানোর নমুনা:</b> ${g.talk}</p>
+        <p><b>উল্লেখযোগ্য উৎস:</b> ${g.origin}</p>
+        <p><b>যত্নের নিয়ম:</b> ${g.care}</p>
+      </details>
+    </div>
+  </article>
+`).join('');
+
+document.getElementById('scienceRows').innerHTML = gems.map(g => `
+  <tr>
+    <td><b>${g.name}</b></td>
+    <td>${g.ri}</td>
+    <td>${g.sg}</td>
+    <td>${g.hard}</td>
+    <td>${g.material}</td>
+  </tr>
+`).join('');
+
+document.getElementById('trainingGrid').innerHTML = training.map((t,i) => `
+  <article class="ac-session">
+    <div class="ac-num">০${i+1}</div>
+    <h3>${t[0]}</h3>
+    <p><b>প্রশিক্ষণের লক্ষ্য:</b> ${t[1]}</p>
+    <details>
+      <summary>অনুশীলনগুলি দেখুন</summary>
+      <ul>
+        <li><b>হাতে-কলমে কাজ:</b> ${t[2]}</li>
+        <li><b>ক্রেতার সঙ্গে কথোপকথন:</b> ${t[3]}</li>
+        <li><b>বিক্রয় উপস্থাপনা:</b> ${t[4]}</li>
+        <li><b>বাড়ির কাজ:</b> ${t[5]}</li>
+      </ul>
+    </details>
+  </article>
+`).join('');
+
+const c = document.getElementById('caratInput');
+const r = document.getElementById('rattiInput');
+function bnNum(n){ return n.toFixed(2).replace(/[0-9]/g, d => '০১২৩৪৫৬৭৮৯'[d]); }
+function calcAcademy(){
+  const cv = Math.max(0, Number(c.value) || 0);
+  const rv = Math.max(0, Number(r.value) || 0);
+  document.getElementById('rattiResult').textContent = 'প্রায় ' + bnNum(cv / 0.91) + ' রতি';
+  document.getElementById('caratResult').textContent = 'প্রায় ' + bnNum(rv * 0.91) + ' ক্যারেট';
+}
+c.addEventListener('input', calcAcademy);
+r.addEventListener('input', calcAcademy);
 </script>
 </body>
 </html>
