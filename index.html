@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>JewelGyan — Gem &amp; Jewellery Executive Hub</title>
-<meta name="description" content="Interactive Q&A handbook + Bengali Gemstone Academy for jewellery retail professionals.">
+<meta name="description" content="Interactive Q&A handbook, Sales & Marketing Training, and Gemstone Academy for jewellery professionals.">
 <meta name="theme-color" content="#07120c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,7 +83,9 @@
   .tabs{
     display:flex;background:rgba(255,255,255,.04);
     border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px;
+    flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
   }
+  .tabs::-webkit-scrollbar{display:none}
   .tabs button{
     font:inherit;font-size:12px;font-weight:700;letter-spacing:.2px;
     padding:7px 13px;border-radius:7px;border:0;
@@ -105,7 +107,7 @@
     display:inline-flex;align-items:center;gap:6px;
     padding:7px 14px;border-radius:10px;
     background:linear-gradient(150deg, #fdba74, #f97316);
-    color:#451a03; /* Dark brown text for contrast */
+    color:#451a03;
     font-size:12px;font-weight:700;letter-spacing:.2px;
     text-decoration:none;transition:.2s;border:1px solid #ea580c;
     box-shadow:0 4px 14px -6px rgba(249,115,22,.5);
@@ -145,7 +147,7 @@
   .app-view.active{display:block;animation:viewIn .3s ease both}
   @keyframes viewIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-  /* ============ HERO LINKS (Q&A + Academy) ============ */
+  /* ============ HERO LINKS ============ */
   .hero-links{
     position:relative;z-index:1;
     display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;
@@ -177,7 +179,7 @@
   .hero-link .hl-arrow{font-size:11px;opacity:.7;transition:.2s}
   .hero-link:hover .hl-arrow{transform:translateX(2px);opacity:1}
 
-  /* ============ Q&A LAYOUT ============ */
+  /* ============ LAYOUT ============ */
   .layout{
     max-width:1440px;margin:0 auto;padding:26px 20px 70px;
     display:grid;grid-template-columns:296px minmax(0,1fr);gap:30px;align-items:start;
@@ -399,7 +401,7 @@
   }
   .empty strong{display:block;font-size:16px;color:var(--gold-2);margin-bottom:6px}
 
-  /* ============ ACADEMY VIEW ============ */
+  /* ============ ACADEMY VIEW (FULL ENGLISH) ============ */
   .academy-main{max-width:1180px;margin:0 auto;padding:0 20px 60px}
 
   .ac-hero{
@@ -418,7 +420,7 @@
   }
   .ac-eyebrow{color:var(--gold);font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase}
   .ac-hero h1{
-    font-family:'Noto Sans Bengali','Inter',sans-serif;
+    font-family:'Cormorant Garamond',Georgia,serif;
     font-size:clamp(32px,5vw,54px);line-height:1.25;margin:14px 0;font-weight:800;
     color:#eaf8ee;
   }
@@ -477,7 +479,7 @@
   .ac-section-head{max-width:760px;margin-bottom:26px}
   .ac-kicker{color:var(--gold);font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase}
   .ac-section-head h2{
-    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-family:'Cormorant Garamond',Georgia,serif;
     font-size:clamp(26px,4vw,38px);color:#f0faf3;margin:7px 0;font-weight:800;line-height:1.25;
   }
   .ac-section-head p{color:var(--muted);margin:0;font-size:14px;line-height:1.7}
@@ -515,7 +517,7 @@
   .ac-gem-sub{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.3px}
   .ac-gem-body h3{
     margin:2px 0;color:#f0faf3;font-size:22px;font-weight:800;
-    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-family:'Cormorant Garamond',Georgia,serif;
   }
   .ac-gem-body p{font-size:12px;color:var(--muted);margin:8px 0 13px;line-height:1.65}
   .ac-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
@@ -547,7 +549,7 @@
   }
   .ac-info-panel h3{
     font-size:20px;margin:0 0 9px;color:var(--gold-2);
-    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-family:'Cormorant Garamond',Georgia,serif;
     font-weight:800;
   }
   .ac-info-panel p,.ac-info-panel li{color:#c3d5ca;font-size:12.5px;line-height:1.7}
@@ -586,7 +588,7 @@
   .ac-num{font-family:'Playfair Display',Georgia,serif;font-size:26px;color:var(--gold);font-weight:700;line-height:1}
   .ac-session h3{
     font-size:18px;margin:4px 0;color:#f0faf3;
-    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-family:'Cormorant Garamond',Georgia,serif;
     font-weight:800;
   }
   .ac-session p{font-size:12px;color:var(--muted);line-height:1.65}
@@ -607,7 +609,7 @@
   }
   .ac-roleplay h3,.ac-exam h3{
     font-size:20px;color:var(--gold-2);margin:0 0 12px;
-    font-family:'Cormorant Garamond','Noto Sans Bengali',Georgia,serif;
+    font-family:'Cormorant Garamond',Georgia,serif;
     font-weight:800;
   }
   .ac-roleplay-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
@@ -650,7 +652,7 @@
   .f-name strong{color:var(--gold);font-weight:700;letter-spacing:.6px}
   .f-copy{font-size:11.5px;color:var(--muted);letter-spacing:.2px;line-height:1.55}
 
-  /* ============ RESPONSIVE ============ */
+  /* ============ RESPONSIVE (MOBILE OPTIMIZATIONS) ============ */
   @media (max-width:1100px){
     .ac-gem-grid,.ac-training-grid{grid-template-columns:repeat(2,1fr)}
     .ac-exam-grid{grid-template-columns:repeat(2,1fr)}
@@ -690,11 +692,13 @@
     .hbar{padding:10px 14px;gap:10px}
     .logo h1{font-size:20px}
     .logo small{font-size:9px;letter-spacing:1.8px}
+    
     .main-nav{order:3;width:100%;margin-left:0;flex:1 1 100%;flex-direction:column;gap:8px}
-    .tabs{width:100%;justify-content:center}
+    .tabs{width:100%;justify-content:flex-start;padding:4px}
     .tabs button{flex:1;text-align:center;font-size:12px;padding:8px 6px}
-    .header-links{width:100%;justify-content:center}
-    .header-links a{flex:1;justify-content:center;font-size:11.5px;padding:8px 10px}
+    .header-links{width:100%;justify-content:center;flex-wrap:wrap}
+    .header-links a{flex:1 1 auto;justify-content:center;font-size:11.5px;padding:8px 10px;min-width:120px}
+    
     .tools{order:4;width:100%;margin-left:0;gap:8px;flex:1 1 100%}
     .langsw{flex:1 1 auto;justify-content:center}
     .langsw button{flex:1;font-size:11px;padding:7px 6px;text-align:center}
@@ -707,36 +711,44 @@
     .hero{padding:20px 16px;border-radius:16px;margin-bottom:18px}
     .hero p{font-size:13.5px}
     .chip{font-size:10.5px;padding:5px 10px}
-    .toolbar{gap:8px;margin-bottom:14px}
+    
+    .toolbar{gap:8px;margin-bottom:14px;flex-wrap:wrap}
     .count{font-size:12px;flex:1 1 100%}
     .btn{font-size:11.5px;padding:6px 11px;flex:1}
-    .sec-head{padding:13px 14px;gap:11px;margin:26px 0 12px}
+    
+    .sec-head{padding:13px 14px;gap:11px;margin:26px 0 12px;flex-wrap:wrap}
     .sec-head h2{font-size:16.5px}
     .sec-head .sub{font-size:11.5px}
     .sec-icon{width:36px;height:36px;font-size:16px}
     .sec-count{display:none}
+    
     .q-head{padding:13px 14px;gap:10px}
     .q-title .bn{font-size:14px}
     .q-title .en{font-size:12.5px}
     .q-body{padding:0 14px 14px}
     .ans{font-size:13.4px;padding:12px 13px}
     .ans ul{margin-left:16px}
+    
     .panel-head{padding:15px 16px}
     .panel-head h2{font-size:19px}
     .panel-body{padding:15px 14px 20px}
     ol.rules li{font-size:13px;padding:10px 12px 10px 46px}
     ol.rules li::before{left:11px;width:22px;height:22px;font-size:10px}
+    
+    .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
     table{font-size:12.5px;min-width:420px}
     thead th, tbody td{padding:9px 12px}
 
     .academy-main{padding:0 12px 40px}
     .ac-hero-inner{padding:34px 18px;gap:6px}
-    .ac-hero h1{font-size:34px;line-height:1.3}
+    .ac-hero h1{font-size:32px;line-height:1.3}
     .ac-hero p{font-size:13px}
-    .ac-hero-actions .ac-btn{flex:1;font-size:12px;padding:10px 12px}
+    .ac-hero-actions{flex-direction:column}
+    .ac-hero-actions .ac-btn{width:100%;font-size:12px;padding:10px 12px}
     .ac-hero-art{min-height:200px}
     .ac-hero-art:before{width:180px;height:180px}
     .ac-hero-gem{width:200px}
+    
     .ac-stats{padding:0 8px;gap:6px;margin-top:-16px}
     .ac-stat{padding:11px 6px}
     .ac-stat b{font-size:24px}
@@ -795,14 +807,13 @@
       </div>
     </a>
 
-    <!-- Main Navigation Group -->
     <div class="main-nav">
       <div class="tabs" id="tabs">
-        <button data-tab="qa" class="on" type="button">📚 Q&amp;A</button>
-        <button data-tab="academy" type="button">💎 রত্নশিক্ষা</button>
+        <button data-tab="qa" class="on" type="button">📚 Basic</button>
+        <button data-tab="sales" type="button">💼 Advanced</button>
+        <button data-tab="academy" type="button">💎 Gemstone Academy</button>
       </div>
 
-      <!-- External Links as Categories -->
       <div class="header-links">
         <a href="https://english-spur.github.io/sovan-portfolio/" target="_blank" rel="noopener noreferrer" title="Sovan Portfolio">
           <span>👤</span> Portfolio
@@ -828,7 +839,7 @@
 </header>
 
 <!-- ==========================================================
-     VIEW 1 : Q & A HUB
+     VIEW 1 : BASIC Q & A HUB
      ========================================================== -->
 <div id="qaView" class="app-view active">
   <div class="layout" id="top">
@@ -868,7 +879,6 @@
           <span class="chip">Gemstone · Gold · Diamond · Retail</span>
         </div>
 
-        <!-- HERO LINKS (Updated to Orange Theme) -->
         <div class="hero-links">
           <a class="hero-link" href="https://english-spur.github.io/sovan-portfolio/" target="_blank" rel="noopener noreferrer">
             <span class="hl-ico">👤</span>
@@ -947,7 +957,134 @@
 </div>
 
 <!-- ==========================================================
-     VIEW 2 : রত্নশিক্ষা / GEMSTONE ACADEMY
+     VIEW 2 : ADVANCED SALES & MARKETING
+     ========================================================== -->
+<div id="salesView" class="app-view">
+  <div class="layout" id="salesTop">
+
+    <aside>
+      <nav id="salesNav">
+        <div class="nav-label">Sections</div>
+        <button class="nav-btn active" data-sec="all">
+          <span class="ico">📚</span>
+          <span class="lbl">All Questions<span class="sub">সব প্রশ্ন</span></span>
+          <span class="cnt">100</span>
+        </button>
+        <div class="nav-div"></div>
+        <div class="nav-label">Quick Reference</div>
+        <button class="nav-btn" data-jump="sales-revision">
+          <span class="ico">📋</span>
+          <span class="lbl">Terminology Table<span class="sub">পরিভাষা</span></span>
+        </button>
+        <button class="nav-btn" data-jump="sales-golden">
+          <span class="ico">⭐</span>
+          <span class="lbl">Golden Rules<span class="sub">সোনালি নিয়ম</span></span>
+        </button>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Part 2 – Sales, Marketing &amp; After-Sales</div>
+        <h2>Jewellery Retail Professional Training</h2>
+        <p>100 important questions and answers covering sales skills, customer psychology, marketing, after-sales service and business development.</p>
+        <p class="bnline">সেলস, মার্কেটিং ও আফটার-সেলস সার্ভিস — দ্বিভাষিক প্রশিক্ষণ সামগ্রী।</p>
+        <div class="chips">
+          <span class="chip">5 Sections</span>
+          <span class="chip">100 Q &amp; A</span>
+          <span class="chip">Sales &amp; Marketing</span>
+          <span class="chip">Bengali + English</span>
+        </div>
+
+        <div class="hero-links">
+          <a class="hero-link" href="https://english-spur.github.io/sovan-portfolio/" target="_blank" rel="noopener noreferrer">
+            <span class="hl-ico">👤</span>
+            <span>Sovan Portfolio</span>
+            <span class="hl-arrow">↗</span>
+          </a>
+          <a class="hero-link" href="https://english-spur.github.io/English-Spur/" target="_blank" rel="noopener noreferrer">
+            <span class="hl-ico">🌐</span>
+            <span>English Spur</span>
+            <span class="hl-arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="toolbar">
+        <div class="count" id="salesCount"></div>
+        <div class="spacer"></div>
+        <button class="btn" id="salesExpandAll">⤢ Expand All</button>
+        <button class="btn" id="salesCollapseAll">⤡ Collapse All</button>
+      </div>
+
+      <div id="salesContent"></div>
+
+      <section class="panel" id="sales-revision">
+        <div class="panel-head">
+          <h2>Important Sales &amp; Marketing Terminology</h2>
+          <p>গুরুত্বপূর্ণ সেলস ও মার্কেটিং পরিভাষা</p>
+        </div>
+        <div class="panel-body">
+          <div class="tablewrap">
+            <table>
+              <thead>
+                <tr><th>Term</th><th>Meaning</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Sales Pitch</td><td>পণ্য বিক্রির উপস্থাপনা</td></tr>
+                <tr><td>Lead</td><td>সম্ভাব্য গ্রাহক</td></tr>
+                <tr><td>Conversion</td><td>বিক্রয়ে রূপান্তর</td></tr>
+                <tr><td>Upselling</td><td>উন্নত পণ্য প্রস্তাব</td></tr>
+                <tr><td>Cross-Selling</td><td>সম্পর্কিত পণ্য প্রস্তাব</td></tr>
+                <tr><td>Add-on Selling</td><td>অতিরিক্ত পণ্য বা পরিষেবা বিক্রি</td></tr>
+                <tr><td>ATV</td><td>গড় Transaction মূল্য</td></tr>
+                <tr><td>ASP</td><td>গড় বিক্রয়মূল্য</td></tr>
+                <tr><td>UPT</td><td>প্রতি Transaction-এ গড় পণ্য</td></tr>
+                <tr><td>KPI</td><td>সাফল্য পরিমাপের সূচক</td></tr>
+                <tr><td>CRM</td><td>গ্রাহক সম্পর্ক ব্যবস্থাপনা</td></tr>
+                <tr><td>CAC</td><td>নতুন গ্রাহক অর্জনের খরচ</td></tr>
+                <tr><td>CLV</td><td>গ্রাহকের দীর্ঘমেয়াদি ব্যবসায়িক মূল্য</td></tr>
+                <tr><td>TAT</td><td>পরিষেবা সম্পন্ন করার সময়</td></tr>
+                <tr><td>Retention</td><td>গ্রাহক ধরে রাখা</td></tr>
+                <tr><td>Referral</td><td>গ্রাহকের সুপারিশ</td></tr>
+                <tr><td>Loyalty Programme</td><td>নিয়মিত গ্রাহকের পুরস্কার ব্যবস্থা</td></tr>
+                <tr><td>Visual Merchandising</td><td>আকর্ষণীয় পণ্য প্রদর্শন</td></tr>
+                <tr><td>Market Research</td><td>বাজার গবেষণা</td></tr>
+                <tr><td>Competitor Analysis</td><td>প্রতিযোগী বিশ্লেষণ</td></tr>
+                <tr><td>Gross Profit</td><td>মোট বিক্রয় থেকে পণ্যের সরাসরি খরচ বাদ দেওয়ার পর লাভ</td></tr>
+                <tr><td>Profit Margin</td><td>বিক্রয়ের তুলনায় লাভের শতাংশ</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="sales-golden">
+        <div class="panel-head">
+          <h2>Professional Golden Rules for Sales Executives</h2>
+          <p>জুয়েলারি সেলস এক্সিকিউটিভদের জন্য সোনালি নিয়ম</p>
+        </div>
+        <div class="panel-body">
+          <ol class="rules">
+            <li>Never force a customer to buy. – গ্রাহককে কখনো জোর করে পণ্য কেনাবেন না।</li>
+            <li>Always understand the customer's budget. – গ্রাহকের বাজেট বুঝুন।</li>
+            <li>Sell benefits, not just product features. – শুধু বৈশিষ্ট্য নয়, সুবিধাও বোঝান।</li>
+            <li>Never make false promises. – মিথ্যা প্রতিশ্রুতি দেবেন না।</li>
+            <li>Explain pricing transparently. – দাম নির্ধারণের বিষয়গুলি পরিষ্কারভাবে বুঝিয়ে বলুন।</li>
+            <li>Never hide product limitations. – পণ্যের সীমাবদ্ধতা লুকাবেন না।</li>
+            <li>Maintain customer confidentiality. – গ্রাহকের তথ্যের গোপনীয়তা বজায় রাখুন।</li>
+            <li>Follow up professionally. – পেশাদারভাবে Follow-up করুন।</li>
+            <li>Focus on customer satisfaction, not just sales targets. – শুধু টার্গেট নয়, গ্রাহকের সন্তুষ্টির ওপর গুরুত্ব দিন।</li>
+            <li>Build relationships, not just transactions. – শুধু বিক্রয় নয়, দীর্ঘমেয়াদি সম্পর্ক তৈরি করুন।</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- ==========================================================
+     VIEW 3 : GEMSTONE ACADEMY (FULL ENGLISH)
      ========================================================== -->
 <div id="academyView" class="app-view">
   <main class="academy-main">
@@ -955,15 +1092,14 @@
     <section class="ac-hero">
       <div class="ac-hero-inner">
         <div>
-          <div class="ac-eyebrow">পেশাদার প্রশিক্ষণ · মডিউল ০১</div>
-          <h1>রত্নপাথরের <span>জ্ঞান ও বিজ্ঞান</span></h1>
-          <p>জুয়েলারি রিটেল কর্মীদের জন্য একটি পূর্ণাঙ্গ প্রশিক্ষণ সহায়িকা। এখানে রয়েছে প্রচলিত নবরত্নের পরিচয়, রত্নের বৈজ্ঞানিক বৈশিষ্ট্য, ওজনের একক, ক্রেতার সঙ্গে কথোপকথন এবং হাতে-কলমে অনুশীলন।</p>
+          <div class="ac-eyebrow">Professional Training · Module 01</div>
+          <h1>Gemstone <span>Knowledge &amp; Science</span></h1>
+          <p>A complete training guide for jewellery retail professionals. Explore the 9 traditional Navratnas, their scientific properties, weight units, customer conversation tips, and hands-on practice.</p>
           <div class="ac-hero-actions">
-            <a class="ac-btn ac-btn-gold" href="#gemstones" onclick="smoothAc(event)">৯টি রত্ন সম্পর্কে জানুন ↓</a>
-            <a class="ac-btn ac-btn-outline" href="#training" onclick="smoothAc(event)">প্রশিক্ষণ শুরু করুন</a>
+            <a class="ac-btn ac-btn-gold" href="#gemstones" onclick="smoothAc(event)">Learn about 9 Gemstones ↓</a>
+            <a class="ac-btn ac-btn-outline" href="#training" onclick="smoothAc(event)">Start Training</a>
           </div>
 
-          <!-- HERO LINKS -->
           <div class="hero-links">
             <a class="hero-link" href="https://english-spur.github.io/sovan-portfolio/" target="_blank" rel="noopener noreferrer">
               <span class="hl-ico">👤</span>
@@ -978,9 +1114,9 @@
           </div>
         </div>
         <div class="ac-hero-art">
-          <div class="ac-floating ac-fl1">নয়টি নবরত্ন</div>
-          <div class="ac-floating ac-fl2">জ্ঞান · আত্মবিশ্বাস · বিশ্বাস</div>
-          <svg class="ac-hero-gem" viewBox="0 0 320 320" aria-label="বহুমুখী রত্নের অলংকরণ">
+          <div class="ac-floating ac-fl1">9 Navratnas</div>
+          <div class="ac-floating ac-fl2">Knowledge · Confidence · Trust</div>
+          <svg class="ac-hero-gem" viewBox="0 0 320 320" aria-label="Multi-faceted Gemstone Illustration">
             <defs>
               <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
                 <stop stop-color="#dff5e8"/>
@@ -1001,150 +1137,150 @@
     </section>
 
     <div class="ac-stats">
-      <div class="ac-stat"><b>০৯</b><span>নবরত্ন</span></div>
-      <div class="ac-stat"><b>০৪</b><span>মূল বৈশিষ্ট্য</span></div>
-      <div class="ac-stat"><b>০২</b><span>ওজনের একক</span></div>
-      <div class="ac-stat"><b>০৯</b><span>প্রশিক্ষণ পর্ব</span></div>
+      <div class="ac-stat"><b>09</b><span>Gemstones</span></div>
+      <div class="ac-stat"><b>04</b><span>Key Traits</span></div>
+      <div class="ac-stat"><b>02</b><span>Weight Units</span></div>
+      <div class="ac-stat"><b>09</b><span>Training Modules</span></div>
     </div>
 
     <section class="ac-wrap" id="gemstones">
       <div class="ac-section-head">
-        <div class="ac-kicker">রত্ন পরিচিতি</div>
-        <h2>নয়টি নবরত্ন সম্পর্কে জানুন</h2>
-        <p>প্রতিটি রত্নের পরিচয়, সাধারণ রং, প্রতিসরণাঙ্ক (RI), আপেক্ষিক গুরুত্ব (SG), মোহস কঠোরতা, প্রচলিত গ্রহ-সম্পর্ক এবং ক্রেতাকে বোঝানোর গুরুত্বপূর্ণ বিষয় জানুন।</p>
+        <div class="ac-kicker">Gemstone Introduction</div>
+        <h2>Learn about the 9 Navratnas</h2>
+        <p>Discover each gemstone's identity, typical colour, Refractive Index (RI), Specific Gravity (SG), Mohs hardness, traditional planetary association, and crucial points for customer communication.</p>
       </div>
       <div class="ac-quicknav">
-        <a class="ac-chip" href="#ruby" onclick="smoothAc(event)">০১ মানিক</a>
-        <a class="ac-chip" href="#pearl" onclick="smoothAc(event)">০২ মুক্তা</a>
-        <a class="ac-chip" href="#coral" onclick="smoothAc(event)">০৩ প্রবাল</a>
-        <a class="ac-chip" href="#emerald" onclick="smoothAc(event)">০৪ পান্না</a>
-        <a class="ac-chip" href="#yellow-sapphire" onclick="smoothAc(event)">০৫ পীত পুখরাজ</a>
-        <a class="ac-chip" href="#diamond" onclick="smoothAc(event)">০৬ হীরা</a>
-        <a class="ac-chip" href="#blue-sapphire" onclick="smoothAc(event)">০৭ নীলা</a>
-        <a class="ac-chip" href="#hessonite" onclick="smoothAc(event)">০৮ গোমেদ</a>
-        <a class="ac-chip" href="#catseye" onclick="smoothAc(event)">০৯ ক্যাটস আই</a>
+        <a class="ac-chip" href="#ruby" onclick="smoothAc(event)">01 Ruby</a>
+        <a class="ac-chip" href="#pearl" onclick="smoothAc(event)">02 Pearl</a>
+        <a class="ac-chip" href="#coral" onclick="smoothAc(event)">03 Red Coral</a>
+        <a class="ac-chip" href="#emerald" onclick="smoothAc(event)">04 Emerald</a>
+        <a class="ac-chip" href="#yellow-sapphire" onclick="smoothAc(event)">05 Yellow Sapphire</a>
+        <a class="ac-chip" href="#diamond" onclick="smoothAc(event)">06 Diamond</a>
+        <a class="ac-chip" href="#blue-sapphire" onclick="smoothAc(event)">07 Blue Sapphire</a>
+        <a class="ac-chip" href="#hessonite" onclick="smoothAc(event)">08 Hessonite</a>
+        <a class="ac-chip" href="#catseye" onclick="smoothAc(event)">09 Cat's Eye</a>
       </div>
       <div class="ac-gem-grid" id="gemGrid"></div>
     </section>
 
     <section class="ac-wrap" id="science">
       <div class="ac-section-head">
-        <div class="ac-kicker">রত্নের বিজ্ঞান</div>
-        <h2>এক নজরে রত্নের বৈজ্ঞানিক বৈশিষ্ট্য</h2>
-        <p>নিচের মানগুলি প্রাকৃতিক রত্নের সাধারণ রেফারেন্স রেঞ্জ। রাসায়নিক গঠন, উৎস, চিকিৎসা বা ট্রিটমেন্ট এবং পরীক্ষার পদ্ধতি অনুযায়ী মানের কিছু পার্থক্য হতে পারে।</p>
+        <div class="ac-kicker">Gemstone Science</div>
+        <h2>Scientific Properties at a Glance</h2>
+        <p>The values below are typical reference ranges for natural gemstones. Slight variations may occur based on chemical composition, origin, treatments, and testing methods.</p>
       </div>
       <div class="tablewrap">
         <table>
           <thead>
-            <tr><th>রত্নের নাম</th><th>RI (প্রায়)</th><th>SG (প্রায়)</th><th>মোহস কঠোরতা</th><th>খনিজ / উপাদান</th></tr>
+            <tr><th>Gemstone</th><th>RI (Approx)</th><th>SG (Approx)</th><th>Mohs Hardness</th><th>Mineral / Composition</th></tr>
           </thead>
           <tbody id="scienceRows"></tbody>
         </table>
       </div>
       <div class="ac-info-panel">
         <div>
-          <h3>এই শব্দগুলির অর্থ কী?</h3>
+          <h3>What do these terms mean?</h3>
           <ul>
-            <li><b>RI – প্রতিসরণাঙ্ক:</b> রত্নের ভিতরে আলো প্রবেশ করলে কতটা বেঁকে যায়, তার পরিমাপ।</li>
-            <li><b>SG – আপেক্ষিক গুরুত্ব:</b> সমান আয়তনের জলের তুলনায় পদার্থটির ঘনত্বের অনুপাত।</li>
-            <li><b>Mohs Hardness – মোহস কঠোরতা:</b> আঁচড় প্রতিরোধের আপেক্ষিক ক্ষমতা। এটি ভেঙে যাওয়ার প্রতিরোধ ক্ষমতা বা Toughness নয়।</li>
-            <li><b>হীরার 4Cs:</b> Cut (কাট), Colour (রং), Clarity (স্বচ্ছতা) এবং Carat Weight (ওজন)।</li>
+            <li><b>RI – Refractive Index:</b> A measure of how much light bends when entering the gemstone.</li>
+            <li><b>SG – Specific Gravity:</b> The ratio of the gemstone's density compared to water of the same volume.</li>
+            <li><b>Mohs Hardness:</b> The relative ability to resist scratching. It is not the same as toughness or resistance to breaking.</li>
+            <li><b>Diamond 4Cs:</b> Cut, Colour, Clarity, and Carat Weight.</li>
           </ul>
         </div>
         <div>
-          <h3>বিক্রয়কর্মীর জন্য জরুরি কথা</h3>
-          <p>শুধু রং বা চোখে দেখে কোনো রত্নের পরিচয় নিশ্চিত করবেন না। সঠিক শনাক্তকরণের জন্য প্রশিক্ষিত রত্নবিশারদ, উপযুক্ত যন্ত্র এবং নির্ভরযোগ্য পরীক্ষাগারের রিপোর্ট প্রয়োজন হতে পারে।</p>
-          <p class="ac-note">রত্নে কোনো ট্রিটমেন্ট, কৃত্রিম উৎপাদন, বিকল্প পাথর বা জোড়া লাগানো উপাদান থাকলে প্রযোজ্য আইন, দোকানের নীতি ও রিপোর্ট অনুযায়ী সঠিক তথ্য জানাতে হবে।</p>
+          <h3>Important for Sales Staff</h3>
+          <p>Never confirm a gemstone's identity based solely on colour or visual inspection. Accurate identification may require a trained gemologist, appropriate instruments, and reliable laboratory reports.</p>
+          <p class="ac-note">If a gemstone has treatments, synthetic origins, alternative stones, or assembled components, accurate information must be disclosed according to applicable laws, store policies, and reports.</p>
         </div>
       </div>
     </section>
 
     <section class="ac-wrap" id="weight">
       <div class="ac-section-head">
-        <div class="ac-kicker">ওজন রূপান্তর</div>
-        <h2>ক্যারেট ও রতি: পার্থক্য বুঝুন</h2>
-        <p>Carat বা ক্যারেট হলো রত্নের ওজন মাপার আন্তর্জাতিকভাবে স্বীকৃত একক। Ratti বা রতি হলো ভারতীয় ঐতিহ্যবাহী ওজনের একক, যার ব্যবহারিক মান অঞ্চল ও ব্যবসায়িক রীতি অনুযায়ী ভিন্ন হতে পারে।</p>
+        <div class="ac-kicker">Weight Conversion</div>
+        <h2>Carat vs Ratti: Understand the Difference</h2>
+        <p>Carat (ct) is the internationally recognized unit for gemstone weight. Ratti is a traditional Indian weight unit, and its practical value can vary by region and business practice.</p>
       </div>
       <div class="ac-calculator">
         <div class="ac-calcbox">
-          <label for="caratInput">ক্যারেট (ct) লিখুন</label>
+          <label for="caratInput">Enter Carat (ct)</label>
           <input id="caratInput" type="number" min="0" step="0.01" value="1">
-          <div class="ac-result" id="rattiResult">প্রায় ১.১০ রতি</div>
-          <div class="ac-small">সাধারণ দোকানি হিসাব: ১ রতি ≈ ০.৯১ ক্যারেট।</div>
+          <div class="ac-result" id="rattiResult">Approx 1.10 Ratti</div>
+          <div class="ac-small">Common jeweller calculation: 1 Ratti ≈ 0.91 Carat.</div>
         </div>
         <div class="ac-calcbox">
-          <label for="rattiInput">রতি লিখুন</label>
+          <label for="rattiInput">Enter Ratti</label>
           <input id="rattiInput" type="number" min="0" step="0.01" value="1">
-          <div class="ac-result" id="caratResult">প্রায় ০.৯১ ক্যারেট</div>
-          <div class="ac-small">একই আনুমানিক রূপান্তর ব্যবহার করা হয়েছে।</div>
+          <div class="ac-result" id="caratResult">Approx 0.91 Carat</div>
+          <div class="ac-small">Uses the same approximate conversion.</div>
         </div>
       </div>
       <div class="tablewrap" style="margin-top:17px">
         <table>
           <thead>
-            <tr><th>একক</th><th>সমতুল্য ওজন</th><th>গুরুত্বপূর্ণ তথ্য</th></tr>
+            <tr><th>Unit</th><th>Equivalent Weight</th><th>Important Information</th></tr>
           </thead>
           <tbody>
-            <tr><td>১ ক্যারেট (ct)</td><td>২০০ মিলিগ্রাম</td><td>রত্নের ওজনের আন্তর্জাতিক মান।</td></tr>
-            <tr><td>১ রতি (প্রচলিত আনুমানিক হিসাব)</td><td>প্রায় ০.৯১ ক্যারেট / ১৮২ মিলিগ্রাম</td><td>ঐতিহ্যবাহী মান; স্থানীয় রীতিতে পার্থক্য থাকতে পারে।</td></tr>
-            <tr><td>১ ক্যারেট (আনুমানিক)</td><td>প্রায় ১.১০ রতি</td><td>দোকানের অনুমোদিত হিসাব এবং ক্যালিব্রেটেড ওজনযন্ত্র ব্যবহার করুন।</td></tr>
+            <tr><td>1 Carat (ct)</td><td>200 Milligrams</td><td>The international standard for gemstone weight.</td></tr>
+            <tr><td>1 Ratti (Traditional Approx)</td><td>Approx 0.91 Carat / 182 Milligrams</td><td>Traditional measure; regional variations may exist.</td></tr>
+            <tr><td>1 Carat (Approx)</td><td>Approx 1.10 Ratti</td><td>Use the store's approved calculation and calibrated scales.</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="ac-note">সতর্কতা: স্থানীয় ব্যবসায়িক রীতি যাচাই না করে ক্রেতাকে রতির একদম নির্ভুল রূপান্তরের প্রতিশ্রুতি দেবেন না। বিল, সার্টিফিকেট এবং আন্তর্জাতিক তুলনার ক্ষেত্রে ক্যালিব্রেটেড যন্ত্রে মাপা ক্যারেট ওজনকে গুরুত্ব দিন।</p>
+      <p class="ac-note">Caution: Do not promise an exact Ratti conversion to a customer without verifying local business practices. For billing, certificates, and international comparisons, prioritize Carat weight measured on calibrated scales.</p>
     </section>
 
     <section class="ac-wrap" id="training">
       <div class="ac-section-head">
-        <div class="ac-kicker">নয়টি প্রশিক্ষণ পর্ব</div>
-        <h2>প্রতিটি রত্নের জন্য হাতে-কলমে অনুশীলন</h2>
-        <p>প্রতিটি রত্ন নিয়ে একটি করে প্রশিক্ষণ পর্ব সাজানো হয়েছে। প্রতিটি পর্বে রয়েছে পণ্যের জ্ঞান, পর্যবেক্ষণ, ক্রেতার সঙ্গে কথোপকথন, সংক্ষিপ্ত বিক্রয় উপস্থাপনা এবং বাড়ির কাজ।</p>
+        <div class="ac-kicker">9 Training Modules</div>
+        <h2>Hands-on Practice for Each Gemstone</h2>
+        <p>Each gemstone has a dedicated training module. Each module includes product knowledge, observation, customer conversation, a brief sales pitch, and homework.</p>
       </div>
       <div class="ac-training-grid" id="trainingGrid"></div>
       <div class="ac-roleplay">
-        <h3>বাস্তব ক্রেতার পাঁচটি পরিস্থিতি</h3>
+        <h3>5 Real Customer Scenarios</h3>
         <div class="ac-roleplay-grid">
-          <div class="ac-scenario"><b>পরিস্থিতি ০১ · সীমিত বাজেটের ক্রেতা</b>“আমি আসল রত্ন কিনতে চাই, কিন্তু বাজেট কম।” গুণমান সম্পর্কে ভুল তথ্য না দিয়ে উপযুক্ত বিকল্প বোঝান।</div>
-          <div class="ac-scenario"><b>পরিস্থিতি ০২ · জ্যোতিষবিশ্বাসী ক্রেতা</b>“কোন পাথর পরলে আমার সমস্যা নিশ্চিতভাবে মিটবে?” বিশ্বাসকে সম্মান করুন, তবে জ্যোতিষীয় ফল নিশ্চিত বা বৈজ্ঞানিকভাবে প্রমাণিত—এমন দাবি করবেন না।</div>
-          <div class="ac-scenario"><b>পরিস্থিতি ০৩ · সার্টিফিকেট জানতে চাওয়া ক্রেতা</b>“আমি বুঝব কীভাবে পাথরটি প্রাকৃতিক?” রিপোর্ট, পরীক্ষাগার, ট্রিটমেন্ট এবং রিপোর্টের সীমাবদ্ধতা সহজ ভাষায় বোঝান।</div>
-          <div class="ac-scenario"><b>পরিস্থিতি ০৪ · দুটি পাথরের তুলনা</b>“এই মানিকটির দাম অন্যটির চেয়ে বেশি কেন?” রং, স্বচ্ছতা, ট্রিটমেন্ট, উৎসের দাবি, কাট এবং নথিপত্র ব্যাখ্যা করুন।</div>
-          <div class="ac-scenario"><b>পরিস্থিতি ০৫ · দৈনন্দিন ব্যবহারের উপযোগিতা</b>“এই পাথরটি কি প্রতিদিন পরা যাবে?” কঠোরতা, ভঙ্গুরতা, সেটিংয়ের সুরক্ষা এবং যত্নের নিয়ম বলুন।</div>
+          <div class="ac-scenario"><b>Scenario 01 · Budget-Conscious Customer</b>"I want a real gemstone, but my budget is low." Guide them to suitable alternatives without compromising on accurate information.</div>
+          <div class="ac-scenario"><b>Scenario 02 · Astrology-Believing Customer</b>"Which stone will guarantee my problems are solved?" Respect their beliefs, but never guarantee astrological results or make scientifically unproven claims.</div>
+          <div class="ac-scenario"><b>Scenario 03 · Certificate-Seeking Customer</b>"How do I know if this stone is natural?" Explain reports, laboratories, treatments, and the limitations of reports in simple terms.</div>
+          <div class="ac-scenario"><b>Scenario 04 · Comparing Two Stones</b>"Why is this Ruby more expensive than the other?" Explain colour, clarity, treatments, origin claims, cut, and documentation.</div>
+          <div class="ac-scenario"><b>Scenario 05 · Daily Wear Suitability</b>"Can I wear this stone every day?" Discuss hardness, brittleness, setting protection, and care instructions.</div>
         </div>
       </div>
     </section>
 
     <section class="ac-wrap" id="assessment">
       <div class="ac-section-head">
-        <div class="ac-kicker">প্রশিক্ষকের মূল্যায়ন</div>
-        <h2>চূড়ান্ত ব্যবহারিক পরীক্ষা</h2>
-        <p>পণ্যের জ্ঞান, যোগাযোগ দক্ষতা এবং দায়িত্বশীল বিক্রয় যাচাই করার জন্য ১০০ নম্বরের একটি নমুনা মূল্যায়ন।</p>
+        <div class="ac-kicker">Trainer's Assessment</div>
+        <h2>Final Practical Exam</h2>
+        <p>A sample 100-mark assessment to evaluate product knowledge, communication skills, and responsible selling.</p>
       </div>
       <div class="ac-exam">
-        <h3>চূড়ান্ত বিক্রয় দক্ষতা পরীক্ষা · ১০০ নম্বর</h3>
+        <h3>Final Sales Skills Exam · 100 Marks</h3>
         <div class="ac-exam-grid">
-          <div class="ac-exam-item"><b>২০ নম্বর · পণ্যের জ্ঞান</b><br>নয়টি রত্নের নাম ও মূল বৈশিষ্ট্য ব্যাখ্যা করুন।</div>
-          <div class="ac-exam-item"><b>১৫ নম্বর · রত্নের বিজ্ঞান</b><br>RI, SG, মোহস কঠোরতা এবং 4Cs ব্যাখ্যা করুন।</div>
-          <div class="ac-exam-item"><b>১০ নম্বর · ওজনের হিসাব</b><br>দোকানের অনুমোদিত নিয়মে ক্যারেট ও রতি রূপান্তর করুন।</div>
-          <div class="ac-exam-item"><b>২০ নম্বর · ক্রেতার প্রয়োজন বোঝা</b><br>প্রয়োজন অনুযায়ী প্রশ্ন করুন এবং দায়িত্বশীল পরামর্শ দিন।</div>
-          <div class="ac-exam-item"><b>২০ নম্বর · পণ্য উপস্থাপনা</b><br>৬০–৯০ সেকেন্ডে স্পষ্ট ও নির্ভুলভাবে পণ্যটি উপস্থাপন করুন।</div>
-          <div class="ac-exam-item"><b>১৫ নম্বর · নৈতিকতা ও যত্ন</b><br>ট্রিটমেন্ট, সার্টিফিকেট, তথ্য প্রকাশ এবং পরিচর্যা ব্যাখ্যা করুন।</div>
+          <div class="ac-exam-item"><b>20 Marks · Product Knowledge</b><br>Explain the names and key characteristics of the 9 Navratnas.</div>
+          <div class="ac-exam-item"><b>15 Marks · Gemstone Science</b><br>Explain RI, SG, Mohs hardness, and the 4Cs.</div>
+          <div class="ac-exam-item"><b>10 Marks · Weight Calculation</b><br>Convert Carat to Ratti using the store's approved method.</div>
+          <div class="ac-exam-item"><b>20 Marks · Understanding Customer Needs</b><br>Ask the right questions and provide responsible advice.</div>
+          <div class="ac-exam-item"><b>20 Marks · Product Presentation</b><br>Present the product clearly and accurately in 60–90 seconds.</div>
+          <div class="ac-exam-item"><b>15 Marks · Ethics &amp; Care</b><br>Explain treatments, certificates, disclosures, and maintenance.</div>
         </div>
       </div>
       <div class="ac-info-panel">
         <div>
-          <h3>প্রশিক্ষকের দৈনিক চেকলিস্ট</h3>
+          <h3>Trainer's Daily Checklist</h3>
           <ul>
-            <li>প্রশিক্ষণার্থী কি রত্নটির নাম ও খনিজ পরিবার বলতে পারছেন?</li>
-            <li>সহজ ভাষায় RI, SG এবং কঠোরতা বোঝাতে পারছেন?</li>
-            <li>কঠোরতা ও ভঙ্গুরতার পার্থক্য বুঝিয়ে বলতে পারছেন?</li>
-            <li>ট্রিটমেন্ট ও সার্টিফিকেট সম্পর্কে সঠিক তথ্য দিতে পারছেন?</li>
-            <li>যত্নের নিয়ম ও ক্রেতার প্রশ্নের উত্তর দিতে পারছেন?</li>
+            <li>Can the trainee name the gemstone and its mineral family?</li>
+            <li>Can they explain RI, SG, and hardness in simple terms?</li>
+            <li>Can they explain the difference between hardness and brittleness?</li>
+            <li>Can they provide accurate information about treatments and certificates?</li>
+            <li>Can they explain care instructions and answer customer questions?</li>
           </ul>
         </div>
         <div>
-          <h3>পেশাদার বিক্রয়ের মূলনীতি</h3>
-          <p>নির্ভুল তথ্য, স্বচ্ছতা এবং মনোযোগ দিয়ে ক্রেতার কথা শোনার মাধ্যমে বিশ্বাস তৈরি করুন। নির্ভরযোগ্য প্রমাণ ছাড়া জ্যোতিষীয় ফল, বিনিয়োগে লাভ, বিরলতা বা উৎস সম্পর্কে নিশ্চয়তা দেবেন না।</p>
-          <p class="ac-note">এই ওয়েবসাইটটি প্রশিক্ষণের শিক্ষামূলক সহায়িকা। এটি রত্ন পরীক্ষাগারের পরীক্ষা, আনুষ্ঠানিক সার্টিফিকেশন বা বর্তমান আইনগত নির্দেশিকার বিকল্প নয়।</p>
+          <h3>Professional Selling Principles</h3>
+          <p>Build trust through accurate information, transparency, and attentive listening. Never guarantee astrological results, investment returns, rarity, or origin without reliable proof.</p>
+          <p class="ac-note">This website is an educational aid for training. It is not a substitute for gemological laboratory testing, formal certification, or current legal guidelines.</p>
         </div>
       </div>
     </section>
@@ -1160,19 +1296,28 @@
   </div>
 </footer>
 
-<button class="backtop" id="backtop" type="button" aria-label="উপরে যান" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="backtop" id="backtop" type="button" aria-label="Go to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
 /* =========================================================
    TAB SWITCHING
    ========================================================= */
+let activeTab = 'qa';
+
 function switchTab(name){
+  activeTab = name;
   document.body.classList.toggle('view-academy', name === 'academy');
   document.getElementById('qaView').classList.toggle('active', name === 'qa');
+  document.getElementById('salesView').classList.toggle('active', name === 'sales');
   document.getElementById('academyView').classList.toggle('active', name === 'academy');
+  
   document.querySelectorAll('#tabs button').forEach(b => {
     b.classList.toggle('on', b.dataset.tab === name);
   });
+
+  const tools = document.getElementById('qaTools');
+  tools.style.display = (name === 'academy') ? 'none' : 'flex';
+  
   window.scrollTo({ top: 0, behavior: 'auto' });
 }
 document.getElementById('tabs').addEventListener('click', e => {
@@ -1197,7 +1342,7 @@ window.addEventListener('scroll', () => {
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 /* =========================================================
-   Q&A DATA
+   Q&A DATA (PART 1)
    ========================================================= */
 const SECTIONS = [
   { id:'s1', n:1,  icon:'🪙', en:'Gold Knowledge',                    bn:'সোনা সম্পর্কে প্রাথমিক ও পেশাগত জ্ঞান' },
@@ -1295,6 +1440,132 @@ const QUESTIONS = [
 {s:'s10',n:80,q:{bn:`গ্রাহকদের সঙ্গে দীর্ঘমেয়াদি সম্পর্ক কীভাবে তৈরি করবেন?`, en:`How would you build long-term relationships with customers?`},a:{bn:`ভালো ব্যবহার, সঠিক তথ্য, প্রতিশ্রুতি রক্ষা, বিক্রয়-পরবর্তী পরিষেবা এবং নিয়মিত যোগাযোগের মাধ্যমে গ্রাহকের আস্থা অর্জন করব।`,en:`I will build trust through courteous behaviour, accurate information, keeping promises, reliable after-sales service and appropriate follow-up communication.`}}
 ];
 
+/* =========================================================
+   SALES & MARKETING DATA (PART 2)
+   ========================================================= */
+const SALES_SECTIONS = [
+  { id:'t1', n:1, icon:'📈', en:'Sales Skills & Techniques', bn:'সেলস দক্ষতা ও বিক্রয় কৌশল' },
+  { id:'t2', n:2, icon:'🧠', en:'Customer Psychology & Objection Handling', bn:'গ্রাহকের মনস্তত্ত্ব ও আপত্তি মোকাবিলা' },
+  { id:'t3', n:3, icon:'📣', en:'Jewellery Marketing & Promotion', bn:'জুয়েলারি মার্কেটিং ও প্রচার' },
+  { id:'t4', n:4, icon:'🛠️', en:'After-Sales Service & Customer Retention', bn:'বিক্রয়-পরবর্তী পরিষেবা ও গ্রাহক ধরে রাখা' },
+  { id:'t5', n:5, icon:'📊', en:'Sales Management & Business Development', bn:'সেলস ম্যানেজমেন্ট ও ব্যবসার উন্নয়ন' }
+];
+
+const SALES_QUESTIONS = [
+/* ---------- SECTION 1 : SALES SKILLS ---------- */
+{s:'t1',n:81,q:{bn:`সেলস বা বিক্রয় কী?`, en:`What is Sales?`},a:{bn:`Sales হলো এমন একটি প্রক্রিয়া যার মাধ্যমে গ্রাহকের প্রয়োজন বুঝে উপযুক্ত পণ্য বা পরিষেবা সম্পর্কে জানানো এবং তাঁকে কেনার সিদ্ধান্ত নিতে সাহায্য করা হয়।`,en:`Sales is the process of understanding customer needs, presenting suitable products or services and helping customers make a buying decision.`}},
+{s:'t1',n:82,q:{bn:`Jewellery Sales-এর প্রধান ধাপগুলি কী কী?`, en:`What are the main stages of the jewellery sales process?`},a:{bn:`<ol><li>Greeting – গ্রাহককে স্বাগত জানানো।</li><li>Need Identification – চাহিদা বোঝা।</li><li>Product Presentation – পণ্য দেখানো।</li><li>Product Demonstration – পণ্যের বৈশিষ্ট্য বোঝানো।</li><li>Objection Handling – আপত্তির উত্তর দেওয়া।</li><li>Closing – বিক্রয় সম্পন্ন করা।</li><li>Follow-up – পরবর্তী যোগাযোগ।</li></ol>`,en:`The main stages are Greeting, Need Identification, Product Presentation, Product Demonstration, Objection Handling, Closing and Follow-up.`}},
+{s:'t1',n:83,q:{bn:`সেলস পিচ কী?`, en:`What is a Sales Pitch?`},a:{bn:`Sales Pitch হলো পণ্যের গুরুত্বপূর্ণ বৈশিষ্ট্য, সুবিধা ও মূল্য সম্পর্কে গ্রাহকের কাছে আকর্ষণীয় ও সংক্ষিপ্ত উপস্থাপনা।`,en:`A Sales Pitch is a brief and persuasive presentation of a product's features, benefits and value to a potential customer.`}},
+{s:'t1',n:84,q:{bn:`Feature ও Benefit-এর পার্থক্য কী?`, en:`What is the difference between a Product Feature and a Product Benefit?`},a:{bn:`Feature হলো পণ্যের নিজস্ব বৈশিষ্ট্য। Benefit হলো সেই বৈশিষ্ট্য গ্রাহককে কী সুবিধা দিচ্ছে।<br><br><b>উদাহরণ:</b> একটি Necklace-এর Lightweight Design হলো Feature, আর দীর্ঘ সময় পরলেও আরামদায়ক থাকা হলো Benefit।`,en:`A Feature describes what a product has, while a Benefit explains how that feature helps the customer.<br><br><b>Example:</b> A lightweight necklace is a product feature, while comfortable everyday wear is its benefit.`}},
+{s:'t1',n:85,q:{bn:`কনসালটেটিভ সেলিং কী?`, en:`What is Consultative Selling?`},a:{bn:`গ্রাহকের প্রয়োজন, বাজেট ও পছন্দ বিশ্লেষণ করে তাঁকে পরামর্শের মাধ্যমে উপযুক্ত পণ্য কেনার সিদ্ধান্ত নিতে সাহায্য করাকে Consultative Selling বলে।`,en:`Consultative Selling is a customer-focused approach in which the salesperson understands the customer's needs and recommends suitable products through professional advice.`}},
+{s:'t1',n:86,q:{bn:`নিড-বেসড সেলিং কী?`, en:`What is Need-Based Selling?`},a:{bn:`গ্রাহকের প্রকৃত চাহিদা অনুযায়ী পণ্য বিক্রি করাকে Need-Based Selling বলে।`,en:`Need-Based Selling means recommending and selling products according to the customer's actual requirements.`}},
+{s:'t1',n:87,q:{bn:`সাজেস্টিভ সেলিং কী?`, en:`What is Suggestive Selling?`},a:{bn:`গ্রাহকের পছন্দ ও কেনাকাটার উদ্দেশ্যের সঙ্গে মানানসই অতিরিক্ত বা বিকল্প পণ্য দেখানোর কৌশলকে Suggestive Selling বলে।`,en:`Suggestive Selling is the technique of recommending additional or alternative products that match the customer's preferences and purchase purpose.`}},
+{s:'t1',n:88,q:{bn:`Jewellery Retail-এ Upselling কী?`, en:`What is Upselling in jewellery retail?`},a:{bn:`গ্রাহক যে ধরনের গয়না কিনতে চাইছেন, তার চেয়ে উন্নত মান, ডিজাইন বা অতিরিক্ত বৈশিষ্ট্যযুক্ত উপযুক্ত পণ্য দেখিয়ে উচ্চমূল্যের বিকল্প প্রস্তাব করাকে Upselling বলে।`,en:`Upselling means suggesting a more premium or upgraded jewellery product that offers additional value and suits the customer's requirements.`}},
+{s:'t1',n:89,q:{bn:`Jewellery Retail-এ Cross-Selling কী?`, en:`What is Cross-Selling in jewellery retail?`},a:{bn:`একটি গয়না কেনার পাশাপাশি তার সঙ্গে মানানসই অন্য গয়না বা Accessories কেনার পরামর্শ দেওয়াকে Cross-Selling বলে।<br><br><b>উদাহরণ:</b> Necklace-এর সঙ্গে Earrings বা Bracelet দেখানো।`,en:`Cross-Selling means recommending complementary products along with the customer's primary purchase.<br><br><b>Example:</b> Suggesting matching earrings or a bracelet with a necklace.`}},
+{s:'t1',n:90,q:{bn:`অ্যাড-অন সেলিং কী?`, en:`What is Add-on Selling?`},a:{bn:`মূল পণ্যের সঙ্গে অতিরিক্ত কোনো প্রাসঙ্গিক পণ্য বা পরিষেবা কেনার প্রস্তাব দেওয়াকে Add-on Selling বলে।<br><br><b>উদাহরণ:</b> প্রযোজ্য ক্ষেত্রে Jewellery Care Kit বা Gift Packaging।`,en:`Add-on Selling means offering relevant additional products or services along with the main purchase, such as a jewellery care kit or gift packaging where available.`}},
+{s:'t1',n:91,q:{bn:`সেলস কনভার্সন রেট কী?`, en:`What is a Sales Conversion Rate?`},a:{bn:`মোট কতজন সম্ভাব্য ক্রেতা দোকানে এসেছেন বা যোগাযোগ করেছেন, তাঁদের মধ্যে কতজন কেনাকাটা করেছেন, তার শতকরা হার হলো Conversion Rate।<br><br><b>সূত্র:</b> (Total Buyers ÷ Total Qualified Visitors) × 100`,en:`Sales Conversion Rate is the percentage of qualified visitors or prospects who complete a purchase.<br><br><b>Formula:</b> (Total Buyers ÷ Total Qualified Visitors) × 100`}},
+{s:'t1',n:92,q:{bn:`ATV কী?`, en:`What is Average Transaction Value (ATV)?`},a:{bn:`একটি নির্দিষ্ট সময়ে মোট বিক্রয়ের পরিমাণকে মোট Transaction সংখ্যা দিয়ে ভাগ করলে Average Transaction Value পাওয়া যায়।<br><br><b>সূত্র:</b> Total Sales Value ÷ Number of Transactions`,en:`Average Transaction Value is the average amount spent by customers per completed transaction.<br><br><b>Formula:</b> Total Sales Value ÷ Number of Transactions.`}},
+{s:'t1',n:93,q:{bn:`ASP কী?`, en:`What is Average Selling Price (ASP)?`},a:{bn:`নির্দিষ্ট সময়ে বিক্রি হওয়া মোট পণ্যের বিক্রয়মূল্যকে বিক্রি হওয়া মোট ইউনিট দিয়ে ভাগ করলে Average Selling Price পাওয়া যায়।<br><br><b>সূত্র:</b> Total Sales Revenue ÷ Units Sold`,en:`Average Selling Price is the average selling price per unit during a given period.<br><br><b>Formula:</b> Total Sales Revenue ÷ Units Sold.`}},
+{s:'t1',n:94,q:{bn:`সেলস টার্গেট কী?`, en:`What is a Sales Target?`},a:{bn:`নির্দিষ্ট সময়ের মধ্যে একজন Executive বা Store-কে যে পরিমাণ বিক্রয় সম্পন্ন করতে হবে, তাকে Sales Target বলে।`,en:`A Sales Target is a predefined sales goal that an executive or store is expected to achieve within a specific period.`}},
+{s:'t1',n:95,q:{bn:`ডেইলি সেলস রিপোর্ট কী?`, en:`What is a Daily Sales Report?`},a:{bn:`প্রতিদিনের বিক্রয়, Transaction সংখ্যা, পণ্যের ধরন, Revenue এবং Target Achievement-এর হিসাবকে Daily Sales Report বলে।`,en:`A Daily Sales Report is a record of daily sales, transaction numbers, product categories, revenue and target achievement.`}},
+{s:'t1',n:96,q:{bn:`সেলস ফানেল কী?`, en:`What is a Sales Funnel?`},a:{bn:`একজন সম্ভাব্য গ্রাহক প্রথমে পণ্যের বিষয়ে জানতে পারেন, তারপর আগ্রহী হন, পণ্য বিবেচনা করেন এবং শেষে কেনাকাটা করেন। এই ধাপগুলিকে একত্রে Sales Funnel বলে।`,en:`A Sales Funnel represents the stages through which a potential customer moves, from initial awareness and interest to consideration and final purchase.`}},
+{s:'t1',n:97,q:{bn:`সেল ক্লোজিং কী?`, en:`What is Closing a Sale?`},a:{bn:`গ্রাহকের সমস্ত প্রশ্নের উত্তর দেওয়ার পর তাঁকে স্বেচ্ছায় কেনাকাটার সিদ্ধান্ত সম্পন্ন করতে সাহায্য করাকে Closing a Sale বলে।`,en:`Closing a Sale is the process of helping a customer complete their purchase after addressing their questions and concerns.`}},
+{s:'t1',n:98,q:{bn:`ট্রায়াল ক্লোজিং কী?`, en:`What is Trial Closing?`},a:{bn:`বিক্রয় সম্পন্ন করার আগে গ্রাহক কেনার জন্য কতটা প্রস্তুত, তা বোঝার জন্য ছোট প্রশ্ন করা হলো Trial Closing।<br><br><b>উদাহরণ:</b> "আপনার কি এই ডিজাইনটি পছন্দ হয়েছে?"`,en:`Trial Closing involves asking questions to understand how ready a customer is to make a purchase.<br><br><b>Example:</b> "Do you like this design?"`}},
+{s:'t1',n:99,q:{bn:`রিলেশনশিপ সেলিং কী?`, en:`What is Relationship Selling?`},a:{bn:`শুধু একটি পণ্য বিক্রি না করে গ্রাহকের সঙ্গে দীর্ঘমেয়াদি বিশ্বাস ও সম্পর্ক তৈরি করার মাধ্যমে বিক্রয় পরিচালনা করাকে Relationship Selling বলে।`,en:`Relationship Selling focuses on building long-term customer trust and relationships rather than concentrating only on a single transaction.`}},
+{s:'t1',n:100,q:{bn:`একজন Jewellery Executive কীভাবে প্রতিদিনের বিক্রয় বাড়াতে পারেন?`, en:`How can a jewellery executive improve daily sales performance?`},a:{bn:`Product Knowledge বাড়িয়ে, গ্রাহকের প্রয়োজন বুঝে, ভালো Product Presentation করে, নিয়মিত Follow-up রেখে এবং নিজের Sales Performance বিশ্লেষণ করে বিক্রয় বাড়ানো যায়।`,en:`A jewellery executive can improve daily sales by strengthening product knowledge, understanding customer needs, presenting products effectively, following up appropriately and analysing personal sales performance.`}},
+{s:'t1',n:101,q:{bn:`ওয়াক-ইন কাস্টমার কী?`, en:`What is a Walk-in Customer?`},a:{bn:`যিনি পূর্বনির্ধারিত Appointment ছাড়াই সরাসরি দোকানে এসে পণ্য দেখতে বা কিনতে চান, তাঁকে Walk-in Customer বলে।`,en:`A Walk-in Customer is someone who visits a store without a prior appointment to explore or purchase products.`}},
+{s:'t1',n:102,q:{bn:`Jewellery Sales-এ Lead কী?`, en:`What is a Lead in jewellery sales?`},a:{bn:`যিনি কোনো পণ্য বা পরিষেবায় আগ্রহ দেখিয়েছেন এবং ভবিষ্যতে কেনার সম্ভাবনা রয়েছে, তাঁকে Sales Lead বলা হয়।`,en:`A Sales Lead is a potential customer who has shown interest in a product or service and may make a purchase in the future.`}},
+{s:'t1',n:103,q:{bn:`লিড কনভার্সন কী?`, en:`What is Lead Conversion?`},a:{bn:`একজন সম্ভাব্য গ্রাহককে সফলভাবে প্রকৃত ক্রেতায় পরিণত করার প্রক্রিয়াকে Lead Conversion বলে।`,en:`Lead Conversion is the process of turning a potential customer into an actual buyer.`}},
+{s:'t1',n:104,q:{bn:`রিপিট পারচেজ কী?`, en:`What is a Repeat Purchase?`},a:{bn:`একজন গ্রাহক একই দোকান থেকে আবার কোনো পণ্য কেনাকাটা করলে তাকে Repeat Purchase বলে।`,en:`A Repeat Purchase occurs when an existing customer buys from the same store again.`}},
+{s:'t1',n:105,q:{bn:`কাস্টমার লাইফটাইম ভ্যালু কী?`, en:`What is Customer Lifetime Value (CLV)?`},a:{bn:`একজন গ্রাহক দীর্ঘ সময় ধরে একটি প্রতিষ্ঠানের সঙ্গে সম্পর্ক বজায় রেখে মোট কতটা ব্যবসায়িক মূল্য তৈরি করেন, তার ধারণাকে Customer Lifetime Value বলে।`,en:`Customer Lifetime Value is an estimate of the total business value a customer generates throughout their relationship with a company.`}},
+
+/* ---------- SECTION 2 : CUSTOMER PSYCHOLOGY ---------- */
+{s:'t2',n:106,q:{bn:`কাস্টমার সাইকোলজি কী?`, en:`What is Customer Psychology?`},a:{bn:`গ্রাহক কেন, কীভাবে এবং কোন বিষয় বিবেচনা করে কেনাকাটার সিদ্ধান্ত নেন, সেই আচরণ ও মানসিক প্রক্রিয়ার অধ্যয়নকে Customer Psychology বলে।`,en:`Customer Psychology is the study of the thoughts, emotions and behaviours that influence customers' purchasing decisions.`}},
+{s:'t2',n:107,q:{bn:`গ্রাহকরা কেন গয়না কেনেন?`, en:`Why do customers buy jewellery?`},a:{bn:`সৌন্দর্য, ব্যক্তিগত পছন্দ, বিবাহ, উৎসব, উপহার, সামাজিক অনুষ্ঠান, ঐতিহ্য এবং কিছু ক্ষেত্রে সম্পদ সংরক্ষণের উদ্দেশ্যে গ্রাহকরা গয়না কেনেন।`,en:`Customers buy jewellery for beauty, personal preferences, weddings, festivals, gifts, social occasions, traditions and sometimes wealth preservation.`}},
+{s:'t2',n:108,q:{bn:`ইমোশনাল বাইং কী?`, en:`What is Emotional Buying?`},a:{bn:`আবেগ, স্মৃতি, ভালোবাসা, সম্পর্ক বা বিশেষ উপলক্ষের প্রভাবে কেনাকাটার সিদ্ধান্ত নেওয়াকে Emotional Buying বলে।`,en:`Emotional Buying occurs when purchasing decisions are strongly influenced by feelings, memories, relationships or special occasions.`}},
+{s:'t2',n:109,q:{bn:`ইমপালস বাইং কী?`, en:`What is Impulse Buying?`},a:{bn:`পূর্বপরিকল্পনা ছাড়াই হঠাৎ কোনো পণ্য কেনার সিদ্ধান্ত নেওয়াকে Impulse Buying বলে।`,en:`Impulse Buying is an unplanned purchase made suddenly, often influenced by attraction or immediate desire.`}},
+{s:'t2',n:110,q:{bn:`কাস্টমার বাইং বিহেভিয়ার কী?`, en:`What is Customer Buying Behaviour?`},a:{bn:`গ্রাহক কীভাবে পণ্য নির্বাচন করেন, বিকল্প যাচাই করেন, দাম বিবেচনা করেন এবং কেনার সিদ্ধান্ত নেন, সেই আচরণকে Customer Buying Behaviour বলে।`,en:`Customer Buying Behaviour refers to how customers select products, evaluate alternatives, consider prices and make purchasing decisions.`}},
+{s:'t2',n:111,q:{bn:`প্রাইস অবজেকশন কী?`, en:`What is Price Objection?`},a:{bn:`গ্রাহক যখন মনে করেন কোনো পণ্যের দাম তাঁর বাজেট বা প্রত্যাশার তুলনায় বেশি, তখন তিনি Price Objection প্রকাশ করেন।`,en:`A Price Objection occurs when a customer feels that a product's price is higher than their budget or expectations.`}},
+{s:'t2',n:112,q:{bn:`অন্য দোকানে কম দাম পাওয়ার কথা বললে কী করবেন?`, en:`How should you handle a customer who says another store offers a lower price?`},a:{bn:`অন্য দোকানকে ছোট না করে পণ্যের Purity, Weight, Making Charges, Certification এবং পরিষেবার পার্থক্য বুঝিয়ে বলব। একই বৈশিষ্ট্যের পণ্যের তুলনা করতে সাহায্য করব।`,en:`I will avoid criticising the competitor. Instead, I will explain differences in purity, weight, making charges, certification and services, helping the customer compare equivalent products.`}},
+{s:'t2',n:113,q:{bn:`কোয়ালিটি অবজেকশন কী?`, en:`What is Quality Objection?`},a:{bn:`গ্রাহক যখন পণ্যের গুণমান, স্থায়িত্ব বা বিশুদ্ধতা নিয়ে সন্দেহ প্রকাশ করেন, তখন তাকে Quality Objection বলে।`,en:`A Quality Objection occurs when a customer expresses doubts about a product's quality, durability or purity.`}},
+{s:'t2',n:114,q:{bn:`দুটি ডিজাইনের মধ্যে দ্বিধায় থাকা গ্রাহককে কীভাবে সাহায্য করবেন?`, en:`How do you handle a customer who is confused between two designs?`},a:{bn:`দুটি ডিজাইনের পার্থক্য, ব্যবহারিক সুবিধা, আরাম, দাম ও উপলক্ষ অনুযায়ী উপযুক্ততা বোঝাব। সিদ্ধান্তের স্বাধীনতা গ্রাহককে দেব।`,en:`I will explain the differences in design, practicality, comfort, price and suitability for the occasion, while allowing the customer to make the final decision.`}},
+{s:'t2',n:115,q:{bn:`সেলসে ট্রাস্ট বিল্ডিং কী?`, en:`What is Trust Building in sales?`},a:{bn:`সঠিক তথ্য, স্বচ্ছ মূল্য, প্রতিশ্রুতি রক্ষা এবং ভালো ব্যবহারের মাধ্যমে গ্রাহকের আস্থা অর্জন করাকে Trust Building বলে।`,en:`Trust Building means earning customer confidence through accurate information, transparent pricing, reliable promises and courteous behaviour.`}},
+{s:'t2',n:116,q:{bn:`অ্যাক্টিভ লিসনিং কী?`, en:`What is Active Listening?`},a:{bn:`গ্রাহকের কথা মনোযোগ দিয়ে শোনা, তাঁর বক্তব্য বোঝা এবং উপযুক্ত প্রতিক্রিয়া দেওয়ার পদ্ধতিকে Active Listening বলে।`,en:`Active Listening is the practice of carefully listening to customers, understanding their concerns and responding appropriately.`}},
+{s:'t2',n:117,q:{bn:`কাস্টমার সার্ভিসে Empathy কী?`, en:`What is Empathy in customer service?`},a:{bn:`গ্রাহকের অনুভূতি ও সমস্যাকে তাঁর দৃষ্টিকোণ থেকে বোঝার এবং সম্মান করার ক্ষমতাকে Empathy বলে।`,en:`Empathy is the ability to understand and respect a customer's feelings and concerns from their perspective.`}},
+{s:'t2',n:118,q:{bn:`ওপেন-এন্ডেড প্রশ্ন কী?`, en:`What is an Open-Ended Question?`},a:{bn:`যে প্রশ্নের উত্তর শুধু হ্যাঁ বা না দিয়ে শেষ হয় না এবং গ্রাহককে বিস্তারিত বলতে উৎসাহিত করে, তাকে Open-Ended Question বলে।<br><br><b>উদাহরণ:</b> "আপনি কোন ধরনের Jewellery Design পছন্দ করেন?"`,en:`An Open-Ended Question encourages customers to explain their preferences rather than answering only yes or no.<br><br><b>Example:</b> "What type of jewellery design do you prefer?"`}},
+{s:'t2',n:119,q:{bn:`ক্লোজড-এন্ডেড প্রশ্ন কী?`, en:`What is a Closed-Ended Question?`},a:{bn:`যে প্রশ্নের উত্তর সাধারণত হ্যাঁ, না অথবা নির্দিষ্ট তথ্য দিয়ে দেওয়া যায়, তাকে Closed-Ended Question বলে।<br><br><b>উদাহরণ:</b> "আপনি কি 22K Gold খুঁজছেন?"`,en:`A Closed-Ended Question usually requires a short or specific answer, such as yes or no.<br><br><b>Example:</b> "Are you looking for 22K gold?"`}},
+{s:'t2',n:120,q:{bn:`নন-ভার্বাল কমিউনিকেশন কী?`, en:`What is Non-Verbal Communication?`},a:{bn:`কথা না বলে চোখের দৃষ্টি, মুখের অভিব্যক্তি, শরীরের ভঙ্গি এবং হাতের ইশারার মাধ্যমে যোগাযোগ করাকে Non-Verbal Communication বলে।`,en:`Non-Verbal Communication involves conveying messages through eye contact, facial expressions, body language and gestures without relying on spoken words.`}},
+{s:'t2',n:121,q:{bn:`কাস্টমার সেগমেন্টেশন কী?`, en:`What is Customer Segmentation?`},a:{bn:`গ্রাহকদের বয়স, বাজেট, পছন্দ, ক্রয়ক্ষমতা, কেনাকাটার উদ্দেশ্য এবং আচরণ অনুযায়ী বিভিন্ন দলে ভাগ করাকে Customer Segmentation বলে।`,en:`Customer Segmentation is the process of dividing customers into groups based on factors such as age, budget, preferences, purchasing power, buying purpose and behaviour.`}},
+{s:'t2',n:122,q:{bn:`যিনি শুধু গয়না দেখছেন, কিনবেন কি না নিশ্চিত নন, তাঁকে কীভাবে সামলাবেন?`, en:`How do you handle a customer who is only browsing?`},a:{bn:`তাঁকে স্বাচ্ছন্দ্য দেব, জোর করে বিক্রির চেষ্টা করব না এবং প্রয়োজনে তাঁর পছন্দের ডিজাইন বা বাজেট সম্পর্কে জানতে চাইব।`,en:`I will make the customer feel comfortable, avoid pressuring them and politely explore their design preferences or budget if they are willing to share.`}},
+{s:'t2',n:123,q:{bn:`সোশ্যাল প্রুফ কী?`, en:`What is Social Proof in jewellery marketing and sales?`},a:{bn:`অন্য গ্রাহকের প্রকৃত Review, Feedback বা অভিজ্ঞতার মাধ্যমে কোনো পণ্য বা দোকানের প্রতি আস্থা তৈরি হওয়াকে Social Proof বলে।`,en:`Social Proof is the influence created by genuine customer reviews, feedback and experiences that help others develop confidence in a product or store.`}},
+{s:'t2',n:124,q:{bn:`গ্রাহক বারবার কেনার সিদ্ধান্ত পিছিয়ে দিলে কী করবেন?`, en:`How should you handle a customer who keeps delaying the purchase decision?`},a:{bn:`তাঁর দ্বিধার কারণ বুঝব, প্রয়োজনীয় তথ্য দেব, বিকল্প দেখাব এবং তাঁকে যথেষ্ট সময় দেব। মিথ্যা জরুরি পরিস্থিতি তৈরি করব না।`,en:`I will understand the reason for the hesitation, provide relevant information, offer alternatives and give the customer enough time without creating false urgency.`}},
+{s:'t2',n:125,q:{bn:`কাস্টমার স্যাটিসফ্যাকশন কী?`, en:`What is Customer Satisfaction?`},a:{bn:`পণ্য ও পরিষেবা থেকে গ্রাহকের প্রত্যাশা কতটা পূরণ হয়েছে, তার মূল্যায়নকে Customer Satisfaction বলে।`,en:`Customer Satisfaction measures how well a product or service meets or exceeds customer expectations.`}},
+
+/* ---------- SECTION 3 : MARKETING ---------- */
+{s:'t3',n:126,q:{bn:`মার্কেটিং কী?`, en:`What is Marketing?`},a:{bn:`Marketing হলো গ্রাহকের চাহিদা বোঝা, উপযুক্ত পণ্য তৈরি বা নির্বাচন, সঠিক মূল্য নির্ধারণ, প্রচার এবং গ্রাহকের কাছে পণ্য পৌঁছে দেওয়ার সামগ্রিক প্রক্রিয়া।`,en:`Marketing is the overall process of understanding customer needs, selecting or developing suitable products, setting prices, promoting them and making them available to customers.`}},
+{s:'t3',n:127,q:{bn:`Sales ও Marketing-এর পার্থক্য কী?`, en:`What is the difference between Sales and Marketing?`},a:{bn:`Marketing-এর উদ্দেশ্য হলো পণ্যের পরিচিতি তৈরি করা, গ্রাহক আকর্ষণ করা এবং কেনার আগ্রহ সৃষ্টি করা। Sales-এর উদ্দেশ্য হলো সেই আগ্রহকে বাস্তব কেনাকাটায় রূপান্তর করা।`,en:`Marketing creates awareness, attracts potential customers and generates purchase interest. Sales converts that interest into actual transactions.`}},
+{s:'t3',n:128,q:{bn:`মার্কেটিংয়ের 4Ps কী?`, en:`What is the 4Ps of Marketing?`},a:{bn:`<ol><li><b>Product</b> – পণ্য।</li><li><b>Price</b> – মূল্য।</li><li><b>Place</b> – কোথায় ও কীভাবে পণ্য পাওয়া যাবে।</li><li><b>Promotion</b> – প্রচার ও বিজ্ঞাপন।</li></ol>`,en:`The 4Ps of Marketing are Product, Price, Place and Promotion.`}},
+{s:'t3',n:129,q:{bn:`টার্গেট মার্কেট কী?`, en:`What is a Target Market?`},a:{bn:`নির্দিষ্ট পণ্য বা পরিষেবা কেনার সম্ভাবনা বেশি এমন গ্রাহকগোষ্ঠীকে Target Market বলে।`,en:`A Target Market is a specific group of customers who are most likely to purchase a particular product or service.`}},
+{s:'t3',n:130,q:{bn:`ব্র্যান্ড পজিশনিং কী?`, en:`What is Brand Positioning?`},a:{bn:`গ্রাহকের মনে একটি Jewellery Brand-এর বিশেষ পরিচয়, মূল্য ও অবস্থান তৈরি করার কৌশলকে Brand Positioning বলে।`,en:`Brand Positioning is the strategy of creating a distinctive identity and value perception for a jewellery brand in the minds of customers.`}},
+{s:'t3',n:131,q:{bn:`ব্র্যান্ড অ্যাওয়ারনেস কী?`, en:`What is Brand Awareness?`},a:{bn:`গ্রাহকরা কোনো Jewellery Brand-এর নাম, পণ্য ও পরিচিতি কতটা জানেন, তাকে Brand Awareness বলে।`,en:`Brand Awareness refers to how familiar customers are with a jewellery brand, its name and its products.`}},
+{s:'t3',n:132,q:{bn:`ডিজিটাল মার্কেটিং কী?`, en:`What is Digital Marketing?`},a:{bn:`Internet, Website, Search Engine, Social Media, Email এবং Digital Advertising-এর মাধ্যমে পণ্যের প্রচার করাকে Digital Marketing বলে।`,en:`Digital Marketing is the promotion of products and services through websites, search engines, social media, email and online advertising.`}},
+{s:'t3',n:133,q:{bn:`সোশ্যাল মিডিয়া মার্কেটিং কী?`, en:`What is Social Media Marketing?`},a:{bn:`Facebook, Instagram, YouTube এবং অন্যান্য Social Media Platform ব্যবহার করে পণ্যের প্রচার ও গ্রাহকের সঙ্গে যোগাযোগ স্থাপন করাকে Social Media Marketing বলে।`,en:`Social Media Marketing uses platforms such as Facebook, Instagram and YouTube to promote products and engage with customers.`}},
+{s:'t3',n:134,q:{bn:`Instagram কীভাবে একটি Jewellery Store-কে সাহায্য করতে পারে?`, en:`How can Instagram help a jewellery store?`},a:{bn:`সুন্দর Product Photography, Reels, Design Videos, New Collection Updates এবং Customer Testimonials প্রকাশ করে Instagram-এর মাধ্যমে গ্রাহকের আগ্রহ তৈরি করা যায়।`,en:`Instagram can help a jewellery store attract customers through product photography, reels, design videos, new collection updates and genuine customer testimonials.`}},
+{s:'t3',n:135,q:{bn:`ভিজ্যুয়াল মার্চেন্ডাইজিং কী?`, en:`What is Visual Merchandising?`},a:{bn:`দোকানের আলো, ডিসপ্লে, রং, সাজসজ্জা এবং পণ্য প্রদর্শনের মাধ্যমে গ্রাহকের দৃষ্টি আকর্ষণ করার কৌশলকে Visual Merchandising বলে।`,en:`Visual Merchandising is the technique of attracting customers through product displays, lighting, colours, store layout and presentation.`}},
+{s:'t3',n:136,q:{bn:`উইন্ডো ডিসপ্লে কী?`, en:`What is Window Display?`},a:{bn:`দোকানের সামনের কাচের অংশে নির্বাচিত পণ্য ও আকর্ষণীয় সাজসজ্জার মাধ্যমে পথচারীদের দৃষ্টি আকর্ষণ করাকে Window Display বলে।`,en:`Window Display is the presentation of selected products and attractive arrangements in a store's front window to attract passers-by.`}},
+{s:'t3',n:137,q:{bn:`সিজনাল মার্কেটিং কী?`, en:`What is Seasonal Marketing?`},a:{bn:`দুর্গাপূজা, দীপাবলি, বিবাহের মরশুম, অক্ষয় তৃতীয়া এবং অন্যান্য বিশেষ উপলক্ষকে কেন্দ্র করে পণ্যের প্রচার করাকে Seasonal Marketing বলে।`,en:`Seasonal Marketing involves promoting products around specific occasions, festivals, wedding seasons and other important events.`}},
+{s:'t3',n:138,q:{bn:`ফেস্টিভ্যাল ক্যাম্পেইন মার্কেটিং কী?`, en:`What is Festival Campaign Marketing?`},a:{bn:`উৎসব উপলক্ষে বিশেষ Offer, New Collection, Advertisement এবং Promotional Activities পরিচালনাকে Festival Campaign Marketing বলে।`,en:`Festival Campaign Marketing involves running special offers, launching new collections, advertising and promotional activities during festivals.`}},
+{s:'t3',n:139,q:{bn:`ইনফ্লুয়েন্সার মার্কেটিং কী?`, en:`What is Influencer Marketing?`},a:{bn:`Social Media-তে পরিচিত বা প্রভাবশালী ব্যক্তির মাধ্যমে Jewellery Brand বা Product-এর প্রচার করাকে Influencer Marketing বলে।`,en:`Influencer Marketing is a promotional strategy in which individuals with an established online audience promote a jewellery brand or product.`}},
+{s:'t3',n:140,q:{bn:`কনটেন্ট মার্কেটিং কী?`, en:`What is Content Marketing?`},a:{bn:`Jewellery সম্পর্কিত শিক্ষামূলক, আকর্ষণীয় ও মূল্যবান Content তৈরি করে গ্রাহকের আগ্রহ ও আস্থা অর্জন করাকে Content Marketing বলে।`,en:`Content Marketing involves creating useful and engaging jewellery-related content to attract, educate and build trust with customers.`}},
+{s:'t3',n:141,q:{bn:`প্রমোশনাল ক্যাম্পেইন কী?`, en:`What is a Promotional Campaign?`},a:{bn:`নির্দিষ্ট সময়ে নির্দিষ্ট উদ্দেশ্যে পরিচালিত বিশেষ প্রচারমূলক কার্যক্রমকে Promotional Campaign বলে।`,en:`A Promotional Campaign is a planned marketing activity conducted over a specific period to achieve a particular promotional objective.`}},
+{s:'t3',n:142,q:{bn:`কাস্টমার রেফারেল মার্কেটিং কী?`, en:`What is Customer Referral Marketing?`},a:{bn:`সন্তুষ্ট গ্রাহকদের মাধ্যমে তাঁদের পরিচিত অন্য সম্ভাব্য গ্রাহকের কাছে দোকানের পরিচিতি পৌঁছে দেওয়ার কৌশলকে Referral Marketing বলে।`,en:`Referral Marketing encourages satisfied customers to recommend the store to friends, family and other potential buyers.`}},
+{s:'t3',n:143,q:{bn:`লয়্যালটি প্রোগ্রাম কী?`, en:`What is a Loyalty Programme?`},a:{bn:`নিয়মিত গ্রাহকদের বিশেষ সুবিধা, Points, Rewards বা অন্যান্য সুবিধা দেওয়ার ব্যবস্থাকে Loyalty Programme বলে।`,en:`A Loyalty Programme rewards repeat customers with benefits such as points, rewards or special privileges according to programme terms.`}},
+{s:'t3',n:144,q:{bn:`মার্কেট রিসার্চ কী?`, en:`What is Market Research?`},a:{bn:`গ্রাহকের চাহিদা, প্রতিযোগী দোকান, বাজারের প্রবণতা, মূল্য এবং পণ্যের জনপ্রিয়তা সম্পর্কে তথ্য সংগ্রহ ও বিশ্লেষণ করাকে Market Research বলে।`,en:`Market Research is the process of collecting and analysing information about customer needs, competitors, market trends, pricing and product demand.`}},
+{s:'t3',n:145,q:{bn:`একটি Jewellery Store কীভাবে নতুন গ্রাহক আকর্ষণ করতে পারে?`, en:`How can a jewellery store attract new customers?`},a:{bn:`আকর্ষণীয় Product Display, ভালো Customer Service, Digital Marketing, Festival Campaign, Referral Programme এবং সঠিক মূল্য ও পণ্যের তথ্যের মাধ্যমে নতুন গ্রাহক আকর্ষণ করা যায়।`,en:`A jewellery store can attract new customers through attractive product displays, excellent customer service, digital marketing, festival campaigns, referral programmes and transparent product information.`}},
+
+/* ---------- SECTION 4 : AFTER-SALES ---------- */
+{s:'t4',n:146,q:{bn:`আফটার-সেলস সার্ভিস কী?`, en:`What is After-Sales Service?`},a:{bn:`পণ্য বিক্রির পর গ্রাহককে যে পরিষেবা, সহায়তা ও সমাধান দেওয়া হয় তাকে After-Sales Service বলে।`,en:`After-Sales Service refers to the support, assistance and solutions provided to customers after a purchase.`}},
+{s:'t4',n:147,q:{bn:`Jewellery Retail-এ After-Sales Service কেন গুরুত্বপূর্ণ?`, en:`Why is After-Sales Service important in jewellery retail?`},a:{bn:`এটি গ্রাহকের আস্থা বাড়ায়, অভিযোগ সমাধান করে, Repeat Purchase-এর সম্ভাবনা বাড়ায় এবং প্রতিষ্ঠানের সুনাম তৈরি করে।`,en:`It builds customer trust, resolves complaints, encourages repeat purchases and strengthens the store's reputation.`}},
+{s:'t4',n:148,q:{bn:`জুয়েলারি ক্লিনিং সার্ভিস কী?`, en:`What is Jewellery Cleaning Service?`},a:{bn:`গয়নার উপর জমে থাকা ময়লা, তেল ও অন্যান্য পদার্থ নির্দিষ্ট নিরাপদ পদ্ধতিতে পরিষ্কার করার পরিষেবাকে Jewellery Cleaning Service বলে।`,en:`Jewellery Cleaning Service involves removing dirt, oil and other deposits using appropriate cleaning methods suitable for the jewellery material.`}},
+{s:'t4',n:149,q:{bn:`জুয়েলারি পলিশিং কী?`, en:`What is Jewellery Polishing?`},a:{bn:`গয়নার পৃষ্ঠের সৌন্দর্য ও উজ্জ্বলতা ফিরিয়ে আনার জন্য বিশেষ পদ্ধতিতে পৃষ্ঠতল মসৃণ ও চকচকে করার প্রক্রিয়াকে Polishing বলে।`,en:`Jewellery Polishing is the process of improving the surface finish and restoring the shine of jewellery through appropriate polishing techniques.`}},
+{s:'t4',n:150,q:{bn:`জুয়েলারি রিপেয়ার সার্ভিস কী?`, en:`What is Jewellery Repair Service?`},a:{bn:`গয়নার ভাঙা, ক্ষতিগ্রস্ত বা ত্রুটিপূর্ণ অংশ মেরামত করে ব্যবহারযোগ্য অবস্থায় ফিরিয়ে আনার পরিষেবাকে Jewellery Repair Service বলে।`,en:`Jewellery Repair Service involves fixing broken, damaged or defective parts of jewellery to restore its usability.`}},
+{s:'t4',n:151,q:{bn:`রিং রিসাইজিং কী?`, en:`What is Ring Resizing?`},a:{bn:`গ্রাহকের আঙুলের মাপ অনুযায়ী আংটির সাইজ বড় বা ছোট করার প্রক্রিয়াকে Ring Resizing বলে।`,en:`Ring Resizing is the process of increasing or decreasing a ring's size to fit the customer's finger.`}},
+{s:'t4',n:152,q:{bn:`স্টোন টাইটেনিং কী?`, en:`What is Stone Tightening?`},a:{bn:`গয়নার মধ্যে বসানো Diamond বা Gemstone-এর Setting পরীক্ষা করে প্রয়োজনে পাথরকে নিরাপদভাবে আটকানোর প্রক্রিয়াকে Stone Tightening বলে।`,en:`Stone Tightening involves checking gemstone settings and securing loose stones through appropriate professional techniques.`}},
+{s:'t4',n:153,q:{bn:`জুয়েলারি ওয়ারেন্টি কী?`, en:`What is a Jewellery Warranty?`},a:{bn:`নির্দিষ্ট শর্ত ও সময়সীমার মধ্যে পণ্যের নির্দিষ্ট সমস্যা বা ত্রুটির জন্য প্রতিষ্ঠান যে দায়িত্ব বা পরিষেবা প্রদান করে, তাকে Warranty বলে।`,en:`A Jewellery Warranty is a commitment by the seller or manufacturer to provide specified support for covered defects or issues within a defined period and under stated terms.`}},
+{s:'t4',n:154,q:{bn:`Warranty ও Guarantee-এর পার্থক্য কী?`, en:`What is the difference between Warranty and Guarantee?`},a:{bn:`Warranty সাধারণত নির্দিষ্ট শর্তে মেরামত, প্রতিস্থাপন বা পরিষেবার প্রতিশ্রুতি দেয়। Guarantee হলো নির্দিষ্ট পণ্যের মান বা কার্যকারিতা সম্পর্কে অতিরিক্ত নিশ্চয়তা। উভয়ের প্রকৃত শর্ত প্রতিষ্ঠানের নীতি ও লিখিত নথি অনুযায়ী নির্ধারিত হয়।`,en:`A Warranty generally provides specified repair, replacement or service support under defined conditions. A Guarantee is an assurance about a product's quality or performance. The actual terms depend on the written policy.`}},
+{s:'t4',n:155,q:{bn:`রিটার্ন পলিসি কী?`, en:`What is a Return Policy?`},a:{bn:`কোন পরিস্থিতিতে, কত দিনের মধ্যে এবং কী শর্তে গ্রাহক পণ্য ফেরত দিতে পারবেন, তার নিয়মাবলিকে Return Policy বলে।`,en:`A Return Policy defines the conditions, time limits and procedures under which customers may return purchased products.`}},
+{s:'t4',n:156,q:{bn:`এক্সচেঞ্জ পলিসি কী?`, en:`What is an Exchange Policy?`},a:{bn:`পুরোনো বা কেনা পণ্যের পরিবর্তে নতুন পণ্য নেওয়ার ক্ষেত্রে যে নিয়ম ও শর্ত প্রযোজ্য হয় তাকে Exchange Policy বলে।`,en:`An Exchange Policy specifies the rules and conditions for replacing a purchased product with another product.`}},
+{s:'t4',n:157,q:{bn:`বাইব্যাক পলিসি কী?`, en:`What is a Buyback Policy?`},a:{bn:`নির্দিষ্ট শর্তে দোকান পূর্বে বিক্রি করা গয়না পুনরায় কিনে নেওয়ার যে ব্যবস্থা রাখে তাকে Buyback Policy বলে।`,en:`A Buyback Policy allows a store to repurchase previously sold jewellery under specified terms and conditions.`}},
+{s:'t4',n:158,q:{bn:`কাস্টমার রিটেনশন কী?`, en:`What is Customer Retention?`},a:{bn:`ভালো পরিষেবা ও সম্পর্কের মাধ্যমে পুরোনো গ্রাহকদের দীর্ঘ সময় ধরে প্রতিষ্ঠানের সঙ্গে যুক্ত রাখার প্রক্রিয়াকে Customer Retention বলে।`,en:`Customer Retention is the process of keeping existing customers engaged with a business over the long term through good service and relationships.`}},
+{s:'t4',n:159,q:{bn:`কাস্টমার ফিডব্যাক ফর্ম কী?`, en:`What is a Customer Feedback Form?`},a:{bn:`পণ্য ও পরিষেবা সম্পর্কে গ্রাহকের মতামত, সন্তুষ্টি এবং পরামর্শ সংগ্রহ করার জন্য ব্যবহৃত ফর্মকে Customer Feedback Form বলে।`,en:`A Customer Feedback Form is used to collect customers' opinions, satisfaction levels and suggestions about products and services.`}},
+{s:'t4',n:160,q:{bn:`কমপ্লেইন্ট ম্যানেজমেন্ট কী?`, en:`What is Complaint Management?`},a:{bn:`গ্রাহকের অভিযোগ গ্রহণ, নথিভুক্তকরণ, তদন্ত, সমাধান এবং Follow-up করার সম্পূর্ণ প্রক্রিয়াকে Complaint Management বলে।`,en:`Complaint Management is the complete process of receiving, recording, investigating, resolving and following up on customer complaints.`}},
+{s:'t4',n:161,q:{bn:`সার্ভিস টার্নঅ্যারাউন্ড টাইম কী?`, en:`What is a Service Turnaround Time (TAT)?`},a:{bn:`কোনো Repair, Cleaning বা অন্য পরিষেবা সম্পন্ন করতে যে নির্ধারিত সময় লাগে, তাকে Service Turnaround Time বলে।`,en:`Service Turnaround Time is the expected time required to complete a service such as repair or cleaning.`}},
+{s:'t4',n:162,q:{bn:`সার্ভিস জব কার্ড কী?`, en:`What is a Service Job Card?`},a:{bn:`মেরামত বা পরিষেবার জন্য জমা দেওয়া গয়নার বিবরণ, ওজন, অবস্থা, সমস্যা, গ্রাহকের তথ্য এবং পরিষেবার নির্দেশ নথিভুক্ত করার ফর্মকে Service Job Card বলে।`,en:`A Service Job Card records the jewellery details, weight, condition, reported issue, customer information and service instructions for repair or maintenance work.`}},
+{s:'t4',n:163,q:{bn:`Repair-এর জন্য গয়না গ্রহণ করার সময় কী সতর্কতা নিতে হবে?`, en:`What precautions should be taken when accepting jewellery for repair?`},a:{bn:`<ol><li>গ্রাহকের সামনে পণ্য পরীক্ষা করতে হবে।</li><li>পাথর ও ধাতুর অবস্থা নথিভুক্ত করতে হবে।</li><li>ওজন ও অন্যান্য বিবরণ যাচাই করতে হবে।</li><li>ছবি তোলা বা নথিভুক্ত করা, যদি নীতি অনুযায়ী অনুমোদিত হয়।</li><li>Job Card তৈরি করতে হবে।</li><li>গ্রাহককে সম্ভাব্য খরচ ও সময় জানাতে হবে।</li></ol>`,en:`<ol><li>Inspect the item in the customer's presence.</li><li>Record the condition of the metal and stones.</li><li>Verify weight and relevant details.</li><li>Take photographs or document the item where authorised by policy.</li><li>Prepare a service job card.</li><li>Inform the customer about the estimated cost and turnaround time.</li></ol>`}},
+{s:'t4',n:164,q:{bn:`Repair-এর পর গ্রাহক অভিযোগ করলে কী করবেন?`, en:`How should you handle a customer who complains after receiving repaired jewellery?`},a:{bn:`প্রথমে পণ্য ও অভিযোগ পরীক্ষা করব। Repair Record এবং Job Card যাচাই করে Senior বা Service Manager-এর সাহায্যে দ্রুত সমাধান করব।`,en:`I will inspect the jewellery and understand the complaint, review the repair records and job card, and work with the senior or service manager to resolve the issue promptly.`}},
+{s:'t4',n:165,q:{bn:`After-Sales Service কীভাবে Repeat Business বাড়ায়?`, en:`How can after-sales service increase repeat business?`},a:{bn:`সময়মতো পরিষেবা, সমস্যার দ্রুত সমাধান, পরিষ্কার যোগাযোগ এবং নিয়মিত Customer Follow-up গ্রাহকের আস্থা বাড়ায়। এর ফলে ভবিষ্যতে আবার কেনাকাটার সম্ভাবনা বাড়ে।`,en:`Timely service, quick problem resolution, clear communication and appropriate customer follow-ups build trust and increase the likelihood of future purchases.`}},
+
+/* ---------- SECTION 5 : SALES MANAGEMENT ---------- */
+{s:'t5',n:166,q:{bn:`সেলস ম্যানেজমেন্ট কী?`, en:`What is Sales Management?`},a:{bn:`বিক্রয় পরিকল্পনা, Sales Target নির্ধারণ, কর্মীদের পরিচালনা, Performance Monitoring এবং বিক্রয় বৃদ্ধির সামগ্রিক প্রক্রিয়াকে Sales Management বলে।`,en:`Sales Management involves planning sales activities, setting targets, managing salespeople, monitoring performance and improving sales results.`}},
+{s:'t5',n:167,q:{bn:`Jewellery Retail-এ KPI কী?`, en:`What is KPI in jewellery retail?`},a:{bn:`KPI-এর সম্পূর্ণ নাম Key Performance Indicator। এটি এমন কিছু পরিমাপক যার মাধ্যমে একজন Executive বা Store-এর কাজের সাফল্য নির্ধারণ করা হয়।<br><br><b>উদাহরণ:</b> Sales Revenue, Conversion Rate, ATV, UPT এবং Customer Satisfaction।`,en:`KPI stands for Key Performance Indicator. It is a measurable factor used to evaluate the performance of a sales executive or store.<br><br><b>Examples:</b> Sales Revenue, Conversion Rate, ATV, UPT and Customer Satisfaction.`}},
+{s:'t5',n:168,q:{bn:`UPT কী?`, en:`What is UPT?`},a:{bn:`UPT-এর সম্পূর্ণ নাম Units Per Transaction। একটি Transaction-এ গড়ে কতটি পণ্য বিক্রি হয়েছে, তা বোঝায়।<br><br><b>সূত্র:</b> Total Units Sold ÷ Total Transactions`,en:`UPT stands for Units Per Transaction. It measures the average number of items sold in each transaction.<br><br><b>Formula:</b> Total Units Sold ÷ Total Transactions.`}},
+{s:'t5',n:169,q:{bn:`গ্রস প্রফিট কী?`, en:`What is Gross Profit?`},a:{bn:`মোট বিক্রয় থেকে বিক্রি হওয়া পণ্যের সরাসরি খরচ বাদ দিলে Gross Profit পাওয়া যায়।<br><br><b>সূত্র:</b> Net Sales Revenue − Cost of Goods Sold.`,en:`Gross Profit is the amount remaining after subtracting the cost of goods sold from net sales revenue.<br><br><b>Formula:</b> Net Sales Revenue − Cost of Goods Sold.`}},
+{s:'t5',n:170,q:{bn:`প্রফিট মার্জিন কী?`, en:`What is Profit Margin?`},a:{bn:`মোট বিক্রয়ের তুলনায় কত শতাংশ লাভ হয়েছে, তা Profit Margin দিয়ে বোঝানো হয়।<br><br><b>সূত্র:</b> (Profit ÷ Revenue) × 100`,en:`Profit Margin measures profit as a percentage of revenue.<br><br><b>Formula:</b> (Profit ÷ Revenue) × 100.`}},
+{s:'t5',n:171,q:{bn:`স্টক টার্নওভার রেশিও কী?`, en:`What is Stock Turnover Ratio?`},a:{bn:`একটি নির্দিষ্ট সময়ে দোকানের স্টক কত দ্রুত বিক্রি ও পুনরায় প্রতিস্থাপিত হচ্ছে, তা বোঝাতে Stock Turnover Ratio ব্যবহার করা হয়।<br><br><b>সূত্র:</b> Cost of Goods Sold ÷ Average Inventory Value.`,en:`Stock Turnover Ratio measures how frequently inventory is sold and replenished over a specific period.<br><br><b>Formula:</b> Cost of Goods Sold ÷ Average Inventory Value.`}},
+{s:'t5',n:172,q:{bn:`স্লো-মুভিং ইনভেন্টরি কী?`, en:`What is Slow-Moving Inventory?`},a:{bn:`যে পণ্য দীর্ঘ সময় ধরে দোকানে থাকা সত্ত্বেও তুলনামূলকভাবে কম বিক্রি হয়, তাকে Slow-Moving Inventory বলে।`,en:`Slow-Moving Inventory refers to products that remain in stock for a relatively long period because they sell slowly.`}},
+{s:'t5',n:173,q:{bn:`ডেড স্টক কী?`, en:`What is Dead Stock?`},a:{bn:`যে স্টক দীর্ঘ সময় ধরে বিক্রি হয় না এবং যার বিক্রির সম্ভাবনা খুব কম, তাকে Dead Stock বলা হয়।`,en:`Dead Stock refers to inventory that has remained unsold for a long time and has little likelihood of being sold.`}},
+{s:'t5',n:174,q:{bn:`কম্পিটিটর অ্যানালিসিস কী?`, en:`What is Competitor Analysis?`},a:{bn:`প্রতিযোগী Jewellery Store-এর পণ্য, মূল্য, ডিজাইন, পরিষেবা, Marketing এবং Customer Experience বিশ্লেষণ করাকে Competitor Analysis বলে।`,en:`Competitor Analysis is the process of evaluating competing jewellery stores in terms of products, pricing, designs, services, marketing and customer experience.`}},
+{s:'t5',n:175,q:{bn:`কাস্টমার ডেটাবেস কী?`, en:`What is a Customer Database?`},a:{bn:`গ্রাহকের অনুমোদিত যোগাযোগের তথ্য, কেনাকাটার ইতিহাস, পছন্দ এবং পরিষেবা সংক্রান্ত তথ্য সুশৃঙ্খলভাবে সংরক্ষণের ব্যবস্থাকে Customer Database বলে।`,en:`A Customer Database is an organised system for storing authorised customer contact details, purchase history, preferences and service records.`}},
+{s:'t5',n:176,q:{bn:`CRM সফটওয়্যার কী?`, en:`What is CRM Software?`},a:{bn:`CRM Software হলো এমন একটি ডিজিটাল ব্যবস্থা যার মাধ্যমে Customer Details, Sales History, Follow-ups, Complaints এবং Customer Relationships পরিচালনা করা যায়।`,en:`CRM Software is a digital system used to manage customer details, sales history, follow-ups, complaints and customer relationships.`}},
+{s:'t5',n:177,q:{bn:`কাস্টমার অ্যাকুইজিশন কস্ট কী?`, en:`What is Customer Acquisition Cost (CAC)?`},a:{bn:`নতুন গ্রাহক অর্জনের জন্য মোট Marketing ও Sales Acquisition খরচকে নতুন অর্জিত গ্রাহকের সংখ্যা দিয়ে ভাগ করলে CAC পাওয়া যায়।<br><br><b>সূত্র:</b> Total Acquisition Cost ÷ Number of New Customers Acquired.`,en:`Customer Acquisition Cost is the average cost of acquiring one new customer.<br><br><b>Formula:</b> Total Acquisition Cost ÷ Number of New Customers Acquired.`}},
+{s:'t5',n:178,q:{bn:`মার্কেট শেয়ার কী?`, en:`What is Market Share?`},a:{bn:`একটি নির্দিষ্ট বাজারে মোট বিক্রয়ের তুলনায় একটি প্রতিষ্ঠানের বিক্রয়ের অংশকে Market Share বলে।<br><br><b>সূত্র:</b> (Company Sales ÷ Total Market Sales) × 100.`,en:`Market Share is the percentage of total market sales generated by a particular business.<br><br><b>Formula:</b> (Company Sales ÷ Total Market Sales) × 100.`}},
+{s:'t5',n:179,q:{bn:`Jewellery Retail-এ Business Development কী?`, en:`What is Business Development in jewellery retail?`},a:{bn:`নতুন গ্রাহক, নতুন বাজার, নতুন বিক্রয় সুযোগ এবং ব্যবসার সম্প্রসারণের মাধ্যমে প্রতিষ্ঠানের দীর্ঘমেয়াদি উন্নয়ন করাকে Business Development বলে।`,en:`Business Development involves creating new customers, exploring new markets, identifying sales opportunities and expanding the business for long-term growth.`}},
+{s:'t5',n:180,q:{bn:`একজন অসাধারণ Jewellery Sales Professional-এর কী কী গুণ থাকা উচিত?`, en:`What are the qualities of an excellent jewellery sales professional?`},a:{bn:`<ol><li>Strong Product Knowledge.</li><li>Excellent Communication Skills.</li><li>Customer Psychology Understanding.</li><li>Professional Sales Techniques.</li><li>Marketing Awareness.</li><li>Effective Objection Handling.</li><li>After-Sales Service Knowledge.</li><li>Honesty and Integrity.</li><li>Target Orientation.</li><li>Continuous Learning.</li></ol>`,en:`An excellent jewellery sales professional should possess strong product knowledge, excellent communication skills, an understanding of customer psychology, professional sales techniques, marketing awareness, effective objection handling, after-sales service knowledge, honesty, target orientation and a commitment to continuous learning.`}}
+];
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
 const stripHTML = html => {
   const d = document.createElement('div');
   d.innerHTML = html;
@@ -1303,12 +1574,18 @@ const stripHTML = html => {
 QUESTIONS.forEach(q => {
   q._s = stripHTML(q.q.bn + ' ' + q.q.en + ' ' + q.a.bn + ' ' + q.a.en).toLowerCase();
 });
+SALES_QUESTIONS.forEach(q => {
+  q._s = stripHTML(q.q.bn + ' ' + q.q.en + ' ' + q.a.bn + ' ' + q.a.en).toLowerCase();
+});
 
-const state = { section:'all', query:'', lang:'both' };
+const qaState = { section:'all', query:'', lang:'both' };
+const salesState = { section:'all', query:'', lang:'both' };
+
+/* --- Q&A Logic --- */
 const contentEl = document.getElementById('content');
 const countEl   = document.getElementById('count');
 const navEl     = document.getElementById('nav');
-const extras    = [document.getElementById('revision'), document.getElementById('golden')];
+const qaExtras  = [document.getElementById('revision'), document.getElementById('golden')];
 
 (function buildNav(){
   const divider = navEl.querySelector('.nav-div');
@@ -1324,9 +1601,9 @@ const extras    = [document.getElementById('revision'), document.getElementById(
   });
 })();
 
-function matches(q){
-  if(state.section !== 'all' && q.s !== state.section) return false;
-  if(state.query && !q._s.includes(state.query)) return false;
+function matchesQA(q){
+  if(qaState.section !== 'all' && q.s !== qaState.section) return false;
+  if(qaState.query && !q._s.includes(qaState.query)) return false;
   return true;
 }
 function sectionHead(sec, count){
@@ -1355,8 +1632,9 @@ function card(q){
     </div>
   </article>`;
 }
-function render(){
-  const list = QUESTIONS.filter(matches);
+
+function renderQA(){
+  const list = QUESTIONS.filter(matchesQA);
   let html = '';
 
   if(!list.length){
@@ -1365,11 +1643,11 @@ function render(){
       Try a different keyword — e.g. “karat”, “HUID”, “4Cs”, “making charges” or “hallmark”.
     </div>`;
     countEl.innerHTML = `Showing <b>0</b> of ${QUESTIONS.length} questions`;
-    toggleExtras(false);
+    qaExtras.forEach(el => el.style.display = 'none');
     return;
   }
 
-  if(state.section === 'all'){
+  if(qaState.section === 'all'){
     SECTIONS.forEach(sec => {
       const items = list.filter(q => q.s === sec.id);
       if(!items.length) return;
@@ -1377,45 +1655,33 @@ function render(){
       items.forEach(q => { html += card(q); });
     });
   } else {
-    const sec = SECTIONS.find(s => s.id === state.section);
+    const sec = SECTIONS.find(s => s.id === qaState.section);
     html += sectionHead(sec, list.length);
     list.forEach(q => { html += card(q); });
   }
 
   contentEl.innerHTML = html;
   countEl.innerHTML = `Showing <b>${list.length}</b> of ${QUESTIONS.length} questions`;
-  toggleExtras(state.section === 'all' && !state.query);
+  const showExtras = qaState.section === 'all' && !qaState.query;
+  qaExtras.forEach(el => el.style.display = showExtras ? '' : 'none');
 }
-function toggleExtras(show){
-  extras.forEach(el => { if(el) el.style.display = show ? '' : 'none'; });
-}
-
-contentEl.addEventListener('click', e => {
-  const head = e.target.closest('.q-head');
-  if(!head) return;
-  const cardEl = head.closest('.q-card');
-  const open = cardEl.classList.toggle('open');
-  head.setAttribute('aria-expanded', open ? 'true' : 'false');
-});
 
 navEl.addEventListener('click', e => {
   const btn = e.target.closest('.nav-btn');
   if(!btn) return;
-
   if(btn.dataset.jump){
-    state.section = 'all';
-    state.query = '';
+    qaState.section = 'all';
+    qaState.query = '';
     document.getElementById('search').value = '';
     setActiveNav('all');
-    render();
+    renderQA();
     const target = document.getElementById(btn.dataset.jump);
     if(target) target.scrollIntoView({ behavior:'smooth', block:'start' });
     return;
   }
-
-  state.section = btn.dataset.sec;
-  setActiveNav(state.section);
-  render();
+  qaState.section = btn.dataset.sec;
+  setActiveNav(qaState.section);
+  renderQA();
   const tb = document.querySelector('.toolbar');
   const y = tb.getBoundingClientRect().top + window.pageYOffset - 80;
   window.scrollTo({ top: y, behavior:'smooth' });
@@ -1426,17 +1692,116 @@ function setActiveNav(sec){
   });
 }
 
+/* --- Sales Logic --- */
+const salesContentEl = document.getElementById('salesContent');
+const salesCountEl   = document.getElementById('salesCount');
+const salesNavEl     = document.getElementById('salesNav');
+const salesExtras    = [document.getElementById('sales-revision'), document.getElementById('sales-golden')];
+
+(function buildSalesNav(){
+  const divider = salesNavEl.querySelector('.nav-div');
+  SALES_SECTIONS.forEach(sec => {
+    const btn = document.createElement('button');
+    btn.className = 'nav-btn';
+    btn.dataset.sec = sec.id;
+    const total = SALES_QUESTIONS.filter(q => q.s === sec.id).length;
+    btn.innerHTML = `<span class="ico">${sec.icon}</span>
+      <span class="lbl">${sec.en}<span class="sub">${sec.bn}</span></span>
+      <span class="cnt">${total}</span>`;
+    salesNavEl.insertBefore(btn, divider);
+  });
+})();
+
+function matchesSales(q){
+  if(salesState.section !== 'all' && q.s !== salesState.section) return false;
+  if(salesState.query && !q._s.includes(salesState.query)) return false;
+  return true;
+}
+
+function renderSales(){
+  const list = SALES_QUESTIONS.filter(matchesSales);
+  let html = '';
+
+  if(!list.length){
+    salesContentEl.innerHTML = `<div class="empty">
+      <strong>No matching questions found</strong>
+      Try a different keyword.
+    </div>`;
+    salesCountEl.innerHTML = `Showing <b>0</b> of ${SALES_QUESTIONS.length} questions`;
+    salesExtras.forEach(el => el.style.display = 'none');
+    return;
+  }
+
+  if(salesState.section === 'all'){
+    SALES_SECTIONS.forEach(sec => {
+      const items = list.filter(q => q.s === sec.id);
+      if(!items.length) return;
+      html += sectionHead(sec, items.length);
+      items.forEach(q => { html += card(q); });
+    });
+  } else {
+    const sec = SALES_SECTIONS.find(s => s.id === salesState.section);
+    html += sectionHead(sec, list.length);
+    list.forEach(q => { html += card(q); });
+  }
+
+  salesContentEl.innerHTML = html;
+  salesCountEl.innerHTML = `Showing <b>${list.length}</b> of ${SALES_QUESTIONS.length} questions`;
+  const showExtras = salesState.section === 'all' && !salesState.query;
+  salesExtras.forEach(el => el.style.display = showExtras ? '' : 'none');
+}
+
+salesNavEl.addEventListener('click', e => {
+  const btn = e.target.closest('.nav-btn');
+  if(!btn) return;
+  if(btn.dataset.jump){
+    salesState.section = 'all';
+    salesState.query = '';
+    document.getElementById('search').value = '';
+    setActiveSalesNav('all');
+    renderSales();
+    const target = document.getElementById(btn.dataset.jump);
+    if(target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+    return;
+  }
+  salesState.section = btn.dataset.sec;
+  setActiveSalesNav(salesState.section);
+  renderSales();
+  const tb = document.querySelector('#salesView .toolbar');
+  const y = tb.getBoundingClientRect().top + window.pageYOffset - 80;
+  window.scrollTo({ top: y, behavior:'smooth' });
+});
+function setActiveSalesNav(sec){
+  salesNavEl.querySelectorAll('.nav-btn').forEach(b => {
+    if(b.dataset.sec) b.classList.toggle('active', b.dataset.sec === sec);
+  });
+}
+
+/* --- Shared Events --- */
+document.addEventListener('click', e => {
+  const head = e.target.closest('.q-head');
+  if(!head) return;
+  const cardEl = head.closest('.q-card');
+  const open = cardEl.classList.toggle('open');
+  head.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
 document.getElementById('search').addEventListener('input', e => {
-  state.query = e.target.value.trim().toLowerCase();
-  render();
+  const query = e.target.value.trim().toLowerCase();
+  if(activeTab === 'qa'){
+    qaState.query = query;
+    renderQA();
+  } else if(activeTab === 'sales'){
+    salesState.query = query;
+    renderSales();
+  }
 });
 
 document.getElementById('langsw').addEventListener('click', e => {
   const btn = e.target.closest('button');
   if(!btn) return;
-  state.lang = btn.dataset.lang;
-  document.body.className = 'lang-' + state.lang +
-    (document.body.classList.contains('view-academy') ? ' view-academy' : '');
+  const lang = btn.dataset.lang;
+  document.body.className = 'lang-' + lang + (activeTab === 'academy' ? ' view-academy' : '');
   document.querySelectorAll('#langsw button').forEach(b => b.classList.toggle('on', b === btn));
 });
 
@@ -1453,37 +1818,48 @@ document.getElementById('collapseAll').addEventListener('click', () => {
   });
 });
 
-render();
+document.getElementById('salesExpandAll').addEventListener('click', () => {
+  salesContentEl.querySelectorAll('.q-card').forEach(c => {
+    c.classList.add('open');
+    c.querySelector('.q-head').setAttribute('aria-expanded','true');
+  });
+});
+document.getElementById('salesCollapseAll').addEventListener('click', () => {
+  salesContentEl.querySelectorAll('.q-card').forEach(c => {
+    c.classList.remove('open');
+    c.querySelector('.q-head').setAttribute('aria-expanded','false');
+  });
+});
 
 /* =========================================================
-   ACADEMY DATA
+   ACADEMY DATA (FULL ENGLISH)
    ========================================================= */
 const gems=[
-{id:'ruby',n:'০১',name:'মানিক (Ruby)',sanskrit:'মাণিক্য',planet:'প্রচলিত বিশ্বাসে সূর্য',colour:'লাল থেকে বেগুনি আভাযুক্ত লাল',ri:'১.৭৬২–১.৭৭০',sg:'৩.৯৭–৪.০৫',hard:'৯',material:'করান্ডাম (Al₂O₃)',desc:'করান্ডাম খনিজের লাল রঙের জাতকে মানিক বলা হয়। এর রং, স্বচ্ছতা, কাট এবং ট্রিটমেন্টের ওপর গুণমান নির্ভর করে।',talk:'“মানিক হলো করান্ডাম পরিবারের লাল রত্ন। মোহস স্কেলে এর কঠোরতা ৯। পাথরের রং, স্বচ্ছতা, ট্রিটমেন্ট এবং নির্ভরযোগ্য পরীক্ষার রিপোর্ট দেখে এর গুণমান বিচার করা হয়।”',origin:'মায়ানমার, মোজাম্বিক, থাইল্যান্ড, শ্রীলঙ্কা ও মাদাগাস্কার উল্লেখযোগ্য উৎস। নির্ভরযোগ্য প্রমাণ ছাড়া উৎসের দাবি করবেন না।',care:'নিয়মিত ব্যবহারের উপযোগী হলেও জোরে আঘাত এড়িয়ে চলুন। রাসায়নিক পদার্থ থেকে দূরে রাখুন।',color:'#a51d3b',light:'#ff8ca1'},
-{id:'pearl',n:'০২',name:'মুক্তা (Pearl)',sanskrit:'মোতি',planet:'প্রচলিত বিশ্বাসে চন্দ্র',colour:'সাদা, ক্রিম, গোলাপি, রুপালি, কালো',ri:'১.৫২–১.৬৯ (প্রকারভেদে)',sg:'২.৬০–২.৮৫ (প্রকারভেদে)',hard:'২.৫–৪.৫',material:'জৈব রত্ন; নেকার',desc:'ঝিনুক বা মলাস্কের ভিতরে তৈরি এক ধরনের জৈব রত্ন। প্রাকৃতিক ও কালচার্ড—দুই ধরনের মুক্তাই রয়েছে।',talk:'“মুক্তা একটি জৈব রত্ন, খনিজ নয়। এর দীপ্তি, উপরিভাগের অবস্থা, আকৃতি, আকার, রং এবং মালার মুক্তাগুলির মিল দেখে গুণমান বোঝা হয়।”',origin:'চীন, জাপান, অস্ট্রেলিয়া ও দক্ষিণ প্রশান্ত মহাসাগরীয় অঞ্চলে কালচার্ড মুক্তা উৎপাদিত হয়। প্রকার ও উৎস নথি দেখে নিশ্চিত করুন।',care:'পারফিউম, হেয়ার স্প্রে, প্রসাধনী, অ্যাসিড ও অতিরিক্ত তাপ থেকে দূরে রাখুন। ব্যবহারের পর নরম কাপড়ে মুছুন।',color:'#d8d9df',light:'#fff'},
-{id:'coral',n:'০৩',name:'লাল প্রবাল (Red Coral)',sanskrit:'মুঙ্গা / প্রবাল',planet:'প্রচলিত বিশ্বাসে মঙ্গল',colour:'লাল, কমলা-লাল, গোলাপি-লাল',ri:'১.৪৮৬–১.৬৫৮ (পরিবর্তনশীল)',sg:'প্রায় ২.৬০–২.৭০',hard:'৩–৪',material:'জৈব রত্ন; সামুদ্রিক প্রবাল',desc:'সামুদ্রিক প্রবাল জীবের তৈরি মূল্যবান জৈব রত্ন উপাদান। সাধারণত পুঁতি বা ক্যাবোশঁ আকারে ব্যবহার করা হয়।',talk:'“লাল প্রবাল একটি জৈব রত্ন উপাদান। মানিক বা নীলার তুলনায় এটি অনেক নরম, তাই আঁচড় ও আঘাত থেকে সাবধানে রাখতে হয়।”',origin:'ভূমধ্যসাগরসহ বিভিন্ন সামুদ্রিক অঞ্চল ঐতিহাসিক উৎস। সংগ্রহ ও বাণিজ্যে বিধিনিষেধ থাকতে পারে; বৈধতা ও উৎস যাচাই করুন।',care:'আঁচড়, তাপ, রাসায়নিক পদার্থ এবং আল্ট্রাসনিক ক্লিনার থেকে দূরে রাখুন। নরম কাপড়ে পরিষ্কার করুন।',color:'#c94a36',light:'#ffad8f'},
-{id:'emerald',n:'০৪',name:'পান্না (Emerald)',sanskrit:'পান্না',planet:'প্রচলিত বিশ্বাসে বুধ',colour:'সবুজ থেকে নীলচে সবুজ',ri:'১.৫৭৭–১.৫৮৩',sg:'২.৬৭–২.৭৮',hard:'৭.৫–৮',material:'বেরিল (Be₃Al₂Si₆O₁₈)',desc:'বেরিল খনিজের সবুজ জাতকে পান্না বলা হয়। এতে স্বাভাবিক অন্তর্ভুক্তি বা ইনক্লুশন দেখা যায়, যা অনেক সময় Jardin নামে পরিচিত।',talk:'“পান্না হলো সবুজ বেরিল। অনেক পান্নায় প্রাকৃতিক ইনক্লুশন থাকে। স্বচ্ছতা বাড়াতে তেল বা অন্য উপাদান দিয়ে ট্রিটমেন্ট করা হতে পারে, তাই তা জানানো জরুরি।”',origin:'কলম্বিয়া, জাম্বিয়া, ব্রাজিল, ইথিওপিয়া ও আফগানিস্তান উল্লেখযোগ্য উৎস। পরীক্ষাগারের সমর্থন ছাড়া উৎসের দাবি করবেন না।',care:'আল্ট্রাসনিক বা স্টিম ক্লিনার ব্যবহার করবেন না। তাপমাত্রার আকস্মিক পরিবর্তন ও আঘাত এড়ান।',color:'#16865b',light:'#8af0b5'},
-{id:'yellow-sapphire',n:'০৫',name:'পীত পুখরাজ (Yellow Sapphire)',sanskrit:'পুখরাজ',planet:'প্রচলিত বিশ্বাসে বৃহস্পতি',colour:'হলুদ থেকে সোনালি হলুদ',ri:'১.৭৬২–১.৭৭০',sg:'৩.৯৯–৪.০০',hard:'৯',material:'হলুদ করান্ডাম (Al₂O₃)',desc:'কোরান্ডাম পরিবারের হলুদ রঙের রত্ন। মানিক ও নীলার মতো এর মোহস কঠোরতা ৯।',talk:'“পীত পুখরাজ করান্ডাম পরিবারের রত্ন। এর রং, স্বচ্ছতা, কাট, ট্রিটমেন্ট এবং পরীক্ষার রিপোর্ট গুণমান বিচার করতে সাহায্য করে।”',origin:'শ্রীলঙ্কা, মাদাগাস্কার, থাইল্যান্ড, অস্ট্রেলিয়া ও তানজানিয়া উল্লেখযোগ্য উৎস। প্রমাণ ছাড়া উৎসের দাবি নয়।',care:'গয়নায় ব্যবহারের জন্য বেশ টেকসই, তবে শক্ত আঘাত এড়ান এবং সেটিং নিয়মিত পরীক্ষা করুন।',color:'#d9a323',light:'#ffe99a'},
-{id:'diamond',n:'০৬',name:'হীরা (Diamond)',sanskrit:'হীরা',planet:'প্রচলিত বিশ্বাসে শুক্র',colour:'বর্ণহীন, হলুদ, বাদামি, গোলাপি, নীলসহ নানা রং',ri:'২.৪১৭',sg:'৩.৫২',hard:'১০',material:'কার্বন (C)',desc:'হীরা স্ফটিকাকার কার্বন এবং প্রাকৃতিকভাবে পাওয়া সবচেয়ে কঠিন পদার্থ। 4Cs দিয়ে হীরার গুণমান বোঝানো হয়।',talk:'“হীরার গুণমান বোঝার চারটি প্রধান বিষয় হলো Cut, Colour, Clarity এবং Carat Weight। নির্দিষ্ট পাথরের বৈশিষ্ট্য বুঝতে গ্রেডিং রিপোর্ট সহায়ক।”',origin:'প্রাকৃতিক হীরা বিভিন্ন দেশে পাওয়া যায়। ল্যাব-গ্রোন হীরার রাসায়নিক গঠন একই হলেও উৎপত্তি আলাদা; তা স্পষ্টভাবে জানাতে হবে।',care:'খুব কঠিন হলেও নির্দিষ্ট দিকে বা ধার বরাবর চিড় ধরতে পারে। আঘাত এড়ান এবং সেটিং অনুযায়ী পরিষ্কার করুন।',color:'#8bb9d5',light:'#effaff'},
-{id:'blue-sapphire',n:'০৭',name:'নীলা (Blue Sapphire)',sanskrit:'নীলম',planet:'প্রচলিত বিশ্বাসে শনি',colour:'নীল থেকে বেগুনি আভাযুক্ত নীল',ri:'১.৭৬২–১.৭৭০',sg:'৩.৯৫–৪.০৩',hard:'৯',material:'নীল করান্ডাম (Al₂O₃)',desc:'করান্ডাম খনিজের নীল জাতকে নীলা বলা হয়। রঙের বিন্যাস, ইনক্লুশন, ট্রিটমেন্ট ও স্বচ্ছতা গুরুত্বপূর্ণ।',talk:'“নীলা করান্ডাম পরিবারের রত্ন এবং এর মোহস কঠোরতা ৯। নীলের আভা, রঙের সমতা, স্বচ্ছতা, কাট ও ট্রিটমেন্ট মূল্যায়নে গুরুত্বপূর্ণ।”',origin:'শ্রীলঙ্কা, কাশ্মীর, মাদাগাস্কার, মায়ানমার ও অস্ট্রেলিয়া উল্লেখযোগ্য উৎস। কাশ্মীরি উৎসের দাবি বিশেষভাবে পরীক্ষার প্রমাণসাপেক্ষ।',care:'সাধারণত টেকসই, তবে শক্ত আঘাত এড়ান। উৎস ও ট্রিটমেন্টের তথ্য নির্ভরযোগ্য রিপোর্টের ভিত্তিতে দিন।',color:'#2253a5',light:'#8ab8ff'},
-{id:'hessonite',n:'০৮',name:'গোমেদ (Hessonite)',sanskrit:'গোমেদ',planet:'প্রচলিত বিশ্বাসে রাহু',colour:'মধু, দারুচিনি, কমলা-বাদামি, লালচে বাদামি',ri:'১.৭৩৪–১.৭৫৯',sg:'৩.৫৭–৩.৭৩',hard:'৬.৫–৭.৫',material:'গ্রসুলার গারনেট',desc:'গ্রসুলার গারনেটের কমলা থেকে বাদামি-কমলা জাত। অনেক সময় মধুর মতো উষ্ণ রং দেখা যায়।',talk:'“গোমেদ হলো গ্রসুলার গারনেট। এর মধু বা দারুচিনি রং, স্বচ্ছতা, ইনক্লুশন এবং কাট ভালোভাবে পর্যবেক্ষণ করা উচিত।”',origin:'শ্রীলঙ্কা, ভারত, তানজানিয়া ও অন্যান্য গারনেট উৎপাদনকারী অঞ্চলে পাওয়া যায়। উৎসের দাবি করার আগে যাচাই করুন।',care:'শক্ত আঘাত ও ক্ষতিকর ক্লিনার এড়ান। বেশি কঠিন রত্নের সঙ্গে ঘষা লাগে এমনভাবে রাখবেন না।',color:'#b76b2e',light:'#f4c184'},
-{id:'catseye',n:'০৯',name:'ক্যাটস আই (Chrysoberyl)',sanskrit:'লহসুনিয়া / বৈদুর্য',planet:'প্রচলিত বিশ্বাসে কেতু',colour:'মধু, হলুদ-সবুজ, সবুজ-বাদামি, বাদামি',ri:'১.৭৪৬–১.৭৫৫',sg:'৩.৭০–৩.৭৮',hard:'৮.৫',material:'ক্রাইসোবেরিল (BeAl₂O₄)',desc:'ক্রাইসোবেরিলের এমন এক রূপ, যেখানে আলোর একটি সরু চলমান রেখা বিড়ালের চোখের মতো দেখায়। এই প্রভাবকে Chatoyancy বলে।',talk:'“এই রত্নের প্রধান আকর্ষণ হলো চলমান আলোর রেখা বা Cat’s Eye effect। ক্যাবোশঁ কাট এবং চোখের রেখার অবস্থান খুব গুরুত্বপূর্ণ।”',origin:'শ্রীলঙ্কা, ভারত, ব্রাজিল ও মাদাগাস্কার উল্লেখযোগ্য উৎস। ক্রাইসোবেরিল ক্যাটস আইকে কোয়ার্টজ ক্যাটস আই বা অন্য অনুরূপ পাথর থেকে আলাদা করতে হবে।',care:'কঠোরতা ভালো হলেও ক্যাবোশঁ পাথরে আঘাত লাগতে পারে। অন্য জিনিসের সঙ্গে ঘষা লাগা থেকে রক্ষা করুন।',color:'#9a9b39',light:'#e8e99a'}
+{id:'ruby',n:'01',name:'Ruby',sanskrit:'Manikya',planet:'Sun (Traditional)',colour:'Red to purplish-red',ri:'1.762–1.770',sg:'3.97–4.05',hard:'9',material:'Corundum (Al₂O₃)',desc:'The red variety of the mineral corundum. Its quality depends on colour, clarity, cut, and treatment.',talk:'“Ruby is the red gemstone of the corundum family. It has a Mohs hardness of 9. We evaluate its quality based on colour, clarity, treatment, and reliable laboratory reports.”',origin:'Notable sources include Myanmar, Mozambique, Thailand, Sri Lanka, and Madagascar. Never claim origin without reliable proof.',care:'Suitable for regular wear, but avoid hard impacts. Keep away from harsh chemicals.',color:'#a51d3b',light:'#ff8ca1'},
+{id:'pearl',n:'02',name:'Pearl',sanskrit:'Moti',planet:'Moon (Traditional)',colour:'White, cream, pink, silver, black',ri:'1.52–1.69 (varies)',sg:'2.60–2.85 (varies)',hard:'2.5–4.5',material:'Organic gem; Nacre',desc:'An organic gem formed inside mollusks. Both natural and cultured pearls exist.',talk:'“Pearl is an organic gem, not a mineral. Its quality is judged by lustre, surface condition, shape, size, colour, and the matching of pearls in a strand.”',origin:'Cultured pearls are produced in China, Japan, Australia, and the South Pacific. Verify the type and origin with documentation.',care:'Keep away from perfume, hairspray, cosmetics, acids, and excessive heat. Wipe with a soft cloth after wearing.',color:'#d8d9df',light:'#fff'},
+{id:'coral',n:'03',name:'Red Coral',sanskrit:'Munga / Praval',planet:'Mars (Traditional)',colour:'Red, orange-red, pinkish-red',ri:'1.486–1.658 (variable)',sg:'Approx 2.60–2.70',hard:'3–4',material:'Organic gem; Marine coral',desc:'A valuable organic gem material created by marine coral organisms. Usually used in beads or cabochons.',talk:'“Red Coral is an organic gem material. It is much softer than Ruby or Sapphire, so it must be protected from scratches and impact.”',origin:'Historically sourced from the Mediterranean and other marine regions. Collection and trade may be restricted; verify legality and origin.',care:'Keep away from scratches, heat, chemicals, and ultrasonic cleaners. Clean with a soft cloth.',color:'#c94a36',light:'#ffad8f'},
+{id:'emerald',n:'04',name:'Emerald',sanskrit:'Panna',planet:'Mercury (Traditional)',colour:'Green to bluish-green',ri:'1.577–1.583',sg:'2.67–2.78',hard:'7.5–8',material:'Beryl (Be₃Al₂Si₆O₁₈)',desc:'The green variety of the mineral beryl. Natural inclusions, often called "jardin" (garden), are common.',talk:'“Emerald is green beryl. Many emeralds have natural inclusions. Treatments using oil or resin are common to improve clarity, so it is crucial to disclose them.”',origin:'Notable sources include Colombia, Zambia, Brazil, Ethiopia, and Afghanistan. Do not claim origin without laboratory support.',care:'Do not use ultrasonic or steam cleaners. Avoid sudden temperature changes and impacts.',color:'#16865b',light:'#8af0b5'},
+{id:'yellow-sapphire',n:'05',name:'Yellow Sapphire',sanskrit:'Pukhraj',planet:'Jupiter (Traditional)',colour:'Yellow to golden-yellow',ri:'1.762–1.770',sg:'3.99–4.00',hard:'9',material:'Yellow Corundum (Al₂O₃)',desc:'The yellow variety of corundum. Like Ruby and Blue Sapphire, it has a Mohs hardness of 9.',talk:'“Yellow Sapphire is a corundum gemstone. Colour, clarity, cut, treatment, and laboratory reports help determine its quality.”',origin:'Notable sources include Sri Lanka, Madagascar, Thailand, Australia, and Tanzania. No origin claims without proof.',care:'Very durable for jewellery, but avoid hard impacts and check the setting regularly.',color:'#d9a323',light:'#ffe99a'},
+{id:'diamond',n:'06',name:'Diamond',sanskrit:'Heera',planet:'Venus (Traditional)',colour:'Colourless, yellow, brown, pink, blue, etc.',ri:'2.417',sg:'3.52',hard:'10',material:'Carbon (C)',desc:'Crystalline carbon and the hardest naturally occurring substance. Quality is evaluated using the 4Cs.',talk:'“The four main factors for judging a diamond are Cut, Colour, Clarity, and Carat Weight. A grading report helps verify a specific stone\'s characteristics.”',origin:'Natural diamonds are found in various countries. Lab-grown diamonds have the same chemical structure but a different origin; this must be clearly disclosed.',care:'Despite being very hard, they can chip along certain planes. Avoid impacts and clean according to the setting.',color:'#8bb9d5',light:'#effaff'},
+{id:'blue-sapphire',n:'07',name:'Blue Sapphire',sanskrit:'Neelam',planet:'Saturn (Traditional)',colour:'Blue to violet-blue',ri:'1.762–1.770',sg:'3.95–4.03',hard:'9',material:'Blue Corundum (Al₂O₃)',desc:'The blue variety of corundum. Colour zoning, inclusions, treatments, and clarity are important.',talk:'“Blue Sapphire is a corundum gemstone with a Mohs hardness of 9. The hue, tone, saturation, clarity, cut, and treatments are crucial for evaluation.”',origin:'Notable sources include Sri Lanka, Kashmir, Madagascar, Myanmar, and Australia. Kashmir origin claims require specific laboratory proof.',care:'Generally durable, but avoid hard impacts. Provide origin and treatment info based on reliable reports.',color:'#2253a5',light:'#8ab8ff'},
+{id:'hessonite',n:'08',name:'Hessonite',sanskrit:'Gomed',planet:'Rahu (Traditional)',colour:'Honey, cinnamon, orange-brown, reddish-brown',ri:'1.734–1.759',sg:'3.57–3.73',hard:'6.5–7.5',material:'Grossular Garnet',desc:'The orange to brownish-orange variety of grossular garnet. Often shows a warm, honey-like colour.',talk:'“Hessonite is a grossular garnet. Its honey or cinnamon colour, clarity, inclusions, and cut should be carefully observed.”',origin:'Found in Sri Lanka, India, Tanzania, and other garnet-producing regions. Verify before making origin claims.',care:'Avoid hard impacts and harsh cleaners. Do not store with harder gems that could scratch it.',color:'#b76b2e',light:'#f4c184'},
+{id:'catseye',n:'09',name:"Cat's Eye",sanskrit:'Lehsunia / Vaidurya',planet:'Ketu (Traditional)',colour:'Honey, yellow-green, greenish-brown, brown',ri:'1.746–1.755',sg:'3.70–3.78',hard:'8.5',material:'Chrysoberyl (BeAl₂O₄)',desc:'A variety of chrysoberyl that displays a sharp, moving band of light resembling a cat\'s eye. This effect is called Chatoyancy.',talk:'“The main attraction of this gem is the moving band of light, or Cat\'s Eye effect. The cabochon cut and the position of the eye are very important.”',origin:'Notable sources include Sri Lanka, India, Brazil, and Madagascar. Must be distinguished from quartz cat\'s eye or other similar stones.',care:'Despite good hardness, the cabochon can be damaged by impact. Protect it from scratching against other objects.',color:'#9a9b39',light:'#e8e99a'}
 ];
 
 const training=[
-['মানিক (Ruby)','লাল করান্ডাম চেনা','মানিকের কঠোরতা ৯ কেন—তা ব্যাখ্যা করুন। দুটি মানিকের রং ও স্বচ্ছতা তুলনা করুন।','ক্রেতা জানতে চান, দুটি লাল পাথরের দামে এত পার্থক্য কেন।','রং, ট্রিটমেন্ট ও সার্টিফিকেট নিয়ে ৬০ সেকেন্ডের উপস্থাপনা দিন।','মানিক সুপারিশ করার আগে ক্রেতাকে করার মতো পাঁচটি প্রশ্ন লিখুন।'],
-['মুক্তা (Pearl)','জৈব রত্ন বোঝা','মুক্তার দীপ্তি, উপরিভাগ, আকৃতি ও মিল পরীক্ষা করুন। প্রাকৃতিক ও কালচার্ড মুক্তার পার্থক্য বলুন।','ক্রেতা জানতে চান, কালচার্ড মুক্তা কি আসল মুক্তা?','কালচার্ড ও নকল মুক্তার পার্থক্য সহজ ভাষায় বোঝান।','মুক্তার যত্নের নির্দেশিকা তৈরি করুন।'],
-['লাল প্রবাল (Red Coral)','প্রবাল শনাক্ত ও যত্ন','রং, পালিশ, উপরিভাগ এবং পুঁতি বা ক্যাবোশঁর ফিনিশ পরীক্ষা করুন। নরম হওয়ার বিষয়টি ব্যাখ্যা করুন।','ক্রেতা প্রতিদিন পরার জন্য প্রবাল চান।','জৈব উৎস, যত্ন এবং বৈধ উৎস সম্পর্কে স্বচ্ছভাবে বলুন।','প্রবাল ব্যবহারে পাঁচটি সতর্কতা লিখুন।'],
-['পান্না (Emerald)','ইনক্লুশন ও ট্রিটমেন্ট বোঝা','প্রাকৃতিক ইনক্লুশন পর্যবেক্ষণ করুন। তেল বা রেজিন ট্রিটমেন্টের কথা কেন জানাতে হয়, ব্যাখ্যা করুন।','ক্রেতা বলছেন, ইনক্লুশন থাকলে পান্না নকল।','প্রাকৃতিক ইনক্লুশন ও ট্রিটমেন্ট সহজ ভাষায় বোঝান।','পান্নার যত্নের পাঁচটি নিয়ম লিখুন।'],
-['পীত পুখরাজ','হলুদ করান্ডাম বোঝা','রং, স্বচ্ছতা, কাট এবং ট্রিটমেন্টের তথ্য তুলনা করুন।','ক্রেতা নিশ্চিত জ্যোতিষীয় ফল জানতে চান।','বিশ্বাসকে সম্মান করে বোঝান যে ফলাফল বৈজ্ঞানিকভাবে নিশ্চিত নয়।','পীত পুখরাজের পণ্যের পরিচিতি কার্ড তৈরি করুন।'],
-['হীরা (Diamond)','4Cs প্রয়োগ','নমুনা রিপোর্ট দেখে Cut, Colour, Clarity ও Carat Weight তুলনা করুন।','ক্রেতা মনে করেন ক্যারেট মানেই পাথরের দৃশ্যমান আকার।','ক্যারেট যে ওজনের একক, তা বোঝান; কাট ও আকৃতিতে মাপ কীভাবে বদলায় বলুন।','১০০ শব্দে 4Cs-এর সহজ ব্যাখ্যা লিখুন।'],
-['নীলা (Blue Sapphire)','নীল করান্ডাম মূল্যায়ন','নীলার রঙের আভা, গাঢ়ত্ব, রঙের ঘনত্ব, রঙের বিন্যাস ও স্বচ্ছতা পর্যবেক্ষণ করুন।','ক্রেতা জানতে চান, পাথরটি নিশ্চিতভাবে কাশ্মীরি কি না।','উৎস জানতে পরীক্ষাগারের নির্ভরযোগ্য প্রমাণ কেন দরকার তা বলুন।','উৎস সম্পর্কে ক্রেতাকে দেওয়ার মতো তিনটি সৎ উত্তর লিখুন।'],
-['গোমেদ (Hessonite)','গ্রসুলার গারনেট চেনা','মধু বা দারুচিনি রং, স্বচ্ছতা এবং ইনক্লুশন পর্যবেক্ষণ করুন।','ক্রেতা দুটি গোমেদের স্বচ্ছতার পার্থক্য জানতে চান।','রং, স্বচ্ছতা, কাট ও রিপোর্টের ভূমিকা ব্যাখ্যা করুন।','গোমেদ পরীক্ষা করার চেকলিস্ট তৈরি করুন।'],
-['ক্যাটস আই (Chrysoberyl)','Chatoyancy বোঝা','ক্যাবোশঁ পাথরকে আলোয় ঘুরিয়ে চলমান চোখের রেখা দেখুন। অন্য ক্যাটস আই উপাদানের সঙ্গে তুলনা করুন।','ক্রেতা জানতে চান, সব কোণ থেকে চোখের রেখা দেখা যায় না কেন।','ক্যাবোশঁ কাট, পাথরের অবস্থান ও আলোর উৎসের ভূমিকা বোঝান।','ক্যাটস আই প্রভাব দেখানোর জন্য ছোট একটি ডেমো স্ক্রিপ্ট লিখুন।']
+['Ruby','Identify Red Corundum','Explain why Ruby has a hardness of 9. Compare the colour and clarity of two rubies.','Customer asks why two red stones have such a price difference.','Give a 60-second presentation on colour, treatment, and certification.','Write five questions to ask a customer before recommending a Ruby.'],
+['Pearl','Understand Organic Gems','Examine the lustre, surface, shape, and matching of pearls. Explain the difference between natural and cultured pearls.','Customer asks if a cultured pearl is a "real" pearl.','Explain the difference between cultured and imitation pearls in simple terms.','Create a care guide for pearls.'],
+['Red Coral','Identify and Care for Coral','Inspect colour, polish, surface, and the finish of beads or cabochons. Explain its softness.','Customer wants coral for daily wear.','Explain the organic origin, care, and legal sourcing transparently.','List five precautions for wearing coral.'],
+['Emerald','Understand Inclusions & Treatments','Observe natural inclusions. Explain why oil or resin treatments must be disclosed.','Customer says, "If it has inclusions, it must be fake."','Explain natural inclusions and treatments in simple language.','List five rules for emerald care.'],
+['Yellow Sapphire','Understand Yellow Corundum','Compare colour, clarity, cut, and treatment information.','Customer wants guaranteed astrological results.','Respect their belief while explaining that results are not scientifically guaranteed.','Create a product introduction card for Yellow Sapphire.'],
+['Diamond','Apply the 4Cs','Compare Cut, Colour, Clarity, and Carat Weight using sample reports.','Customer believes carat weight equals physical size.','Explain that carat is a weight unit; explain how cut and shape affect visible size.','Write a simple 100-word explanation of the 4Cs.'],
+['Blue Sapphire','Evaluate Blue Corundum','Observe the hue, tone, saturation, colour zoning, and clarity of Blue Sapphires.','Customer asks if the stone is guaranteed to be from Kashmir.','Explain why reliable laboratory proof is needed for origin claims.','Write three honest answers about origin to give to a customer.'],
+['Hessonite','Identify Grossular Garnet','Observe the honey or cinnamon colour, clarity, and inclusions.','Customer wants to know the difference in clarity between two hessonites.','Explain the role of colour, clarity, cut, and reports.','Create a checklist for examining Hessonite.'],
+["Cat's Eye",'Understand Chatoyancy','Rotate the cabochon under light to see the moving eye. Compare it with other cat\'s eye materials.','Customer asks why the eye isn\'t visible from all angles.','Explain the role of the cabochon cut, stone orientation, and light source.','Write a short demo script for showing the Cat\'s Eye effect.']
 ];
 
 function gemSVG(g){
-  return `<svg viewBox="0 0 180 180" role="img" aria-label="${g.name} রত্নের অলংকরণ">
+  return `<svg viewBox="0 0 180 180" role="img" aria-label="${g.name} illustration">
     <defs>
       <linearGradient id="grad-${g.id}" x1="0" y1="0" x2="1" y2="1">
         <stop stop-color="${g.light}"/>
@@ -1503,7 +1879,7 @@ function gemSVG(g){
 document.getElementById('gemGrid').innerHTML = gems.map(g => `
   <article class="ac-gem-card" id="${g.id}">
     <div class="ac-gem-visual">
-      <span class="ac-gem-index">নবরত্ন · ${g.n}</span>
+      <span class="ac-gem-index">Navratna · ${g.n}</span>
       ${gemSVG(g)}
     </div>
     <div class="ac-gem-body">
@@ -1511,20 +1887,20 @@ document.getElementById('gemGrid').innerHTML = gems.map(g => `
       <h3>${g.name}</h3>
       <p>${g.desc}</p>
       <div class="ac-specs">
-        <div class="ac-spec"><small>প্রতিসরণাঙ্ক (RI)</small><b>${g.ri}</b></div>
-        <div class="ac-spec"><small>আপেক্ষিক গুরুত্ব (SG)</small><b>${g.sg}</b></div>
-        <div class="ac-spec"><small>মোহস কঠোরতা</small><b>${g.hard} / ১০</b></div>
-        <div class="ac-spec"><small>সাধারণ রং</small><b>${g.colour}</b></div>
+        <div class="ac-spec"><small>Refractive Index (RI)</small><b>${g.ri}</b></div>
+        <div class="ac-spec"><small>Specific Gravity (SG)</small><b>${g.sg}</b></div>
+        <div class="ac-spec"><small>Mohs Hardness</small><b>${g.hard} / 10</b></div>
+        <div class="ac-spec"><small>Typical Colour</small><b>${g.colour}</b></div>
       </div>
       <div class="ac-tagrow">
         <span class="ac-tag">${g.material}</span>
-        <span class="ac-tag">বিক্রয় প্রশিক্ষণ</span>
+        <span class="ac-tag">Sales Training</span>
       </div>
       <details class="ac-details">
-        <summary>প্রশিক্ষকের নোট ও বিক্রয় উপস্থাপনা দেখুন</summary>
-        <p><b>ক্রেতাকে বোঝানোর নমুনা:</b> ${g.talk}</p>
-        <p><b>উল্লেখযোগ্য উৎস:</b> ${g.origin}</p>
-        <p><b>যত্নের নিয়ম:</b> ${g.care}</p>
+        <summary>Trainer's Notes &amp; Sales Pitch</summary>
+        <p><b>Sample Customer Explanation:</b> ${g.talk}</p>
+        <p><b>Notable Origins:</b> ${g.origin}</p>
+        <p><b>Care Instructions:</b> ${g.care}</p>
       </details>
     </div>
   </article>
@@ -1542,16 +1918,16 @@ document.getElementById('scienceRows').innerHTML = gems.map(g => `
 
 document.getElementById('trainingGrid').innerHTML = training.map((t,i) => `
   <article class="ac-session">
-    <div class="ac-num">০${i+1}</div>
+    <div class="ac-num">0${i+1}</div>
     <h3>${t[0]}</h3>
-    <p><b>প্রশিক্ষণের লক্ষ্য:</b> ${t[1]}</p>
+    <p><b>Training Objective:</b> ${t[1]}</p>
     <details>
-      <summary>অনুশীলনগুলি দেখুন</summary>
+      <summary>View Exercises</summary>
       <ul>
-        <li><b>হাতে-কলমে কাজ:</b> ${t[2]}</li>
-        <li><b>ক্রেতার সঙ্গে কথোপকথন:</b> ${t[3]}</li>
-        <li><b>বিক্রয় উপস্থাপনা:</b> ${t[4]}</li>
-        <li><b>বাড়ির কাজ:</b> ${t[5]}</li>
+        <li><b>Hands-on Task:</b> ${t[2]}</li>
+        <li><b>Customer Conversation:</b> ${t[3]}</li>
+        <li><b>Sales Pitch:</b> ${t[4]}</li>
+        <li><b>Homework:</b> ${t[5]}</li>
       </ul>
     </details>
   </article>
@@ -1559,15 +1935,18 @@ document.getElementById('trainingGrid').innerHTML = training.map((t,i) => `
 
 const c = document.getElementById('caratInput');
 const r = document.getElementById('rattiInput');
-function bnNum(n){ return n.toFixed(2).replace(/[0-9]/g, d => '০১২৩৪৫৬৭৮৯'[d]); }
 function calcAcademy(){
   const cv = Math.max(0, Number(c.value) || 0);
   const rv = Math.max(0, Number(r.value) || 0);
-  document.getElementById('rattiResult').textContent = 'প্রায় ' + bnNum(cv / 0.91) + ' রতি';
-  document.getElementById('caratResult').textContent = 'প্রায় ' + bnNum(rv * 0.91) + ' ক্যারেট';
+  document.getElementById('rattiResult').textContent = 'Approx ' + (cv / 0.91).toFixed(2) + ' Ratti';
+  document.getElementById('caratResult').textContent = 'Approx ' + (rv * 0.91).toFixed(2) + ' Carat';
 }
 c.addEventListener('input', calcAcademy);
 r.addEventListener('input', calcAcademy);
+
+/* Boot both Q&A views */
+renderQA();
+renderSales();
 </script>
 </body>
 </html>
